@@ -11,6 +11,7 @@ using ProductModel = MAQFurni.Models.Product;
 
 namespace MAQFurni.Areas.Product.Controllers
 {
+
     public class ProductController : Controller
     {
         private readonly FurnitureShopContext _context;
