@@ -15704,6 +15704,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Order\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Order\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Order\\Views\\Order\\Create.cshtml",
       "TargetPath": "Areas\\Order\\Views\\Order\\Create.cshtml",
       "FileKind": "mvc"
@@ -15801,6 +15806,11 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Shared\\_AdminOrder.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminOrder.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15956,6 +15966,11 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Order\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Order\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
