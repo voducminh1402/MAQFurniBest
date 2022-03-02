@@ -15679,33 +15679,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Order\\Views\\Order\\Edit.cshtml",
-      "TargetPath": "Areas\\Order\\Views\\Order\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\OrderDetail\\Index.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Order\\Delete.cshtml",
-      "TargetPath": "Views\\Order\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Order\\Details.cshtml",
-      "TargetPath": "Views\\Order\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15724,28 +15704,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Order\\Create.cshtml",
-      "TargetPath": "Views\\Order\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\OrderDetail\\Delete.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\OrderDetail\\Views\\OrderDetail\\Create.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Order\\Views\\Order\\Create.cshtml",
-      "TargetPath": "Areas\\Order\\Views\\Order\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15769,23 +15729,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\OrderDetail\\Views\\OrderDetail\\Index.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Order\\Views\\Order\\Index.cshtml",
-      "TargetPath": "Areas\\Order\\Views\\Order\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\OrderDetail\\Views\\OrderDetail\\Edit.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15809,11 +15754,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Order\\Edit.cshtml",
-      "TargetPath": "Views\\Order\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "FileKind": "mvc"
@@ -15824,18 +15764,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\OrderDetail\\Views\\OrderDetail\\Delete.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Order\\Index.cshtml",
-      "TargetPath": "Views\\Order\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15854,11 +15784,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Order\\Views\\Order\\Delete.cshtml",
-      "TargetPath": "Areas\\Order\\Views\\Order\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
       "FileKind": "mvc"
@@ -15871,11 +15796,6 @@
     {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\OrderDetail\\Views\\OrderDetail\\Details.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15919,11 +15839,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\OrderDetail\\Edit.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
       "FileKind": "mvc"
@@ -15934,18 +15849,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\OrderDetail\\Create.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\OrderDetail\\Details.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16016,11 +15921,6 @@
     {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Order\\Views\\Order\\Details.cshtml",
-      "TargetPath": "Areas\\Order\\Views\\Order\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
