@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {}
+    "C:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\MAQFurni.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {
+    "C:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\MAQFurni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\MAQFurni.csproj",
         "projectName": "MAQFurni",
-        "projectPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
-        "packagesPath": "C:\\Users\\VODUCMINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\MAQFurni.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
