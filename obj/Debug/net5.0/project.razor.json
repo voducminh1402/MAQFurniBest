@@ -15619,16 +15619,6 @@
   "RootNamespace": "MAQFurni",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\OrderDetail\\Views\\OrderDetail\\Details.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Order\\Edit.cshtml",
-      "TargetPath": "Views\\Order\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
       "FileKind": "mvc"
@@ -15674,33 +15664,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\OrderDetail\\Edit.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Order\\Index.cshtml",
-      "TargetPath": "Views\\Order\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Order\\Views\\Order\\Edit.cshtml",
-      "TargetPath": "Areas\\Order\\Views\\Order\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\OrderDetail\\Index.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15711,16 +15681,6 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Order\\Views\\Order\\Create.cshtml",
       "TargetPath": "Areas\\Order\\Views\\Order\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\OrderDetail\\Delete.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Order\\Details.cshtml",
-      "TargetPath": "Views\\Order\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15739,11 +15699,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\OrderDetail\\Views\\OrderDetail\\Edit.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Product\\Index.cshtml",
       "TargetPath": "Views\\Product\\Index.cshtml",
       "FileKind": "mvc"
@@ -15759,18 +15714,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\OrderDetail\\Create.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Product\\Edit.cshtml",
       "TargetPath": "Views\\Product\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\OrderDetail\\Details.cshtml",
-      "TargetPath": "Views\\OrderDetail\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15781,16 +15726,6 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Order\\Delete.cshtml",
-      "TargetPath": "Views\\Order\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Order\\Create.cshtml",
-      "TargetPath": "Views\\Order\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15884,11 +15819,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\OrderDetail\\Views\\OrderDetail\\Index.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -15901,11 +15831,6 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\OrderDetail\\Views\\OrderDetail\\Create.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15956,11 +15881,6 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\OrderDetail\\Views\\OrderDetail\\Delete.cshtml",
-      "TargetPath": "Areas\\OrderDetail\\Views\\OrderDetail\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {

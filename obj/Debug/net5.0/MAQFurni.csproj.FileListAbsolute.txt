@@ -173,7 +173,6 @@ C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ForgotPassword.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Lockout.cshtml.g.cs
-C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\LoginWith2fa.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
@@ -206,6 +205,7 @@ C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+<<<<<<< HEAD
 C:\Users\HP\Desktop\prn211\MAQFurniBest\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\HP\Desktop\prn211\MAQFurniBest\bin\Debug\net5.0\appsettings.json
 C:\Users\HP\Desktop\prn211\MAQFurniBest\bin\Debug\net5.0\MAQFurni.StaticWebAssets.xml
@@ -417,23 +417,10 @@ C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\MAQFurni.genruntimeconf
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Create.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Delete.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Details.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Edit.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Index.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Order\Create.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Order\Delete.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Order\Details.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Order\Edit.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\OrderDetail\Views\OrderDetail\Create.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\OrderDetail\Views\OrderDetail\Delete.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\OrderDetail\Views\OrderDetail\Details.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\OrderDetail\Views\OrderDetail\Edit.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\OrderDetail\Views\OrderDetail\Index.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\OrderDetail\Create.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\OrderDetail\Delete.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\OrderDetail\Details.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\OrderDetail\Edit.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\OrderDetail\Index.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\_ViewImports.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\_ViewStart.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Shared\_AdminOrder.cshtml.g.cs
+=======
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+>>>>>>> 4c0851ab5139f8a3bd1c4269969e0d01d18140d9
