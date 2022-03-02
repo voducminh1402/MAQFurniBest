@@ -420,7 +420,7 @@ C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Index.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\_ViewImports.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\_ViewStart.cshtml.g.cs
-C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Shared\_AdminOrder.cshtml.g.cs
 =======
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 >>>>>>> 4c0851ab5139f8a3bd1c4269969e0d01d18140d9
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Shared\_Admin.cshtml.g.cs

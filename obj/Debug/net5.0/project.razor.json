@@ -15744,11 +15744,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Shared\\_AdminOrder.cshtml",
-      "TargetPath": "Views\\Shared\\_AdminOrder.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "FileKind": "mvc"
@@ -15866,6 +15861,11 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn211\\MAQFurniBest\\Views\\Shared\\_Admin.cshtml",
+      "TargetPath": "Views\\Shared\\_Admin.cshtml",
       "FileKind": "mvc"
     },
     {
