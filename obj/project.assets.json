@@ -8492,7 +8492,12 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\VODUCMINH\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+>>>>>>> 0e907b650dd8cfcfb326192efa5cde566afbe960
   },
   "project": {
     "version": "1.0.0",
@@ -8503,6 +8508,9 @@
       "packagesPath": "C:\\Users\\VODUCMINH\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

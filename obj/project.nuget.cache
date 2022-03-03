@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "pP3UIv3EUUYwu2pDeSWn+T79LcDn2+FFGjUJ/v2Aqw6lr0BSe06rCdfPJ8kN+epP00EjowwR2OHoXAXw0YmHnQ==",
+=======
+  "dgSpecHash": "6n0bdRiexN3j1OjNna4CpydI0HbSeBULUUKeeeruvCUTtWe3j4oG9YbuLZlyJBCffKCACdwNvzZszi9phT/CHg==",
+>>>>>>> 0e907b650dd8cfcfb326192efa5cde566afbe960
   "success": true,
   "projectFilePath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
   "expectedPackageFiles": [
