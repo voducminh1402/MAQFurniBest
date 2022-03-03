@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace MAQFurni.Models
 {
     [Table("Order")]
+
     public partial class Order
     {
         public Order()
@@ -19,14 +20,17 @@ namespace MAQFurni.Models
         [Key]
         [Column("OrderID")]
         [StringLength(50)]
+        [Display(Name ="Order Name")]
         public string OrderId { get; set; }
         [Required]
         [Column("UserID")]
         [StringLength(450)]
+        [Display(Name ="User Name")]
         public string UserId { get; set; }
         [Column(TypeName = "decimal(16, 2)")]
         public decimal TotalPrice { get; set; }
         [Column(TypeName = "datetime")]
+        [Display(Name ="Create Date")]
         public DateTime CreateDate { get; set; }
 
         [ForeignKey(nameof(UserId))]
