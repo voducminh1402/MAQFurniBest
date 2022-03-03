@@ -267,7 +267,10 @@
                       <span class="align-middle">Date</span
                       ><span class="sort sort--down"></span>
                     </th>
-                    
+                    <th class="table__th-sort d-none d-sm-table-cell">
+                      <span class="align-middle">Status</span
+                      ><span class="sort sort--down"></span>
+                    </th>
                     <th class="table__actions"></th>
                   </tr>
                 </thead>
@@ -298,7 +301,9 @@
                     <td class="table__td text-nowrap">
                       <span class="text-grey">@Html.DisplayFor(modelItem => item.CreateDate)</span>
                     </td>
-                    
+                    <td class="table__td text-nowrap">
+                      <span class="text-grey">@Html.DisplayFor(modelItem => item.ShippingInfo.Status.StatusName)</span>
+                    </td>
                     <td class="table__td table__actions">
                       <div class="items-more">
                         <button class="items-more__button">
@@ -309,15 +314,6 @@
                         <div class="dropdown-items dropdown-items--right">
                           <div class="dropdown-items__container">
                             <ul class="dropdown-items__list">
-                              <li class="dropdown-items__item">
-                                
-                                <a class="dropdown-items__link" asp-action="Edit" asp-route-id="@item.OrderId"><span class="dropdown-items__link-icon">
-                                    <svg class="icon-icon-edit">
-                                      <use
-                                        xlink:href="#icon-view"
-                                      ></use></svg></span
-                                  >Edit</a>
-                              </li>
                               <li class="dropdown-items__item">
                                 
                                 <a class="dropdown-items__link" asp-action="Details" asp-route-id="@item.OrderId"><span class="dropdown-items__link-icon">
