@@ -34,6 +34,7 @@ namespace MAQFurni
             });
 
             services.AddDefaultIdentity<User>()
+            .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<FurnitureShopContext>()
             .AddDefaultTokenProviders();
 
