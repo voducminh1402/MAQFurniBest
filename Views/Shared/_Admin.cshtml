@@ -17,6 +17,7 @@
     <meta name="apple-mobile-web-app-title" content="Arion Admin Dashboard" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="~/admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/admin/css/apexcharts.css" />
     <link rel="stylesheet" href="~/admin/css/tippy/tippy.css" />
@@ -104,6 +105,7 @@
   </head>
 
   <body>
+    @RenderSection("css")
     <svg
       xmlns="http://www.w3.org/2000/svg"
       style="
@@ -1729,6 +1731,7 @@
       <main class="page-content">
         @RenderBody()
       </main>
+      @RenderSection("scripts", required: false)
     </div>
     <script src="~/admin/js/gsap/gsap.min.js"></script>
     <script src="~/admin/js/gsap/ScrollToPlugin.min.js"></script>
@@ -1761,5 +1764,6 @@
     <script src="~/admin/js/vendor/scrollmagic/debug.addIndicators.min.js"></script>
     <script src="~/admin/js/components.js"></script>
     <script src="~/admin/js/common.js"></script>
+    
   </body>
 </html>

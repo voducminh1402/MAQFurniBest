@@ -23,8 +23,40 @@ namespace MAQFurni.Areas_Order_Controllers
         [HttpGet("admin/order")]
         public async Task<IActionResult> Index()
         {
+            ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
             var furnitureShopContext = _context.Orders.Include(o => o.User);
             return View(await furnitureShopContext.ToListAsync());
+        }
+
+        [HttpGet("admin/order/filter-by-status")]  
+        [ActionName("filter-by-status")]     
+        public List<Order> FilterByStatus(int status)
+        {
+            Console.WriteLine(status);
+            ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
+            List<Order> list;
+            if (status == 0)
+                list = _context.Orders.ToList();
+            else{
+                list = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).Include(o => o.User).ToList();
+            }
+            
+            
+            return list;
+        }
+
+        [HttpGet("admin/order/find")]  
+        [ActionName("find")]     
+        public async Task<IActionResult> SearchAsync(string search)
+        {
+            ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
+            if (search.Trim().Length == 0){
+                var furnitureShopContext1 = _context.Orders.Include(o => o.User);
+                return View(await furnitureShopContext1.ToListAsync());
+            }
+            var furnitureShopContext = _context.Orders.Where(o => o.User.UserName.Contains(search)).Include(o => o.User);
+            
+            return View("Index", await furnitureShopContext.ToListAsync());
         }
 
         // GET: Order/Details/5
@@ -39,6 +71,9 @@ namespace MAQFurni.Areas_Order_Controllers
             var order = await _context.Orders
                 .Include(o => o.User)
                 .FirstOrDefaultAsync(m => m.OrderId == id);
+
+            ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
+
             if (order == null)
             {
                 return NotFound();
@@ -46,6 +81,8 @@ namespace MAQFurni.Areas_Order_Controllers
 
             return View(order);
         }
+
+        
 
         // GET: Order/Create
         [HttpGet("admin/order/create")]
