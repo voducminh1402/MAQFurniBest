@@ -18,6 +18,7 @@ namespace MAQFurni.Models
 
         [Key]
         [Column("CategoryID")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryId { get; set; }
         [Required]
         [StringLength(100)]
