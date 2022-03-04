@@ -1,4 +1,5 @@
-﻿  <!-- Hero/Intro Slider Start -->
+﻿  @model IndexViewModel
+  <!-- Hero/Intro Slider Start -->
     <div class="section ">
         <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
             <!-- Hero slider Active -->
@@ -58,59 +59,24 @@
 
     <!-- Product Category Start -->
     <div class="section pt-100px pb-100px">
-        <div class="container">
-            <div class="category-slider swiper-container" data-aos="fade-up">
-                <div class="category-wrapper swiper-wrapper">
-                    <!-- Single Category -->
-                    <div class=" swiper-slide">
-                        <a href="shop-left-sidebar.html" class="category-inner ">
-                            <div class="category-single-item">
-                                <img src="~/images/icons/1.png" alt="">
-                                <span class="title">Office Chair</span>
-                            </div>
-                        </a>
+            <div class="container">
+                <div class="category-slider swiper-container" data-aos="fade-up">
+                    <div class="category-wrapper swiper-wrapper">
+                            @foreach (var item in Model.ListCategory)
+                            {
+                                <div class=" swiper-slide">
+                                    <a href="shop-left-sidebar.html" class="category-inner ">
+                                        <div class="category-single-item">
+                                            <img src="@Html.DisplayFor(modelItem => item.CategoryImage)" alt="">
+                                            <span class="title">@Html.DisplayFor(modelItem => item.CategoryName)</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            }
                     </div>
-                    <!-- Single Category -->
-                    <div class=" swiper-slide">
-                        <a href="shop-left-sidebar.html" class="category-inner ">
-                            <div class="category-single-item">
-                                <img src="~/images/icons/2.png" alt="">
-                                <span class="title">Book Shelf</span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Single Category -->
-                    <div class=" swiper-slide">
-                        <a href="shop-left-sidebar.html" class="category-inner ">
-                            <div class="category-single-item">
-                                <img src="~/images/icons/3.png" alt="">
-                                <span class="title">Light & Sofa</span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Single Category -->
-                    <div class=" swiper-slide">
-                        <a href="shop-left-sidebar.html" class="category-inner ">
-                            <div class="category-single-item">
-                                <img src="~/images/icons/4.png" alt="">
-                                <span class="title">Reading Table</span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Single Category -->
-                    <div class="swiper-slide">
-                        <a href="shop-left-sidebar.html" class="category-inner ">
-                            <div class="category-single-item">
-                                <img src="~/images/icons/5.png" alt="">
-                                <span class="title">Corner Table</span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Single Category -->
                 </div>
             </div>
         </div>
-    </div>
 
     <!-- Product Category End -->
 
@@ -145,7 +111,7 @@
                         <!-- 1st tab start -->
                         <div class="tab-pane fade show active" id="tab-product-new-arrivals">
                             <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+                                @* <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="200">
                                     <!-- Single Prodect -->
                                     <div class="product">
                                         <div class="thumb">
@@ -301,16 +267,18 @@
                                             </span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6  mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="400">
+                                </div> *@
+                                @foreach (var item in Model.ListProduct)
+                                {
+                                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6  mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="400">
                                     <!-- Single Prodect -->
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="shop-left-sidebar.html" class="image">
-                                                <img src="~/images/product-image/3.jpg" alt="Product" />
-                                                <img class="hover-image" src="~/images/product-image/4.jpg" alt="Product" />
+                                                <img src="@Html.DisplayFor(modelItem => item.ProductImage)" alt="Product" />
                                             </a>
                                             <span class="badges">
+                                                
                                             </span>
                                             <div class="actions">
                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
@@ -320,19 +288,25 @@
                                                 <a href="compare.html" class="action compare" title="Compare"><i
                                                         class="icon-refresh"></i></a>
                                             </div>
-                                            <button title="Add To Cart" class=" add-to-cart">Add
-                                                To Cart</button>
+                                            <button title="Add To Cart" class="add-to-cart">Add
+                                                To Cart
+                                                <input id="pCartImage" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductImage)" />
+                                                <input id="pCartId" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductId)" />
+                                                <input id="pCartName" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductName)" />
+                                                <input id="pCartPrice" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductPrice)" />
+                                                </button>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
+                                            <h5 class="title"><a href="shop-left-sidebar.html">@Html.DisplayFor(modelItem => item.ProductName)</a></h5>
                                             <span class="price">
-                                                <span class="new">$38.50</span>
+                                                <span class="new">@Html.DisplayFor(modelItem => item.ProductPrice) VND</span>
                                             </span>
                                         </div>
                                     </div>
                                     <!-- Single Prodect -->
                                 </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-es-30px" data-aos="fade-up" data-aos-delay="600">
+                                }
+                                @* <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-es-30px" data-aos="fade-up" data-aos-delay="600">
                                     <!-- Single Prodect -->
                                     <div class="product">
                                         <div class="thumb">
@@ -391,10 +365,10 @@
                                         </div>
                                     </div>
                                     <!-- Single Prodect -->
-                                </div>
+                                </div> *@
                             </div>
                         </div>
-                        <!-- 1st tab end -->
+                        @* <!-- 1st tab end -->
                         <!-- 2nd tab start -->
                         <div class="tab-pane fade" id="tab-product-best-sellers">
                             <div class="row">
@@ -1152,7 +1126,7 @@
                                     <!-- Single Prodect -->
                                 </div>
                             </div>
-                        </div>
+                        </div> *@
                         <!-- 4th tab end -->
                     </div>
                 </div>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MAQFurni.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MAQFurni.Controllers
 {
@@ -13,14 +14,19 @@ namespace MAQFurni.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly FurnitureShopContext _context;
+
+        public HomeController(FurnitureShopContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            return View();
+            IndexViewModel ivm = new IndexViewModel();
+            ivm.ListCategory = await _context.Categories.ToListAsync();
+            ivm.ListProduct = await _context.Products.ToListAsync();
+            return View(ivm);
         }
 
         public IActionResult Privacy()
