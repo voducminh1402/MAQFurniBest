@@ -76,7 +76,7 @@ namespace MAQFurni.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new User { UserName = Input.Email, Email = Input.Email, UserStatusId = 1, RoleId = 2 };
-                var result = await _userManager.CreateAsync(user, Input.Password);
+                var result = await _userManager.CreateAsync(user, Input.Password); 
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "User");
