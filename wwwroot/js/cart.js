@@ -116,6 +116,11 @@ cartIcon.forEach((item, index) => {
 document.addEventListener('click',function(e){
     let itemRemoveId = '0';
     if(e.target && e.target.id== 'cartRemove'){
+        let subTotal = 0;
+        let cartEcoTax = 0;
+        let cartVAT = 0;
+        let cartTotal = 0;
+        
         itemRemoveId = e.target.querySelector('input').value;
 
         let cartFromLocal = JSON.parse(localStorage.getItem("cart"));
@@ -143,7 +148,9 @@ document.addEventListener('click',function(e){
             }
         })
 
-        for (let cartItem of cartFromLocal) {
+        let newCartLocal = JSON.parse(localStorage.getItem("cart"));
+
+        for (let cartItem of newCartLocal) {
             subTotal += cartItem.price * cartItem.quantity;
             cartEcoTax = subTotal * 0.02;
             cartVAT = subTotal * 0.08;
