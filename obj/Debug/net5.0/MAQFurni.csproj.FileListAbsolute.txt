@@ -424,3 +424,24 @@ C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 >>>>>>> 4c0851ab5139f8a3bd1c4269969e0d01d18140d9
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Shared\_Admin.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Create.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Delete.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Details.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Index.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Order\Views\_ViewImports.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Order\Views\_ViewStart.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Shared\_Admin.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Create.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Delete.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Details.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Edit.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Index.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Category\Views\_ViewImports.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Category\Views\_ViewStart.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Create.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Delete.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Details.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Edit.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Index.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewImports.cshtml.g.cs
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewStart.cshtml.g.cs

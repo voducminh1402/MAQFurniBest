@@ -146,9 +146,9 @@
                                 </ul>
                             </div>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="#offcanvas-cart" class="cartIcon header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="icon-handbag"></i>
-                                <span class="header-action-num">01</span>
+                                <span id="cartNumOff" class="header-action-num"></span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
                             <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
@@ -204,9 +204,9 @@
                                 </ul>
                             </div>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="#offcanvas-cart" class="cartIcon header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="icon-handbag"></i>
-                                <span class="header-action-num">01</span>
+                                <span id="cartNumOn" class="header-action-num"></span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
                             <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
@@ -275,7 +275,6 @@
                                             </ul>
                                         </li>
                                         <li>
-
                                             <ul class="menu-banner w-100">
                                                 <li>
                                                     <a class="p-0" href="shop-left-sidebar.html"><img class="img-responsive w-100" src="~/images/banner/3.jpg" alt=""></a>
@@ -341,31 +340,7 @@
                 <button class="offcanvas-close">×</button>
             </div>
             <div class="body customScroll">
-                <ul class="minicart-product-list">
-                    <li>
-                        <a href="single-product.html" class="image"><img src="~/images/product-image/1.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Walnut Cutting Board</a>
-                            <span class="quantity-price">1 x <span class="amount">$91.86</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="single-product.html" class="image"><img src="~/images/product-image/2.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Lucky Wooden Elephant</a>
-                            <span class="quantity-price">1 x <span class="amount">$453.28</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="single-product.html" class="image"><img src="~/images/product-image/3.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Fish Cut Out Set</a>
-                            <span class="quantity-price">1 x <span class="amount">$87.34</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
+                <ul id="cartListMain" class="minicart-product-list">
                 </ul>
             </div>
             <div class="foot">
@@ -374,19 +349,19 @@
                         <tbody>
                             <tr>
                                 <td class="text-left">Sub-Total :</td>
-                                <td class="text-right">$523.30</td>
+                                <td class="text-right" id="cartSubTotal">0 VND</td>
                             </tr>
                             <tr>
-                                <td class="text-left">Eco Tax (-2.00) :</td>
-                                <td class="text-right">$4.52</td>
+                                <td class="text-left">Eco Tax (2%) :</td>
+                                <td class="text-right" id="cartEcoTax">0 VND</td>
                             </tr>
                             <tr>
-                                <td class="text-left">VAT (20%) :</td>
-                                <td class="text-right">$104.66</td>
+                                <td class="text-left">VAT (8%) :</td>
+                                <td class="text-right" id="cartVAT">0 VND</td>
                             </tr>
                             <tr>
                                 <td class="text-left">Total :</td>
-                                <td class="text-right theme-color">$632.48</td>
+                                <td class="text-right theme-color" id="cartTotal">0 VND</td>
                             </tr>
                         </tbody>
                     </table>
@@ -839,6 +814,7 @@
 
     <!-- Main Js -->
     <script src="~/js/main.js"></script>
+    <script src="~/js/cart.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
