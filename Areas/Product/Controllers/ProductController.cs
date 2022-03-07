@@ -11,6 +11,7 @@ using ProductModel = MAQFurni.Models.Product;
 
 namespace MAQFurni.Areas.Product.Controllers
 {
+    [Area("Product")]
     public class ProductController : Controller
     {
         private readonly FurnitureShopContext _context;
@@ -21,6 +22,7 @@ namespace MAQFurni.Areas.Product.Controllers
         }
 
         // GET: Product
+        [HttpGet("admin/product")]
         public async Task<IActionResult> Index()
         {
             var furnitureShopContext = _context.Products.Include(p => p.Available).Include(p => p.Category);
@@ -28,6 +30,7 @@ namespace MAQFurni.Areas.Product.Controllers
         }
 
         // GET: Product/Details/5
+        [HttpGet("admin/product/detail/{id}")]
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -48,6 +51,7 @@ namespace MAQFurni.Areas.Product.Controllers
         }
 
         // GET: Product/Create
+        [HttpGet("admin/product/create")]
         public IActionResult Create()
         {
             ViewData["AvailableId"] = new SelectList(_context.ProductAvailables, "AvailableId", "AvailableName");
@@ -58,7 +62,7 @@ namespace MAQFurni.Areas.Product.Controllers
         // POST: Product/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("admin/product/create")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductImage,ProductPrice,Quantity,Description,AvailableId,CategoryId,CreateDate")] ProductModel product)
         {
@@ -74,6 +78,7 @@ namespace MAQFurni.Areas.Product.Controllers
         }
 
         // GET: Product/Edit/5
+        [HttpGet("admin/product/edit/{id}")]
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -94,7 +99,7 @@ namespace MAQFurni.Areas.Product.Controllers
         // POST: Product/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("admin/product/edit/{id}")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("ProductId,ProductName,ProductImage,ProductPrice,Quantity,Description,AvailableId,CategoryId,CreateDate")] ProductModel product)
         {
@@ -129,6 +134,7 @@ namespace MAQFurni.Areas.Product.Controllers
         }
 
         // GET: Product/Delete/5
+        [HttpGet("admin/product/delete/{id}")]
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -149,7 +155,7 @@ namespace MAQFurni.Areas.Product.Controllers
         }
 
         // POST: Product/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost("admin/product/delete/{id}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
