@@ -9,6 +9,7 @@ using MAQFurni.Models;
 
 namespace MAQFurni.Areas_Category_Controllers
 {
+    [Area("Category")]
     public class CategoryController : Controller
     {
         private readonly FurnitureShopContext _context;
@@ -19,6 +20,7 @@ namespace MAQFurni.Areas_Category_Controllers
         }
 
         // GET: Category
+        [HttpGet("/admin/category")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Categories.ToListAsync());
