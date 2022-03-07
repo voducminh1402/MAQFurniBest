@@ -1,3 +1,18 @@
 @{
     Layout = "_Layout";
 }
+
+
+@section scripts
+{
+//cdn.datatables.net/1.10.12/js/jquery.dataTables.js
+
+$(document).ready(function () {
+$(‘#table_id’).DataTable();
+});
+
+}
+@section css
+{
+<link rel=”stylesheet” type=”text/css” href=”//cdn.datatables.net/1.10.12/css/jquery.dataTables.css”>
+}
