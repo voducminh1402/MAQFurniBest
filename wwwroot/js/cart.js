@@ -1,10 +1,14 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart"));
+
+if (cart === null) {
+    cart = [];
+}
 
 const addBtn = document.querySelectorAll(".add-to-cart");
 const cartIcon = document.querySelectorAll(".cartIcon");
 const cartRemove = document.querySelectorAll(".remove-cart");
 
-const checkCartItem = (id) => {
+const checkCartItem = (id, cart) => {
     let flag = 0;
     for (let indexItem in cart) {
         if (cart[indexItem].id === id) {
@@ -14,15 +18,21 @@ const checkCartItem = (id) => {
     return flag;
 }
 
+const getCartFromLocal = () => {
+
+}
+
 addBtn.forEach((item, index) => {
     item.addEventListener("click", () => {
+        let cartFromLocal = JSON.parse(localStorage.getItem("cart"));
+        if (cartFromLocal === null) {
+            cartFromLocal =[];
+        }
         let productImage = item.childNodes[1].value;
         let productId = item.childNodes[3].value;
         let productName = item.childNodes[5].value;
         let productPrice = item.childNodes[7].value;
         let quantiy = 1;
-
-        let flag = true;
 
         let newProduct = {
             "id": productId,
@@ -32,37 +42,37 @@ addBtn.forEach((item, index) => {
             "quantity": quantiy
         }
 
-        if (cart.length === 0) {
-            cart.push(newProduct);
+        if (cartFromLocal.length === 0) {
+            cartFromLocal.push(newProduct);
         }
         else {
-            let indexOfItem = checkCartItem(newProduct.id);
+            let indexOfItem = checkCartItem(newProduct.id, cartFromLocal);
             if (indexOfItem !== 0) {
-                cart[indexOfItem].quantity++;
+                cartFromLocal[indexOfItem].quantity++;
             }
             else {
-                cart.push(newProduct);
+                cartFromLocal.push(newProduct);
             }
         }
-        localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("cart", JSON.stringify(cartFromLocal));
 
-        if (flag == true) {
-            document.querySelectorAll(".header-action-num").forEach((item, index) => {
-                let cartSize = JSON.parse(localStorage.getItem("cart")).length;
-                if (cartSize != 0) {
-                    if (cartSize < 10) {
-                        item.innerHTML = "0" + cartSize;
-                    }
-                    else {
-                        item.innerHTML = cartSize;
-                    }
+        document.querySelectorAll(".header-action-num").forEach((item, index) => {
+            let cartSize = JSON.parse(localStorage.getItem("cart")).length;
+            if (cartSize != 0) {
+                if (cartSize < 10) {
+                    item.innerHTML = "0" + cartSize;
+                    item.style.backgroundColor = "#ff7004";
                 }
                 else {
-                    item.innerHTML = "";
-                    item.style.backgroundColor = "transparent";
+                    item.innerHTML = cartSize;
+                    item.style.backgroundColor = "#ff7004";
                 }
-            })
-        }
+            }
+            else {
+                item.innerHTML = "";
+                item.style.backgroundColor = "transparent";
+            }
+        })
     })
 })
 
@@ -127,6 +137,7 @@ document.addEventListener('click',function(e){
 
         let newCart = cartFromLocal.filter(item => item.id != parseInt(itemRemoveId));
         console.log(newCart);
+        console.log(JSON.stringify(newCart));
 
         localStorage.setItem("cart", JSON.stringify(newCart));
 
@@ -168,7 +179,10 @@ document.addEventListener('click',function(e){
 
 window.onload = () => {
     document.querySelectorAll(".header-action-num").forEach((item, index) => {
-        let cartSize = JSON.parse(localStorage.getItem("cart")).length;
+        let cartSize = 0;
+        if (JSON.parse(localStorage.getItem("cart") !== null)) {
+            cartSize = JSON.parse(localStorage.getItem("cart")).length;
+        }
         if (cartSize != 0) {
             if (cartSize < 10) {
                 item.innerHTML = "0" + cartSize;
