@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MAQFurni.Models;
+using Newtonsoft.Json;
 
 namespace MAQFurni.Areas_Order_Controllers
 {
@@ -28,20 +29,39 @@ namespace MAQFurni.Areas_Order_Controllers
             return View(await furnitureShopContext.ToListAsync());
         }
 
-        [HttpGet("admin/order/filter-by-status")]  
+        // [HttpPost("admin/order/filter-by-status")]  
+        // [ActionName("filter-by-status")]     
+        // public String FilterByStatus(int status)
+        // {
+        //     Console.WriteLine(status);
+        //     ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
+        //     List<Order> list;
+        //     if (status == 0){
+        //         list = _context.Orders.Include(o => o.User).Include(o => o.ShippingInfo).ToList();
+                
+        //     }
+        //     else {
+        //         list = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).Include(o => o.User).Include(o => o.ShippingInfo).ToList();
+        //     }
+        //     var json = JsonConvert.SerializeObject(list);
+            
+        //     return json;
+        // }
+        
+
+        [HttpPost("admin/order/filter-by-status")]  
         [ActionName("filter-by-status")]     
         public List<Order> FilterByStatus(int status)
         {
-            Console.WriteLine(status);
             ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
             List<Order> list;
-            if (status == 0)
+            if (status == 0){
                 list = _context.Orders.ToList();
-            else{
-                list = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).Include(o => o.User).ToList();
+                
             }
-            
-            
+            else {
+                list = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).ToList();
+            }
             return list;
         }
 
@@ -55,7 +75,7 @@ namespace MAQFurni.Areas_Order_Controllers
                 return View(await furnitureShopContext1.ToListAsync());
             }
             var furnitureShopContext = _context.Orders.Where(o => o.User.UserName.Contains(search)).Include(o => o.User);
-            
+            ViewBag.SearchString = search;
             return View("Index", await furnitureShopContext.ToListAsync());
         }
 
