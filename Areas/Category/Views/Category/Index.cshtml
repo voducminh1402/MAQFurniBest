@@ -1,45 +1,332 @@
-@model IEnumerable<MAQFurni.Models.Category>
+@model CategoryList
 
 @{
     ViewData["Title"] = "Index";
     Layout = "_Admin";
 }
 
-@section MySection {        
-    <h1>Index</h1>
+<div class="container">
+                <div class="page-header">
+                    <h1 class="page-header__title">Categories</h1>
+                </div>
+                <div class="page-tools">
+                    <div class="page-tools__breadcrumbs">
+                        <div class="breadcrumbs">
+                            <div class="breadcrumbs__container">
+                                <ol class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a class="breadcrumbs__link" href="index.html">
+                                            <svg class="icon-icon-home breadcrumbs__icon">
+                                                <use xlink:href="#icon-home"></use>
+                                            </svg>
+                                            <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
+                                                <use xlink:href="#icon-keyboard-right"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumbs__item disabled"><a class="breadcrumbs__link" href="#"><span>E-commerce</span>
+                        <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
+                          <use xlink:href="#icon-keyboard-right"></use>
+                        </svg></a>
+                                    </li>
+                                    <li class="breadcrumbs__item active"><span class="breadcrumbs__link">Categories</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-tools__right">
+                        <div class="page-tools__right-row">
+                            <div class="page-tools__right-item"><a class="button-icon" href="#"><span class="button-icon__icon">
+                      <svg class="icon-icon-print">
+                        <use xlink:href="#icon-print"></use>
+                      </svg></span></a>
+                            </div>
+                            <div class="page-tools__right-item"><a class="button-icon" href="#"><span class="button-icon__icon">
+                      <svg class="icon-icon-import">
+                        <use xlink:href="#icon-import"></use>
+                      </svg></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toolbox">
+                    <div class="toolbox__row row gutter-bottom-xs">
+                        <div class="toolbox__left col-12 col-lg">
+                            <div class="toolbox__left-row row row--xs gutter-bottom-xs">
+                                <div class="form-group form-group--inline col-12 col-sm-auto">
+                                    <label class="form-label">Show</label>
+                                    <div class="input-group input-group--white input-group--append">
+                                        <input class="input input--select" type="text" value="10" size="1" data-toggle="dropdown" readonly><span class="input-group__arrow">
+                        <svg class="icon-icon-keyboard-down">
+                          <use xlink:href="#icon-keyboard-down"></use>
+                        </svg></span>
+                                        <div class="dropdown-menu dropdown-menu--right dropdown-menu--fluid js-dropdown-select"><a class="dropdown-menu__item active" href="#" tabindex="0" data-value="10">10</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="15">15</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="20">20</a>
+                                            <a
+                                            class="dropdown-menu__item" href="#" tabindex="0" data-value="25">25</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="50">50</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group--inline col col-sm-auto">
+                                    <div class="input-group input-group--white input-group--append">
+                                        <select class="input js-input-select" data-placeholder="">
+                                            <option value="1" selected="selected">All Categories
+                                            </option>
+                                            @foreach (var item in Model.ListCategory)
+                                            {
+                                                <option value="@Html.DisplayFor(modelItem => item.CategoryId)">@Html.DisplayFor(modelItem => item.CategoryName)
+                                                </option>
+                                            }
+                                            
+                                        </select><span class="input-group__arrow">
+                        <svg class="icon-icon-keyboard-down">
+                          <use xlink:href="#icon-keyboard-down"></use>
+                        </svg></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbox__right col-12 col-lg-auto">
+                            <div class="toolbox__right-row row row--xs flex-nowrap">
+                                <div class="col-auto">
+                                    <button class="button-add button-add--blue btn-add-cate" data-modal="#addCategory"><span class="button-add__icon">
+                                        Add New Category
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-wrapper__content table-collapse scrollbar-thin scrollbar-visible" data-simplebar>
+                        <table class="table table--lines">
+                            <colgroup>
+                                <col width="90px">
+                                    <col width="100px">
+                                        <col width="350px">
+                                            <col>
+                                                <col>
+                                                    <col>
+                                                        <col>
+                                                            <col>
+                            </colgroup>
+                            <thead class="table__header">
+                                <tr class="table__header-row">
+                                    <th class="d-none d-lg-table-cell"><span>ID</span>
+                                    </th>
+                                    <th class="table__th-sort"><span class="align-middle">Category Name</span><span class="sort sort--down"></span>
+                                    </th>
+                                    <th class="table__th-sort"><span class="align-middle">Category Image</span><span class="sort sort--down"></span>
+                                    </th>
+                                    <th class="table__actions"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.ListCategory)
+                                {
+                                    <tr>
+                                    <td class="d-none d-lg-table-cell table__td"><span class="text-grey">@Html.DisplayFor(modelItem => item.CategoryId)</span>
+                                    </td>
+                                    <td class="table__td">@Html.DisplayFor(modelItem => item.CategoryName)</td>
+                                    <td class="table__td">
+                                        <a target="_blank" href="@Html.DisplayFor(modelItem => item.CategoryImage)">@Html.DisplayFor(modelItem => item.CategoryImage)</a>
+                                    </td>
+                                    <td class="table__td table__actions">
+                                        <div class="items-more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-more">
+                                                    <use xlink:href="#icon-more"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a data-modal="#editCategory" data-cate-id="@item.CategoryId" data-cate-name="@item.CategoryName" data-cate-image="@item.CategoryImage" asp-area="Category" asp-action="Edit" asp-route-id="@item.CategoryId" class="dropdown-items__link category-edit"><span class="dropdown-items__link-icon">
+                                    <svg class="icon-icon-archive">
+                                      <use xlink:href="#icon-archive"></use>
+                                    </svg></span>Edit</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item">
+                                                            <form id="deleteCateForm" asp-action="Delete" asp-route-id="@item.CategoryId">
+                                                                <input type="hidden" asp-for="@item.CategoryId" />
+                                                                <button type="submit" value="Delete" class="dropdown-items__link category-delete"><span class="dropdown-items__link-icon"><svg class="icon-icon-trash"><use xlink:href="#icon-trash"></use> </svg></span>Delete</button>
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                }
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-wrapper__footer">
+                        <div class="row">
+                            <div class="table-wrapper__show-result col text-grey"><span class="d-none d-sm-inline-block">Showing</span> 1 to 10 <span class="d-none d-sm-inline-block">of 50 items</span>
+                            </div>
+                            <div class="table-wrapper__pagination col-auto">
+                                <ol class="pagination">
+                                    <li class="pagination__item">
+                                        <a class="pagination__arrow pagination__arrow--prev" href="#">
+                                            <svg class="icon-icon-keyboard-left">
+                                                <use xlink:href="#icon-keyboard-left"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="pagination__item active"><a class="pagination__link" href="#">1</a>
+                                    </li>
+                                    <li class="pagination__item"><a class="pagination__link" href="#">2</a>
+                                    </li>
+                                    <li class="pagination__item"><a class="pagination__link" href="#">3</a>
+                                    </li>
+                                    <li class="pagination__item pagination__item--dots">...</li>
+                                    <li class="pagination__item"><a class="pagination__link" href="#">10</a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a class="pagination__arrow pagination__arrow--next" href="#">
+                                            <svg class="icon-icon-keyboard-right">
+                                                <use xlink:href="#icon-keyboard-right"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CategoryName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CategoryImage)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryImage)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CategoryId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="modal modal--panel modal--right" id="addCategory">
+    <div class="modal__overlay" data-dismiss="modal"></div>
+    <div class="modal__wrap">
+        <div class="modal__window scrollbar-thin" data-simplebar>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <div class="modal__container">
+                        <h2 class="modal__title">Add Categories</h2>
+                    </div>
+                </div>
+                <form asp-action="Create" method="POST">
+                <div class="modal__body">
+                    
+                    <div class="modal__container">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="row row--md">
+                                <div class="col-12 form-group form-group--lg">
+                                    <label  class="form-label">Category Name</label>
+                                    <div class="input-group">
+                                        <input asp-for="@Model.Category.CategoryName" class="input" type="text" placeholder="" required>
+                                        <span asp-validation-for="@Model.Category.CategoryName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group form-group--lg">
+                                    <label asp-for="@Model.Category.CategoryImage" class="form-label">Product Images</label>
+                                    <div class="image-upload">
+                                        <div class="image-upload__drop">
+                                            <input class="image-upload__input" type="file" name="file_upload" multiple="multiple" accept="image/png, image/jpeg" />
+                                            <div class="image-upload__drop-text">
+                                                <svg class="icon-icon-upload">
+                                                    <use xlink:href="#icon-upload"></use>
+                                                </svg><span class="image-upload__drop-action text-blue">Browse</span>   <span> image to upload</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input asp-for="@Model.Category.CategoryImage" type="hidden" id="category__preview-input">
+                                    <a style="display: none;" id="category__preview-image" target="_blank" href="">Click here to preview image</a>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+                <div class="modal__footer">
+                    <div class="modal__container">
+                        <div class="modal__footer-buttons">
+                            <div class="modal__footer-button">
+                                <button class="button button--primary button--block" type="submit" value="Create"><span class="button__text">Create</span>
+                                </button>
+                                @*  data-dismiss="modal" data-modal="#addProductSuccess" *@
+                            </div>
+                            <div class="modal__footer-button">
+                                <button class="button button--secondary button--block" data-dismiss="modal"><span class="button__text">Cancel</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-}
+<div class="modal modal--panel modal--right" id="editCategory">
+        <div class="modal__overlay" data-dismiss="modal"></div>
+        <div class="modal__wrap">
+            <div class="modal__window scrollbar-thin" data-simplebar>
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <div class="modal__container">
+                            <h2 class="modal__title">Add Categories</h2>
+                        </div>
+                    </div>
+                    <form id="editCateForm" asp-action="Edit" method="POST">
+                    <div class="modal__body">
+                        
+                        <div class="modal__container">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="row row--md">
+                                    <div class="col-12 form-group form-group--lg">
+                                        <label  class="form-label">Category Name</label>
+                                        <div class="input-group">
+                                            <input asp-for="@Model.Category.CategoryName" class="input" type="text" placeholder="" id="categoryName" required>
+                                            <span asp-validation-for="@Model.Category.CategoryName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group form-group--lg">
+                                        <label asp-for="@Model.Category.CategoryImage" class="form-label">Product Images</label>
+                                        <div class="image-upload">
+                                            <div class="image-upload__drop">
+                                                <input class="image-upload__input" type="file" name="file_upload" multiple="multiple" accept="image/png, image/jpeg" />
+                                                <div class="image-upload__drop-text">
+                                                    <svg class="icon-icon-upload">
+                                                        <use xlink:href="#icon-upload"></use>
+                                                    </svg><span class="image-upload__drop-action text-blue">Browse</span>   <span> image to upload</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input asp-for="@Model.Category.CategoryImage" type="hidden" id="categoryImage">
+                                        <input asp-for="@Model.Category.CategoryId" type="hidden" id="categoryId">
+                                        <a id="categoryEditImage" target="_blank" href="">Click here to preview image</a>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal__footer">
+                        <div class="modal__container">
+                            <div class="modal__footer-buttons">
+                                <div class="modal__footer-button">
+                                    <button class="button button--primary button--block" type="submit" value="Edit"><span class="button__text">Edit</span>
+                                    </button>
+                                    @*  data-dismiss="modal" data-modal="#addProductSuccess" *@
+                                </div>
+                                <div class="modal__footer-button">
+                                    <button class="button button--secondary button--block" data-dismiss="modal"><span class="button__text">Cancel</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    

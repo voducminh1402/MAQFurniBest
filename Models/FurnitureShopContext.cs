@@ -42,7 +42,7 @@ namespace MAQFurni.Models
 
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.Property(e => e.CategoryId).ValueGeneratedNever();
+                entity.Property(e => e.CategoryId).ValueGeneratedOnAdd();
             });
 
             modelBuilder.Entity<Order>(entity =>
