@@ -9,6 +9,7 @@ using MAQFurni.Models;
 
 namespace MAQFurni.Areas_Category_Controllers
 {
+    [Area("Category")]
     public class CategoryController : Controller
     {
         private readonly FurnitureShopContext _context;
@@ -19,9 +20,13 @@ namespace MAQFurni.Areas_Category_Controllers
         }
 
         // GET: Category
+        [HttpGet("/admin/category")]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Categories.ToListAsync());
+            CategoryList ctl = new CategoryList();
+            ctl.ListCategory =await _context.Categories.ToListAsync();
+            ctl.Category = new Category();
+            return View(ctl);
         }
 
         // GET: Category/Details/5
@@ -51,20 +56,28 @@ namespace MAQFurni.Areas_Category_Controllers
         // POST: Category/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("/admin/category/create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,CategoryName,CategoryImage")] Category category)
+        public async Task<IActionResult> Create([Bind("CategoryName,CategoryImage")] Category category)
         {
             if (ModelState.IsValid)
             {
+                
                 _context.Add(category);
                 await _context.SaveChangesAsync();
+                
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            else {
+                CategoryList ctl = new CategoryList();
+                ctl.ListCategory =await _context.Categories.ToListAsync();
+                ctl.Category = new Category();
+                return View("Index", ctl);
+            } 
         }
 
         // GET: Category/Edit/5
+        [HttpGet("/admin/category/edit/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -83,7 +96,7 @@ namespace MAQFurni.Areas_Category_Controllers
         // POST: Category/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("/admin/category/edit/{id}"), ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CategoryId,CategoryName,CategoryImage")] Category category)
         {
@@ -116,6 +129,7 @@ namespace MAQFurni.Areas_Category_Controllers
         }
 
         // GET: Category/Delete/5
+        [HttpGet("/admin/category/delete/{id}")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +148,7 @@ namespace MAQFurni.Areas_Category_Controllers
         }
 
         // POST: Category/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost("/admin/category/delete/{id}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
