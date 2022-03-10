@@ -16004,6 +16004,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Home\\SearchProduct.cshtml",
+      "TargetPath": "Views\\Home\\SearchProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Home\\ProductDetail.cshtml",
+      "TargetPath": "Views\\Home\\ProductDetail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Category\\Views\\Category\\Details.cshtml",
       "TargetPath": "Areas\\Category\\Views\\Category\\Details.cshtml",
       "FileKind": "mvc"
