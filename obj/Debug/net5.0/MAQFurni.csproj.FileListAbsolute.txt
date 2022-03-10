@@ -445,6 +445,7 @@ C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\P
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Index.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewImports.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewStart.cshtml.g.cs
+<<<<<<< HEAD
 D:\MAQFurniBest\bin\Debug\net5.0\appsettings.Development.json
 D:\MAQFurniBest\bin\Debug\net5.0\appsettings.json
 D:\MAQFurniBest\bin\Debug\net5.0\MAQFurni.StaticWebAssets.xml
@@ -700,3 +701,19 @@ C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Users\Edit.csht
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Users\Index.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Home\SearchProduct.cshtml.g.cs
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Home\ProductDetail.cshtml.g.cs
+=======
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Create.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Delete.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Details.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Edit.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Category\Views\Category\Index.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Category\Views\_ViewImports.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Category\Views\_ViewStart.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Create.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Delete.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Details.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Edit.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\Product\Index.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewImports.cshtml.g.cs
+C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewStart.cshtml.g.cs
+>>>>>>> 5a7e0124ea836679c9122ceb3af3407c2395c5d8
