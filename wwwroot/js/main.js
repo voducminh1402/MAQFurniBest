@@ -503,3 +503,9 @@
 
 
 })(jQuery);
+
+jQuery(function() {
+  jQuery('#sort').change(function() {
+      this.form.submit();
+  });
+});
