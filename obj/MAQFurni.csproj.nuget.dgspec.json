@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {}
   },
   "projects": {
@@ -13,26 +12,9 @@
         "projectPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
         "packagesPath": "C:\\Users\\VODUCMINH\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
-=======
-    "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
-        "projectName": "MAQFurni",
-        "projectPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\",
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
         "projectStyle": "PackageReference",
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -145,11 +127,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
         }
       }
     }
