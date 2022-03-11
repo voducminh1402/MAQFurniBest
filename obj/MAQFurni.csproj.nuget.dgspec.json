@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
+        "projectName": "MAQFurni",
+        "projectPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\",
+=======
     "D:\\MAQFurniBest\\MAQFurni.csproj": {}
   },
   "projects": {
@@ -12,6 +25,7 @@
         "projectPath": "D:\\MAQFurniBest\\MAQFurni.csproj",
         "packagesPath": "C:\\Users\\PhongVu\\.nuget\\packages\\",
         "outputPath": "D:\\MAQFurniBest\\obj\\",
+>>>>>>> 2d42d070df749a656816f9ba52056a68910d948b
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

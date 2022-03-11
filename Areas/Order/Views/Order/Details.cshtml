@@ -32,6 +32,7 @@
                                     </li>
                                     <li class="breadcrumbs__item">
                                         <a  class="breadcrumbs__link" asp-action="Index"><span>Orders</span>
+
                         <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
                           <use xlink:href="#icon-keyboard-right"></use>
                         </svg></a>
@@ -163,98 +164,59 @@
                                         </th>
                                         <th><span>TOTAL</span>
                                         </th>
-                                        <th class="table__actions"></th>
+                                        @* <th class="table__actions"></th> *@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table__row">
+                                    @{
+                                        var list = ViewBag.Product;
+                                    foreach (var item in list)
+                                    {
+                                        
+                                            decimal price = item.DetailPrice * item.Quantity;
+                                        
+                                        <tr class="table__row">
                                         <td class="table__td">
-                                            <div class="mw-200"><span class="text-light-theme">MacBook Pro 15” (Mid 2018)</span>
+                                            <div class="mw-200"><span class="text-light-theme">@item.Product.ProductName</span>
                                             </div>
                                         </td>
                                         <td class="table__td text-center text-dark-theme">
                                             <div class="d-inline-block">
                                                 <div class="input-group input-group--prepend-xs">
                                                     <div class="input-group__prepend">$</div>
-                                                    <div class="input input--edit" contenteditable="true">2500</div>
+                                                    <div class="input input--edit">@item.DetailPrice</div>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="table__td text-center">
-                                            <input class="input input--edit text-center text-light-theme" type="number" value="10" min="0" max="999">
+  
+                                                    <div class="input input--edit">@item.Quantity</div>
                                         </td>
-                                        <td class="table__td text-nowrap text-dark-theme">$25,000</td>
-                                        <td class="table__td table__actions text-dark-theme">
+                                        <td class="table__td text-nowrap text-dark-theme">$@price</td>
+                                        @* <td class="table__td table__actions text-dark-theme">
                                             <button class="table__remove" type="button">
                                                 <svg class="icon-icon-trash">
                                                     <use xlink:href="#icon-trash"></use>
                                                 </svg>
                                             </button>
-                                        </td>
+                                        </td> *@
                                     </tr>
-                                    <tr class="table__row">
-                                        <td class="table__td">
-                                            <div class="mw-200"><span class="text-light-theme">MacBook Pro 15” (Mid 2018)</span>
-                                            </div>
-                                        </td>
-                                        <td class="table__td text-center text-dark-theme">
-                                            <div class="d-inline-block">
-                                                <div class="input-group input-group--prepend-xs">
-                                                    <div class="input-group__prepend">$</div>
-                                                    <div class="input input--edit" contenteditable="true">2500</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="table__td text-center">
-                                            <input class="input input--edit text-center text-light-theme" type="number" value="10" min="0" max="999">
-                                        </td>
-                                        <td class="table__td text-nowrap text-dark-theme">$25,000</td>
-                                        <td class="table__td table__actions text-dark-theme">
-                                            <button class="table__remove" type="button">
-                                                <svg class="icon-icon-trash">
-                                                    <use xlink:href="#icon-trash"></use>
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="table__row">
-                                        <td class="table__td">
-                                            <div class="mw-200"><span class="text-light-theme">MacBook Pro 15” (Mid 2018)</span>
-                                            </div>
-                                        </td>
-                                        <td class="table__td text-center text-dark-theme">
-                                            <div class="d-inline-block">
-                                                <div class="input-group input-group--prepend-xs">
-                                                    <div class="input-group__prepend">$</div>
-                                                    <div class="input input--edit" contenteditable="true">2500</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="table__td text-center">
-                                            <input class="input input--edit text-center text-light-theme" type="number" value="10" min="0" max="999">
-                                        </td>
-                                        <td class="table__td text-nowrap text-dark-theme">$25,000</td>
-                                        <td class="table__td table__actions text-dark-theme">
-                                            <button class="table__remove" type="button">
-                                                <svg class="icon-icon-trash">
-                                                    <use xlink:href="#icon-trash"></use>
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    }}
+                                    
+                                    
                                 </tbody>
                             </table>
                         </div>
                         <div class="card-order__footer-total">
                             <div class="card__container">
                                 <div class="row gutter-bottom-sm justify-content-end">
-                                    <div class="card-order__footer-submit col-12 col-sm">
+                                    @* <div class="card-order__footer-submit col-12 col-sm">
                                         <button class="button button--secondary" type="button"><span class="button__text">Add Product</span>
                                         </button>
-                                    </div>
+                                    </div> *@
                                     <div class="col-auto">
                                         <ul class="card-order__total">
-                                            <li class="card-order__total-item">
+                                            @* <li class="card-order__total-item">
                                                 <div class="card-order__total-title">Subtotal:</div>
                                                 <div class="card-order__total-value">$75,000</div>
                                             </li>
@@ -265,10 +227,10 @@
                                             <li class="card-order__total-item">
                                                 <div class="card-order__total-title">DISCOUNT:</div>
                                                 <div class="card-order__total-value">10%</div>
-                                            </li>
+                                            </li> *@
                                             <li class="card-order__total-item card-order__total-footer">
                                                 <div class="card-order__total-title">total:</div>
-                                                <div class="card-order__total-value">$81,000</div>
+                                                <div class="card-order__total-value">@Html.DisplayFor(model => model.TotalPrice)</div>
                                             </li>
                                         </ul>
                                     </div>

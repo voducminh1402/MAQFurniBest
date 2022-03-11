@@ -31,7 +31,8 @@
                 </svg></a>
             </li>
             <li class="breadcrumbs__item active">
-              <span class="breadcrumbs__link">Orders</span>
+              <a asp-action="Index" class="breadcrumbs__link"><span>Orders</span></a>
+
             </li>
           </ol>
         </div>
@@ -280,17 +281,23 @@
   }
   $('#status').change(function () {
     var data = "";
-    $.ajax({
-      type: "POST",
-      url: "./filter-by-status",
-      data: "status=" + $(this).val(),
-      async: false,
-      success: function (response) {
-        data = response;
-        console.log(response);
-        let dataRow = "";
-        for (let i = 0; i < response.length; i++) {
-          dataRow += `<tr class="table__row">
+
+    let currentUrl = window.location;
+    if (currentUrl.href.toString().includes("search")) {
+      $.ajax({
+        type: "POST",
+
+        url: "./filter-by-status",
+
+
+        data: "status=" + $(this).val(),
+        async: false,
+        success: function (response) {
+          data = response;
+          let dataRow = "";
+          for (let i = 0; i < response.length; i++) {
+            dataRow += `<tr class="table__row">
+
             <td class="table__td">
             <div class="table__checkbox table__checkbox--all">
             <label class="checkbox">
@@ -325,16 +332,16 @@
 
             </td>
             </tr>`;
+          }
+
+
+          $("#order-table").html(dataRow);
+        },
+        error: function () {
+          alert('Error occured');
         }
+      });
 
-
-        $("#order-table").html(dataRow);
-      },
-      error: function () {
-        alert('Error occured');
-      }
     });
-
-  });
 </script>
 }
