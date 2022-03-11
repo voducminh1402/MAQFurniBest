@@ -963,3 +963,5 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\SearchP
 D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\ProductDetail.cshtml.g.cs
 D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\SearchProduct.cshtml.g.cs
 >>>>>>> 2d42d070df749a656816f9ba52056a68910d948b
+D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\Checkout.cshtml.g.cs
+D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
