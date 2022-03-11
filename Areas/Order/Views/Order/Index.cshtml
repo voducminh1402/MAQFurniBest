@@ -31,7 +31,11 @@
                 </svg></a>
             </li>
             <li class="breadcrumbs__item active">
+<<<<<<< HEAD
               <a asp-action="Index" class="breadcrumbs__link"><span>Orders</span></a>
+=======
+              <span class="breadcrumbs__link">Orders</span>
+>>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
             </li>
           </ol>
         </div>
@@ -280,6 +284,7 @@
   }
   $('#status').change(function () {
     var data = "";
+<<<<<<< HEAD
     let currentUrl = window.location;
     if (currentUrl.href.toString().includes("search")) {
       $.ajax({
@@ -295,6 +300,19 @@
           let dataRow = "";
           for (let i = 0; i < response.length; i++) {
             dataRow += `<tr class="table__row">
+=======
+    $.ajax({
+      type: "POST",
+      url: "./filter-by-status",
+      data: "status=" + $(this).val(),
+      async: false,
+      success: function (response) {
+        data = response;
+        console.log(response);
+        let dataRow = "";
+        for (let i = 0; i < response.length; i++) {
+          dataRow += `<tr class="table__row">
+>>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
             <td class="table__td">
             <div class="table__checkbox table__checkbox--all">
             <label class="checkbox">
@@ -329,6 +347,7 @@
 
             </td>
             </tr>`;
+<<<<<<< HEAD
           }
 
 
@@ -397,6 +416,17 @@
       });
     }
 
+=======
+        }
+
+
+        $("#order-table").html(dataRow);
+      },
+      error: function () {
+        alert('Error occured');
+      }
+    });
+>>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
 
   });
 </script>

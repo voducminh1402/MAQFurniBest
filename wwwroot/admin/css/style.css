@@ -1377,6 +1377,13 @@ html[data-theme='light'] .button--secondary:hover {
   transition: var(--t-base);
 }
 
+.btn-add-cate {
+  display: inline-block !important;
+  width: 100% !important;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
 .button-add--sm {
   width: 34px;
   height: 34px;
@@ -2431,7 +2438,8 @@ html[data-theme='light'] .button--secondary:hover {
   /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
   width: auto;
   visibility: visible;
-  overflow: auto;
+  overflow-x: scroll !important;
+  overflow-y: visible !important;
   /* Scroll on this element otherwise element can't have a padding applied properly */
   max-width: 100%;
   /* Not required for horizontal scroll to trigger */

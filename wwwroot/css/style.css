@@ -15003,6 +15003,16 @@ body.offcanvas-open {
 .product-details-content .pro-details-policy {
   margin: 25px 0 0;
 }
+
+.product-search-thumb a{
+  width: 510px;
+  height: 400px;
+}
+
+.product-search-thumb a img {
+  height: 100% !important;
+  width: 100% !important;
+}
 .product-details-content .pro-details-policy li {
   margin-bottom: 20px;
   display: block;
