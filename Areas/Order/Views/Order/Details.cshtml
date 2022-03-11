@@ -30,7 +30,8 @@
                           <use xlink:href="#icon-keyboard-right"></use>
                         </svg></a>
                                     </li>
-                                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="orders.html"><span>Orders</span>
+                                    <li class="breadcrumbs__item">
+                                        <a  class="breadcrumbs__link" asp-action="Index"><span>Orders</span>
                         <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
                           <use xlink:href="#icon-keyboard-right"></use>
                         </svg></a>
@@ -67,8 +68,6 @@
                                         <div class="col">
                                             <h3 class="card__title">Customer</h3>
                                         </div>
-                                        @* <div class="col-auto"><span class="card__date">Placed on 12.07.2018 10:00</span>
-                                        </div> *@
                                     </div>
                                 </div>
                                 <ul class="card-order__customer-list">
@@ -93,101 +92,38 @@
                         <section class="card-order__section card-order__method">
                             <div class="card__container">
                                 <div class="row gutter-bottom-sm">
-                                    @* <div class="col">
-                                        <h3 class="card__title">Payment method</h3>
+                                    <div class="col">
+                                        <h3 class="card__title">Order Status</h3>
                                         <div class="card-order__payment">
+                                            
                                             <div class="form-group">
                                                 <div class="input-group input-group--append">
-                                                    <select class="input js-input-select input--fluid" data-placeholder="">
-                                                        <option value="1" selected="selected">Credit Card
-                                                        </option>
-                                                        <option value="2">Pay Pal
-                                                        </option>
-                                                    </select><span class="input-group__arrow">
+                                                    <select class="input js-input-select input--fluid form-control" asp-items="ViewBag.OrderStatus"></select>
+                                                    <span class="input-group__arrow">
                               <svg class="icon-icon-keyboard-down">
                                 <use xlink:href="#icon-keyboard-down"></use>
                               </svg></span>
                                                 </div>
                                             </div>
-                                            <ul class="card-order__list">
-                                                <li><b>Transaction ID:</b> 000001-TXHQ</li>
-                                                <li><b>Amount:</b> $2500</li>
-                                            </ul>
+
+                                            
+     
                                         </div>
-                                    </div> *@
+                                    </div>
                                     <div class="col">
                                         <h3 class="card__title">Shipping method</h3>
                                         <div class="card-order__shipping">
-                                            <div class="form-group">
-                                                <div class="input-group input-group--append">
-                                                    <select class="input js-input-select input--fluid" data-placeholder="">
-                                                        <option value="1" selected="selected">Carrier
-                                                        </option>
-                                                    </select><span class="input-group__arrow">
-                              <svg class="icon-icon-keyboard-down">
-                                <use xlink:href="#icon-keyboard-down"></use>
-                              </svg></span>
-                                                </div>
-                                            </div>
-                                            @* <ul class="card-order__list">
-                                                <li><b>Tracking Code:</b> FX-012345-6</li>
-                                                <li><b>Date:</b> 12.15.2018</li>
-                                            </ul> *@
+                                            @Html.DisplayFor(model => model.ShippingInfo.Address)
                                         </div>
                                     </div>
-                                    @* <div class="col-12 col-sm-10 col-md-8 col-xl card-order__method-status">
-                                        <div class="card-order__status-panel">
-                                            <div class="form-group form-group--inline">
-                                                <label class="form-label">Fulfilment status</label>
-                                                <div class="input-group input-group--white input-group--append">
-                                                    <select class="input js-input-select input--fluid" data-placeholder="">
-                                                        <option value="1" selected="selected">Delivered
-                                                        </option>
-                                                    </select><span class="input-group__arrow">
-                              <svg class="icon-icon-keyboard-down">
-                                <use xlink:href="#icon-keyboard-down"></use>
-                              </svg></span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group form-group--inline">
-                                                <label class="form-label">Payment status</label>
-                                                <div class="input-group input-group--white input-group--append">
-                                                    <select class="input js-input-select input--fluid" data-placeholder="">
-                                                        <option value="1" selected="selected">Paid
-                                                        </option>
-                                                    </select><span class="input-group__arrow">
-                              <svg class="icon-icon-keyboard-down">
-                                <use xlink:href="#icon-keyboard-down"></use>
-                              </svg></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> *@
+                                    
                                 </div>
                             </div>
                         </section>
                         <section class="card-order__section color-grey-bg">
                             <div class="card__container">
                                 <div class="row gutter-bottom-sm">
-                                    @* <div class="col">
-                                        <h3 class="card__title">Payment method</h3>
-                                        <address class="card-order__address">
-                        <ul class="card-order__list">
-                          <li><b>First name:</b> Sophia</li>
-                          <li><b>Last name:</b> Hale</li>
-                        </ul>
-                        <ul class="card-order__list">
-                          <li><b>Address:</b> 4898 Joanne Lane street</li>
-                          <li><b>City:</b> Boston</li>
-                          <li><b>Country: </b>United States</li>
-                          <li><b>State:</b> Massachusetts</li>
-                          <li><b>Zip code:</b> 02110</li>
-                        </ul>
-                        <ul class="card-order__list">
-                          <li><b>Phone:</b> <a href="+10701234567">+1 (070) 123-4567</a></li>
-                        </ul>
-                      </address>
-                                    </div> *@
+                                    
                                     <div class="col">
                                         <h3 class="card__title">Shipping address</h3>
                                         <address class="card-order__address">
@@ -371,5 +307,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.OrderId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    
 </div> *@
