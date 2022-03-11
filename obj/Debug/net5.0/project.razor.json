@@ -15675,11 +15675,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Category\\Views\\Category\\Delete.cshtml",
       "TargetPath": "Areas\\Category\\Views\\Category\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
       "FileKind": "mvc"
@@ -15700,11 +15703,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Order\\Views\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Order\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "FileKind": "mvc"
@@ -15755,11 +15761,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Shared\\_Admin.cshtml",
       "TargetPath": "Views\\Shared\\_Admin.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -15795,11 +15804,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Category\\Views\\Category\\Index.cshtml",
       "TargetPath": "Areas\\Category\\Views\\Category\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
       "FileKind": "mvc"
@@ -15840,11 +15852,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Users\\Views\\Users\\Create.cshtml",
       "TargetPath": "Areas\\Users\\Views\\Users\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Product\\Index.cshtml",
       "TargetPath": "Views\\Product\\Index.cshtml",
       "FileKind": "mvc"
@@ -15899,6 +15914,7 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Product\\Views\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Product\\Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -15909,6 +15925,8 @@
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
       "FileKind": "mvc"
@@ -15919,6 +15937,7 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Users\\Delete.cshtml",
       "TargetPath": "Views\\Users\\Delete.cshtml",
       "FileKind": "mvc"
@@ -15929,16 +15948,21 @@
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Users\\Views\\Users\\Details.cshtml",
       "TargetPath": "Areas\\Users\\Views\\Users\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> dev
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
