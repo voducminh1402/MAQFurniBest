@@ -2,71 +2,95 @@
 @using MAQFurni.Areas.Identity.Pages.Account
 @model LoginModel
 
-    <div class="breadcrumb-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row breadcrumb_box  align-items-center">
-                        <div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-left">
-                            <h2 class="breadcrumb-title">Shop</h2>
-                        </div>
-                        <div class="col-lg-6  col-md-6 col-sm-12">
-                            <!-- breadcrumb-list start -->
-                            <ul class="breadcrumb-list text-center text-md-right">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Login</li>
-                            </ul>
-                            <!-- breadcrumb-list end -->
-                        </div>
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row breadcrumb_box  align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-left">
+                        <h2 class="breadcrumb-title">Shop</h2>
+                    </div>
+                    <div class="col-lg-6  col-md-6 col-sm-12">
+                        <!-- breadcrumb-list start -->
+                        <ul class="breadcrumb-list text-center text-md-right">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Login</li>
+                        </ul>
+                        <!-- breadcrumb-list end -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- breadcrumb-area end -->
+<!-- breadcrumb-area end -->
 
-    <!-- login area start -->
-    <div class="login-register-area pt-100px pb-100px">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-12 ml-auto mr-auto">
-                    <div class="login-register-wrapper">
-                        <div class="login-register-tab-list nav">
-                            <a class="active" data-bs-toggle="tab" href="#lg1">
-                                <h4>login</h4>
-                            </a>
-                        </div>
-                        <div class="tab-content">
-                            <div id="lg1" class="tab-pane active">
-                                <div class="login-form-container">
-                                    <div class="login-register-form">
-                                        <form id="account" method="post">
-                                            <div asp-validation-summary="All" class="text-danger"></div>
-                                            <input asp-for="Input.Email" type="text" placeholder="Email" />
-                                            <input asp-for="Input.Password" type="password" placeholder="Password" />
-                                            <div class="button-box">
-                                                <div class="login-toggle-btn">
-                                                    <input asp-for="Input.RememberMe" />
-                                                    @Html.DisplayNameFor(m => m.Input.RememberMe)
-                                                    <a class="flote-none" href="javascript:void(0)">Remember me</a>
-                                                    <a asp-page="./ForgotPassword">Forgot Password?</a>
-                                                </div>
-                                                <button type="submit"><span>Login</span></button>
+<!-- login area start -->
+<div class="login-register-area pt-100px pb-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a class="active" data-bs-toggle="tab" href="#lg1">
+                            <h4>login</h4>
+                        </a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form id="account" method="post">
+                                        <div asp-validation-summary="All" class="text-danger"></div>
+                                        <input asp-for="Input.Email" type="text" placeholder="Email" />
+                                        <input asp-for="Input.Password" type="password" placeholder="Password" />
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+                                                <input asp-for="Input.RememberMe" />
+                                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                                <a class="flote-none" href="javascript:void(0)">Remember me</a>
+                                                <a asp-page="./ForgotPassword">Forgot Password?</a>
                                             </div>
-                                        </form>
-                                    </div>
+                                            <button type="submit"><span>Login</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-12">
+                                    @if ((Model.ExternalLogins?.Count ?? 0) != 0)
+                                    {
+                                        <section>
+                                            <hr />
+                                            <form id="external-account" asp-page="./ExternalLogin"
+                                            asp-route-returnUrl="@Model.ReturnUrl" method="post"
+                                            class="form-horizontal">
+                                                <div style="display: flex; justify-content: center;">
+                                                    <p>
+                                                        @foreach (var provider in Model.ExternalLogins)
+                                                        {
+                                                            <button type="submit" class="btn btn-primary" name="provider"
+                                                        value="@provider.Name"
+                                                        title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                                        }
+                                                    </p>
+                                                </div>
+                                            </form>
+                                        </section>
+                                    }
                                 </div>
                             </div>
-                            
                         </div>
+
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- login area end -->
+</div>
+<!-- login area end -->
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+<partial name="_ValidationScriptsPartial" />
 }

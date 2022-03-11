@@ -963,3 +963,9 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\SearchP
 D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\ProductDetail.cshtml.g.cs
 D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\SearchProduct.cshtml.g.cs
 >>>>>>> 2d42d070df749a656816f9ba52056a68910d948b
+C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Shared\Components\MessagePage\Default.cshtml.g.cs
+C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\MailKit.dll
+C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\MimeKit.dll
+C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\CheckoutSuccess.cshtml.g.cs

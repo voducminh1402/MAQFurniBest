@@ -150,9 +150,16 @@ namespace MAQFurni.Controllers
                     Console.WriteLine($"{id} - {price} - {quantity}");
                     totalPrice += price * quantity;
                     Product pro = await _context.Products.SingleOrDefaultAsync(o => o.ProductId.Equals(id));
+                    if (pro.Quantity == 0)
+                    {
+                        ViewBag.ProductId = id;
+                        ViewBag.ProductQuantity = 0;
+                        return View("Checkout");
+                    }
                     if (pro.Quantity < quantity)
                     {
                         ViewBag.ProductId = id;
+                        ViewBag.ProductQuantity = pro.Quantity;
                         return View("Checkout");
                     }
                     dic.Add(pro, quantity);

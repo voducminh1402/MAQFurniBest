@@ -13566,6 +13566,38 @@
         }
       },
       {
+        "HashCode": 1127581693,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__MessagePageViewComponentTagHelper",
+        "AssemblyName": "MAQFurni",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:message-page",
+            "Attributes": [
+              {
+                "Name": "message"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "MVC.ViewComponent",
+            "Name": "message",
+            "TypeName": "MAQFurni.MessagePage.Message",
+            "Metadata": {
+              "Common.PropertyName": "message"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__MessagePageViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "MessagePage"
+        }
+      },
+      {
         "HashCode": 141407075,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -15909,6 +15941,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Home\\CheckoutSuccess.cshtml",
+      "TargetPath": "Views\\Home\\CheckoutSuccess.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
       "FileKind": "mvc"
@@ -15976,6 +16013,11 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Shared\\Components\\MessagePage\\Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\MessagePage\\Default.cshtml",
       "FileKind": "mvc"
     },
     {
