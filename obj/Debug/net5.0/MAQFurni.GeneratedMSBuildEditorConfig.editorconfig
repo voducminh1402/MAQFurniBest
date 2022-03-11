@@ -3,12 +3,8 @@ build_property.TargetFramework = net5.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
-build_property.InvariantGlobalization = 
-build_property.PlatformNeutralAssembly = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MAQFurni
-<<<<<<< HEAD
-build_property.ProjectDir = c:\Users\HP\Desktop\prn22\MAQFurniBest\
-=======
-build_property.ProjectDir = D:\MAQFurniBest\
->>>>>>> 2d42d070df749a656816f9ba52056a68910d948b
+build_property.ProjectDir = C:\Users\HP\Desktop\prn22\MAQFurniBest\

@@ -957,14 +957,9 @@ C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Vie
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewImports.cshtml.g.cs
 C:\Users\HP\Desktop\prn211\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Product\Views\_ViewStart.cshtml.g.cs
 >>>>>>> 5a7e0124ea836679c9122ceb3af3407c2395c5d8
-<<<<<<< HEAD
 >>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\ProductDetail.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\SearchProduct.cshtml.g.cs
-D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\ProductDetail.cshtml.g.cs
-D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\SearchProduct.cshtml.g.cs
->>>>>>> 2d42d070df749a656816f9ba52056a68910d948b
-=======
 D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\ProductDetail.cshtml.g.cs
 D:\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\SearchProduct.cshtml.g.cs
 >>>>>>> 2d42d070df749a656816f9ba52056a68910d948b
