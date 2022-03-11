@@ -41,6 +41,7 @@ namespace MAQFurni.Controllers
 
             ViewBag.ProductList = searchList;
             ViewBag.Search = search;
+            ViewBag.Cond = "Relevance";
 
             return View("SearchProduct");
         }
