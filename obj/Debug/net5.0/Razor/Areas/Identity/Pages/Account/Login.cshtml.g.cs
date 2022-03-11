@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma checksum "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "6b7fd91a37f6237cd2325a25e30e0013d87cdb56"
+=======
+#pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\Login.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "ad7bf40bce849acedbc88ab36baeff5e6e5865c5"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\Login.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "ad7bf40bce849acedbc88ab36baeff5e6e5865c5"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -164,6 +168,9 @@ using MAQFurni.Areas.Identity.Pages.Account;
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad7bf40bce849acedbc88ab36baeff5e6e5865c59623", async() => {
                 WriteLiteral("\r\n                                            ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad7bf40bce849acedbc88ab36baeff5e6e5865c59925", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -191,6 +198,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
 =======
                 WriteLiteral("\r\n                                            ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ad7bf40bce849acedbc88ab36baeff5e6e5865c511628", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -220,6 +230,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 =======
                 WriteLiteral("\r\n                                            ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ad7bf40bce849acedbc88ab36baeff5e6e5865c513464", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -249,6 +262,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 =======
                 WriteLiteral("\r\n                                            <div class=\"button-box\">\r\n                                                <div class=\"login-toggle-btn\">\r\n                                                    ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ad7bf40bce849acedbc88ab36baeff5e6e5865c515469", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -272,9 +288,12 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n                                                ");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 51 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
                                            Write(Html.DisplayNameFor(m => m.Input.RememberMe));
 =======
+=======
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 #line 51 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\Login.cshtml"
                                                Write(Html.DisplayNameFor(m => m.Input.RememberMe));
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -288,6 +307,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 =======
                 WriteLiteral("\r\n                                                    <a class=\"flote-none\" href=\"javascript:void(0)\">Remember me</a>\r\n                                                    ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad7bf40bce849acedbc88ab36baeff5e6e5865c517489", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                     WriteLiteral("Forgot Password?");
                 }
@@ -431,6 +453,9 @@ WriteAttributeValue(" ", 4151, provider.DisplayName, 4152, 21, false);
 =======
                 WriteLiteral("\r\n    ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ad7bf40bce849acedbc88ab36baeff5e6e5865c520638", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );

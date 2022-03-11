@@ -130,6 +130,7 @@ detailAdd.addEventListener("click", () => {
             }
         })
 })
+<<<<<<< HEAD
 
 detailAdd.addEventListener("click", () => {
   let cartFromLocal = JSON.parse(localStorage.getItem("cart"));
@@ -181,6 +182,8 @@ detailAdd.addEventListener("click", () => {
     }
   });
 });
+=======
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 
 cartIcon.forEach((item, index) => {
     item.addEventListener("click", () => {

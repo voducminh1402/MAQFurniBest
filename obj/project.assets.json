@@ -8709,19 +8709,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VODUCMINH\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
       "projectName": "MAQFurni",
-      "projectPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
-      "packagesPath": "C:\\Users\\VODUCMINH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8846,20 +8850,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
-<<<<<<< HEAD
-  }
-=======
   },
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
->>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 }

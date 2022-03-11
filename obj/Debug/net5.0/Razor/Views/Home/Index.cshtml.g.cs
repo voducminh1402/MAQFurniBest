@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma checksum "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "5a8c0678b6a133f947de8a74ebaf7efa0afc58c7"
+=======
+#pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "5a8c0678b6a133f947de8a74ebaf7efa0afc58c7"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "5a8c0678b6a133f947de8a74ebaf7efa0afc58c7"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -95,7 +99,11 @@ using MAQFurni.Models;
                                 <div class=""hero-slide-image"">
                                     ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c79874", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c79865", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c79865", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -131,7 +139,11 @@ using MAQFurni.Models;
                     ");
             WriteLiteral("            </div>\r\n                            </div>\r\n                            <div class=\"col-xl-6 col-lg-5 col-md-5 col-sm-5\">\r\n                                <div class=\"hero-slide-image\">\r\n                                    ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c712304", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c712295", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c712295", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -186,7 +198,11 @@ using MAQFurni.Models;
             WriteAttributeValue("", 3774, "/Home/FilterCategory?categoryId=", 3774, 32, true);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 68 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 68 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 68 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -200,7 +216,11 @@ WriteAttributeValue("", 3806, Html.DisplayFor(modelItem => item.CategoryId), 380
             BeginWriteAttribute("src", " src=\"", 4004, "\"", 4059, 1);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 70 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 70 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 70 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -285,7 +305,11 @@ WriteAttributeValue("", 4010, Html.DisplayFor(modelItem => item.CategoryImage), 
             WriteAttributeValue("", 19443, "/Home/DetailProduct?productId=", 19443, 30, true);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 277 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 277 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 277 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -299,7 +323,11 @@ WriteAttributeValue("", 19473, item.ProductId, 19473, 15, false);
             BeginWriteAttribute("src", " src=\"", 19558, "\"", 19612, 1);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 278 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 278 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 278 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -329,7 +357,11 @@ WriteAttributeValue("", 19564, Html.DisplayFor(modelItem => item.ProductImage), 
             BeginWriteAttribute("value", " value=\"", 20898, "\"", 20954, 1);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 293 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 293 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 293 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -343,7 +375,11 @@ WriteAttributeValue("", 20906, Html.DisplayFor(modelItem => item.ProductImage), 
             BeginWriteAttribute("value", " value=\"", 21041, "\"", 21094, 1);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 294 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 294 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 294 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -357,7 +393,11 @@ WriteAttributeValue("", 21049, Html.DisplayFor(modelItem => item.ProductId), 210
             BeginWriteAttribute("value", " value=\"", 21183, "\"", 21238, 1);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 295 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 295 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 295 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -371,7 +411,11 @@ WriteAttributeValue("", 21191, Html.DisplayFor(modelItem => item.ProductName), 2
             BeginWriteAttribute("value", " value=\"", 21328, "\"", 21384, 1);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 296 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 296 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 296 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -411,7 +455,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
 ");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 309 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Index.cshtml"
+=======
+#line 309 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 309 "C:\Users\VODUCMINH\Desktop\MAQFurni\Views\Home\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -439,7 +487,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                     <a href=""shop-left-sidebar.html"" class=""banner"">
                         ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c725633", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c725579", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c725579", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -474,7 +526,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                     <a href=""shop-left-sidebar.html"" class=""banner"">
                         ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c727494", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c727440", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c727440", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -529,7 +585,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                         <div class=""blog-image"">
                             <a href=""blog-single-left-sidebar.html"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c730308", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c730254", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c730254", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -564,7 +624,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                         <div class=""blog-image"">
                             <a href=""blog-single-left-sidebar.html"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c732529", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c732475", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c732475", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -599,7 +663,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                         <div class=""blog-image"">
                             <a href=""blog-single-left-sidebar.html"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c734753", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c734699", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c734699", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -634,7 +702,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                         <div class=""blog-image"">
                             <a href=""blog-single-left-sidebar.html"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c736978", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c736924", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c736924", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -694,7 +766,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                     <div class=""insta-wrapper"">
                         <a href=""https://www.instagram.com/"" target=""_blank"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c740280", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c740226", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c740226", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -722,7 +798,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                     <div class=""insta-wrapper"">
                         <a href=""https://www.instagram.com/"" target=""_blank"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c741859", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c741805", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c741805", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -750,7 +830,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                     <div class=""insta-wrapper"">
                         <a href=""https://www.instagram.com/"" target=""_blank"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c743427", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c743373", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c743373", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -778,7 +862,11 @@ WriteAttributeValue("", 21336, Html.DisplayFor(modelItem => item.ProductPrice), 
                     <div class=""insta-wrapper"">
                         <a href=""https://www.instagram.com/"" target=""_blank"">");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c744985", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c744931", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5a8c0678b6a133f947de8a74ebaf7efa0afc58c744931", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f

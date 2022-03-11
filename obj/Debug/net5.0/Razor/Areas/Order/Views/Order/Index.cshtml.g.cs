@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma checksum "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "6647845ad286c6b6c923b2b75ae3edfedb952e0e"
+=======
+#pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "b66e8ba3da673311839f21656c67e904778162c4"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "b66e8ba3da673311839f21656c67e904778162c4"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -108,7 +112,11 @@ using MAQFurni.Models;
                   <use xlink:href=""#icon-keyboard-right""></u");
             WriteLiteral("se>\r\n                </svg></a>\r\n            </li>\r\n            <li class=\"breadcrumbs__item active\">\r\n              ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6647845ad286c6b6c923b2b75ae3edfedb952e0e8415", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c48403", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c48403", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -193,9 +201,15 @@ using MAQFurni.Models;
 
               ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6647845ad286c6b6c923b2b75ae3edfedb952e0e12867", async() => {
                 WriteLiteral("\r\n                ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6647845ad286c6b6c923b2b75ae3edfedb952e0e13144", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c412855", async() => {
+                WriteLiteral("\r\n                ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c413132", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c412855", async() => {
                 WriteLiteral("\r\n                ");
@@ -240,7 +254,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = ViewBag.OrderStatu
             WriteLiteral("\r\n\r\n");
             WriteLiteral("            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"toolbox__right col-12 col-lg-auto\">\r\n        <div class=\"toolbox__right-row row row--xs flex-nowrap\">\r\n          <div class=\"col col-lg-auto\">\r\n            ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6647845ad286c6b6c923b2b75ae3edfedb952e0e16008", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c415993", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c415993", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -326,7 +344,11 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
 ");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 162 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
+=======
+#line 172 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 172 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -339,7 +361,11 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
             WriteLiteral("            <tr class=\"table__row\">\r\n\r\n              <td class=\"table__td\" style=\"width: 20rem;\">\r\n                <span class=\"text-grey\">");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 167 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
+=======
+#line 187 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 187 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -351,9 +377,12 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
             WriteLiteral("</span>\r\n              </td>\r\n              <td class=\"table__td\" style=\"width: 16rem;\">");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 169 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
                                                      Write(Html.DisplayFor(modelItem => item.User.UserName));
 =======
+=======
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 #line 189 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
                                Write(Html.DisplayFor(modelItem => item.User.UserName));
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -364,9 +393,12 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
             WriteLiteral("</td>\r\n\r\n              <td class=\"table__td\" style=\"width: 10rem;\"><span>");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 171 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
                                                            Write(Html.DisplayFor(modelItem => item.TotalPrice));
 =======
+=======
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 #line 191 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
                                      Write(Html.DisplayFor(modelItem => item.TotalPrice));
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -377,7 +409,11 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
             WriteLiteral("</span></td>\r\n              <td class=\"table__td text-nowrap\" style=\"width: 15rem;\">\r\n                <span class=\"text-grey\">");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 173 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
+=======
+#line 193 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 193 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -389,7 +425,11 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
             WriteLiteral("</span>\r\n              </td>\r\n              <td class=\"table__td text-nowrap\">\r\n                <span class=\"text-grey\">");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 176 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
+=======
+#line 196 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 196 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -400,7 +440,11 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
 #nullable disable
             WriteLiteral("</span>\r\n              </td>\r\n              <td class=\"table__td table__actions\">\r\n\r\n\r\n                ");
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6647845ad286c6b6c923b2b75ae3edfedb952e0e22527", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c423407", async() => {
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b66e8ba3da673311839f21656c67e904778162c423407", async() => {
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -419,7 +463,11 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
             BeginWriteTagHelperAttribute();
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 181 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
+=======
+#line 201 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 201 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -441,7 +489,11 @@ WriteAttributeValue("", 5373, ViewBag.SearchString, 5373, 21, false);
             WriteLiteral("\r\n\r\n              </td>\r\n            </tr>\r\n");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 189 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Order\Views\Order\Index.cshtml"
+=======
+#line 209 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 209 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Order\Views\Order\Index.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f

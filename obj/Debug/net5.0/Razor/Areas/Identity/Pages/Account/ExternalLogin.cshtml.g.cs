@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma checksum "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "2767287ca0b694be16b1a933a573c9c7be19607a"
+=======
+#pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "699bb93a6b599f35b63f82b913e8c4f7f9477ba4"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #pragma checksum "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "699bb93a6b599f35b63f82b913e8c4f7f9477ba4"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -102,9 +106,12 @@ using MAQFurni.Areas.Identity.Pages.Account;
             WriteLiteral("\r\n\r\n<div style=\"padding: 3rem 6rem;\">\r\n    <h1>");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 9 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
    Write(ViewData["Title"]);
 =======
+=======
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 #line 7 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
 Write(ViewData["Title"]);
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -116,9 +123,12 @@ Write(ViewData["Title"]);
             WriteLiteral("    <hr />\r\n\r\n    <p id=\"external-login-description\" class=\"text-info\">\r\n        You\'ve successfully authenticated with <strong>");
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 14 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
                                                   Write(Model.ProviderDisplayName);
 =======
+=======
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 #line 8 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
                                         Write(Model.ProviderDisplayName);
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -144,6 +154,9 @@ Write(ViewData["Title"]);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "699bb93a6b599f35b63f82b913e8c4f7f9477ba47847", async() => {
                 WriteLiteral("\r\n            ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "699bb93a6b599f35b63f82b913e8c4f7f9477ba48117", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -151,7 +164,11 @@ Write(ViewData["Title"]);
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 22 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+=======
+#line 20 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 20 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -175,6 +192,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
 =======
                 WriteLiteral("\r\n            <div class=\"form-group\">\r\n                ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "699bb93a6b599f35b63f82b913e8c4f7f9477ba49848", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -182,7 +202,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 24 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+=======
+#line 22 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 22 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -205,6 +229,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
 =======
                 WriteLiteral("\r\n                ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "699bb93a6b599f35b63f82b913e8c4f7f9477ba411366", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -212,7 +239,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 25 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+=======
+#line 23 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 23 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -236,6 +267,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 =======
                 WriteLiteral("\r\n                ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "699bb93a6b599f35b63f82b913e8c4f7f9477ba412966", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
@@ -243,7 +277,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 26 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+=======
+#line 24 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 =======
 #line 24 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -277,9 +315,12 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
             BeginWriteTagHelperAttribute();
 #nullable restore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 21 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
                                                            WriteLiteral(Model.ReturnUrl);
 =======
+=======
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
 #line 19 "C:\Users\VODUCMINH\Desktop\MAQFurni\Areas\Identity\Pages\Account\ExternalLogin.cshtml"
                                                        WriteLiteral(Model.ReturnUrl);
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
@@ -307,6 +348,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
 =======
                 WriteLiteral("\r\n    ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "699bb93a6b599f35b63f82b913e8c4f7f9477ba417287", async() => {
+<<<<<<< HEAD
+>>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
+=======
 >>>>>>> 5a6d5fd1f98135391c715b4e0ad477fa4752969f
                 }
                 );
