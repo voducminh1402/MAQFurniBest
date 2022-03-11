@@ -5,7 +5,19 @@
   Layout = "_Admin";
 }
 
+<style>
+  ._fixlongstring {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 350px;
+    display: inline-block;
+  }
 
+  .fixSize{
+    padding-right: 30px;
+  }
+</style>
 
 <div class="container">
   <div class="page-header">
@@ -151,7 +163,7 @@
         <thead class="table__header">
           <tr class="table__header-row">
             <th class="table__th-sort">
-              <span class="align-middle">Product Name</span><span class="sort sort--down"></span>
+              <span class="align-middle fixSize">Product Name</span><span class="sort sort--down"></span>
             </th>
             <th class="table__th-sort">
               <span class="align-middle">Product Image</span><span class="sort sort--down"></span>
@@ -177,16 +189,17 @@
           {
             <tr class="table__row">
               <td class="d-none d-lg-table-cell table__td">
-                <span class="text-grey">@Html.DisplayFor(modelItem => item.ProductName)</span>
+                <span class="text-grey fixSize">@Html.DisplayFor(modelItem => item.ProductName)</span>
               </td>
-              <td class="table__td">@Html.DisplayFor(modelItem => item.ProductImage)</td>
+              <td class="table__td"><span class="text-grey _fixlongstring"><a href="@Html.DisplayFor(modelItem =>
+                item.ProductImage)" target="_blank">Click here to see image</a></span></td>
 
-              <td class="table__td"><span>@Html.DisplayFor(modelItem => item.ProductPrice)</span></td>
+              <td class="table__td"><span class="text-grey">@Html.DisplayFor(modelItem => item.ProductPrice)</span></td>
               <td class="table__td text-nowrap">
                 <span class="text-grey">@Html.DisplayFor(modelItem => item.Quantity)</span>
               </td>
               <td class="table__td text-nowrap">
-                <span class="text-grey">@Html.DisplayFor(modelItem => item.Description)</span>
+                <span class="text-grey _fixlongstring">@Html.DisplayFor(modelItem => item.Description)</span>
               </td>
               <td class="table__td text-nowrap">
                 <span class="text-grey">@Html.DisplayFor(modelItem => item.Available.AvailableName)</span>
@@ -281,4 +294,3 @@
 
 
 </tbody>
-
