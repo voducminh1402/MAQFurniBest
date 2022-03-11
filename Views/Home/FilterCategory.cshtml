@@ -1,7 +1,6 @@
    @{
-       var productList = ViewBag.ProductList as IEnumerable<Product>;
-       var search = ViewBag.Search;
-       var cond = ViewBag.Cond;
+        var productList = ViewBag.ProductList as IEnumerable<Product>;
+        var cond = ViewBag.Cond;
    }
    <div class="breadcrumb-area">
         <div class="container">
@@ -9,13 +8,13 @@
                 <div class="col-12">
                     <div class="row breadcrumb_box  align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-left">
-                            <h2 class="breadcrumb-title">Search</h2>
+                            <h2 class="breadcrumb-title">Categories</h2>
                         </div>
                         <div class="col-lg-6  col-md-6 col-sm-12">
                             <!-- breadcrumb-list start -->
                             <ul class="breadcrumb-list text-center text-md-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Search</li>
+                                <li class="breadcrumb-item active">Categories</li>
                             </ul>
                             <!-- breadcrumb-list end -->
                         </div>
@@ -80,7 +79,6 @@
                                             <option value="3"> Price, low to high</option>
                                             <option selected value="4"> Price, high to low</option>
                                         }
-                                        <input name="search" type="hidden" value="@search">
                                     </select>
                                 </form>
                             </div>
