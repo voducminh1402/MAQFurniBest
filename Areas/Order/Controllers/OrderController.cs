@@ -39,17 +39,6 @@ namespace MAQFurni.Areas_Order_Controllers
         //     List<Order> list;
         //     if (status == 0){
         //         list = _context.Orders.Include(o => o.User).Include(o => o.ShippingInfo).ToList();
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
-        //     }
-        //     else {
-        //         list = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).Include(o => o.User).Include(o => o.ShippingInfo).ToList();
-        //     }
-        //     var json = JsonConvert.SerializeObject(list);
-<<<<<<< HEAD
 
         //     return json;
         // }
@@ -57,20 +46,12 @@ namespace MAQFurni.Areas_Order_Controllers
 
         [HttpPost("admin/order/filter-by-status")]
         [ActionName("filter-by-status")]
-=======
-            
-        //     return json;
-        // }
-        
 
-        [HttpPost("admin/order/filter-by-status")]  
-        [ActionName("filter-by-status")]     
->>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
         public List<Order> FilterByStatus(int status)
         {
             ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
             List<Order> list;
-<<<<<<< HEAD
+
             if (status == 0)
             {
                 list = _context.Orders.ToList();
@@ -78,19 +59,12 @@ namespace MAQFurni.Areas_Order_Controllers
             }
             else
             {
-=======
-            if (status == 0){
-                list = _context.Orders.ToList();
-                
-            }
-            else {
->>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
                 list = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).ToList();
             }
             return list;
         }
 
-<<<<<<< HEAD
+
         [HttpGet("admin/order/find")]
         [ActionName("find")]
         public async Task<IActionResult> SearchAsync(string search)
@@ -98,14 +72,6 @@ namespace MAQFurni.Areas_Order_Controllers
             ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
             if (search.Trim().Length == 0)
             {
-=======
-        [HttpGet("admin/order/find")]  
-        [ActionName("find")]     
-        public async Task<IActionResult> SearchAsync(string search)
-        {
-            ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
-            if (search.Trim().Length == 0){
->>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
                 var furnitureShopContext1 = _context.Orders.Include(o => o.User);
                 return View(await furnitureShopContext1.ToListAsync());
             }
@@ -130,10 +96,9 @@ namespace MAQFurni.Areas_Order_Controllers
                 .FirstOrDefaultAsync(m => m.OrderId == id);
 
             ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
-<<<<<<< HEAD
+
             ViewBag.Product = _context.OrderDetails.Where(o => o.OrderId == id).Include(o => o.Product);
-=======
->>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
+
 
             if (order == null)
             {
@@ -143,11 +108,6 @@ namespace MAQFurni.Areas_Order_Controllers
             return View(order);
         }
 
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 9705fd860456809ec9323039f66c223b2a1a472d
 
         // GET: Order/Create
         [HttpGet("admin/order/create")]

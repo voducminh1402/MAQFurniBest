@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MAQFurni.Controllers
 {
@@ -33,18 +34,18 @@ namespace MAQFurni.Controllers
             return View(ivm);
         }
 
-        public IActionResult Search(string search) 
+        public IActionResult Search(string search)
         {
             List<Product> searchList = new List<Product>();
             searchList = _context.Products.Where(p => p.ProductName.Contains(search)).ToList();
-            
+
             ViewBag.ProductList = searchList;
             ViewBag.Search = search;
 
             return View("SearchProduct");
         }
 
-        public IActionResult DetailProduct(string productId) 
+        public IActionResult DetailProduct(string productId)
         {
             Product productDetail = _context.Products.Find(productId);
             int categoryId = productDetail.CategoryId;
@@ -62,22 +63,27 @@ namespace MAQFurni.Controllers
         }
 
         [HttpGet]
-        public IActionResult Sort(string condition, string search) 
+        public IActionResult Sort(string condition, string search)
         {
             List<Product> searchList = new List<Product>();
-            if (condition.Equals("1")) {
+            if (condition.Equals("1"))
+            {
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).OrderBy(p => p.ProductName).ToList();
             }
-            else if (condition.Equals("2")) {
+            else if (condition.Equals("2"))
+            {
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).OrderByDescending(p => p.ProductName).ToList();
             }
-            else if (condition.Equals("3")) {
+            else if (condition.Equals("3"))
+            {
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).OrderByDescending(p => p.ProductPrice).ToList();
             }
-            else if (condition.Equals("4")) {
+            else if (condition.Equals("4"))
+            {
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).OrderBy(p => p.ProductPrice).ToList();
             }
-            else {
+            else
+            {
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).ToList();
             }
 
