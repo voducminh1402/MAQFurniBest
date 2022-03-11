@@ -3,6 +3,7 @@
 
 @inject SignInManager<User> SignInManager
 @inject UserManager<User> UserManager
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -11,7 +12,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Furns - Furniture eCommerce HTML Template</title>
-    <meta name="description" content="240+ Best Bootstrap Templates are available on this website. Find your template for your project compatible with the most popular HTML library in the world." />
+    <meta name="description"
+        content="240+ Best Bootstrap Templates are available on this website. Find your template for your project compatible with the most popular HTML library in the world." />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="canonical" href="https://htmldemo.hasthemes.com/furns/" />
@@ -135,23 +137,28 @@
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="my-account.html">My account</a></li>
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                    @if (SignInManager.IsSignedIn(User)) {
-                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                                        asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                             <button class="dropdown-item" type="submit">Logout</button>
                                         </form>
                                     }
-                                    else {
+                                    else
+                                    {
                                         <li><a class="dropdown-item" href="login">Sign in</a></li>
                                     }
                                 </ul>
                             </div>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="cartIcon header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="#offcanvas-cart"
+                                class="cartIcon header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="icon-handbag"></i>
                                 <span id="cartNumOff" class="header-action-num"></span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
-                            <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                            <a href="#offcanvas-mobile-menu"
+                                class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
                                 <i class="icon-menu"></i>
                             </a>
                         </div>
@@ -193,23 +200,28 @@
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a class="dropdown-item" href="my-account.html">My account</a></li>
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                    @if (SignInManager.IsSignedIn(User)) {
-                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                                        asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                             <button class="dropdown-item" type="submit">Logout</button>
                                         </form>
                                     }
-                                    else {
+                                    else
+                                    {
                                         <li><a class="dropdown-item" href="login">Sign in</a></li>
                                     }
                                 </ul>
                             </div>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="cartIcon header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="#offcanvas-cart"
+                                class="cartIcon header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="icon-handbag"></i>
                                 <span id="cartNumOn" class="header-action-num"></span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
-                            <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                            <a href="#offcanvas-mobile-menu"
+                                class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
                                 <i class="icon-menu"></i>
                             </a>
                         </div>
@@ -258,10 +270,13 @@
                                                 <li><a href="single-product-slider.html">Product Slider</a></li>
                                                 <li><a href="single-product-gallery-left.html">Product Gallery Left</a>
                                                 </li>
-                                                <li><a href="single-product-gallery-right.html">Product Gallery Right</a>
+                                                <li><a href="single-product-gallery-right.html">Product Gallery
+                                                        Right</a>
                                                 </li>
-                                                <li><a href="single-product-sticky-left.html">Product Sticky Left</a></li>
-                                                <li><a href="single-product-sticky-right.html">Product Sticky Right</a></li>
+                                                <li><a href="single-product-sticky-left.html">Product Sticky Left</a>
+                                                </li>
+                                                <li><a href="single-product-sticky-right.html">Product Sticky Right</a>
+                                                </li>
                                             </ul>
                                             <ul class="d-block">
                                                 <li class="title"><a href="#">Other Pages</a></li>
@@ -277,10 +292,14 @@
                                         <li>
                                             <ul class="menu-banner w-100">
                                                 <li>
-                                                    <a class="p-0" href="shop-left-sidebar.html"><img class="img-responsive w-100" src="~/images/banner/3.jpg" alt=""></a>
+                                                    <a class="p-0" href="shop-left-sidebar.html"><img
+                                                            class="img-responsive w-100" src="~/images/banner/3.jpg"
+                                                            alt=""></a>
                                                 </li>
                                                 <li>
-                                                    <a class="p-0" href="shop-left-sidebar.html"><img class="img-responsive w-100" src="~/images/banner/4.jpg" alt=""></a>
+                                                    <a class="p-0" href="shop-left-sidebar.html"><img
+                                                            class="img-responsive w-100" src="~/images/banner/4.jpg"
+                                                            alt=""></a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -296,26 +315,34 @@
                                 </li>
                                 <li class="dropdown "><a href="#">Blog <i class="ion-ios-arrow-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li class="dropdown position-static"><a href="blog-grid-left-sidebar.html">Blog Grid
-                                            <i class="ion-ios-arrow-right"></i></a>
+                                        <li class="dropdown position-static"><a href="blog-grid-left-sidebar.html">Blog
+                                                Grid
+                                                <i class="ion-ios-arrow-right"></i></a>
                                             <ul class="sub-menu sub-menu-2">
-                                                <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
-                                                <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
+                                                <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a>
+                                                </li>
+                                                <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown position-static"><a href="blog-list-left-sidebar.html">Blog List
-                                            <i class="ion-ios-arrow-right"></i></a>
+                                        <li class="dropdown position-static"><a href="blog-list-left-sidebar.html">Blog
+                                                List
+                                                <i class="ion-ios-arrow-right"></i></a>
                                             <ul class="sub-menu sub-menu-2">
-                                                <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-                                                <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
+                                                <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a>
+                                                </li>
+                                                <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown position-static"><a href="blog-single-left-sidebar.html">Single
-                                            Blog <i class="ion-ios-arrow-right"></i></a>
+                                        <li class="dropdown position-static"><a
+                                                href="blog-single-left-sidebar.html">Single
+                                                Blog <i class="ion-ios-arrow-right"></i></a>
                                             <ul class="sub-menu sub-menu-2">
                                                 <li><a href="blog-single-left-sidebar.html">Single Blog Left Sidebar</a>
                                                 </li>
-                                                <li><a href="blog-single-right-sidebar.html">Single Blog Right Sidebar</a>
+                                                <li><a href="blog-single-right-sidebar.html">Single Blog Right
+                                                        Sidebar</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -368,7 +395,7 @@
                 </div>
                 <div class="buttons">
                     <a href="cart.html" class="btn btn-dark btn-hover-primary mb-6">view cart</a>
-                    <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>
+                    <a href="https://localhost:5001/check-out" class="btn btn-outline-dark current-btn">checkout</a>
                 </div>
                 <p class="minicart-message">Free Shipping on All Orders Over $100!</p>
             </div>
@@ -539,7 +566,9 @@
                         <div class="col-md-6 col-lg-4 mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="200">
                             <div class="single-wedge">
                                 <h4 class="footer-herading">about us</h4>
-                                <p class="about-text">Lorem ipsum dolor sit amet cons adipisicing elit sed do eiusm tempor incididunt ut labor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                <p class="about-text">Lorem ipsum dolor sit amet cons adipisicing elit sed do eiusm
+                                    tempor incididunt ut labor et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud
                                 </p>
                                 <ul class="link-follow">
                                     <li class="li">
@@ -562,7 +591,8 @@
                         </div>
                         <!-- End single blog -->
                         <!-- Start single blog -->
-                        <div class="col-md-6 col-sm-6 col-lg-3 mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="400">
+                        <div class="col-md-6 col-sm-6 col-lg-3 mb-md-30px mb-lm-30px" data-aos="fade-up"
+                            data-aos-delay="400">
                             <div class="single-wedge">
                                 <h4 class="footer-herading">information</h4>
                                 <div class="footer-links">
@@ -570,7 +600,8 @@
                                         <ul class="align-items-center">
                                             <li class="li"><a class="single-link" href="about.html">About us</a></li>
                                             <li class="li"><a class="single-link" href="#">Delivery Information</a></li>
-                                            <li class="li"><a class="single-link" href="privacy-policy.html">Privacy & Policy</a></li>
+                                            <li class="li"><a class="single-link" href="privacy-policy.html">Privacy &
+                                                    Policy</a></li>
                                             <li class="li"><a class="single-link" href="#">Terms & Condition</a></li>
                                             <li class="li"><a class="single-link" href="#">Manufactures</a></li>
                                         </ul>
@@ -606,14 +637,19 @@
                                 <div class="footer-links">
                                     <!-- News letter area -->
                                     <div id="mc_embed_signup" class="subscribe-form">
-                                        <form id="mc-embedded-subscribe-form" class="validate" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
+                                        <form id="mc-embedded-subscribe-form" class="validate" novalidate=""
+                                            target="_blank" name="mc-embedded-subscribe-form" method="post"
+                                            action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
                                             <div id="mc_embed_signup_scroll" class="mc-form">
-                                                <input class="email" type="email" required="" placeholder="Your Mail*" name="EMAIL" value="" />
+                                                <input class="email" type="email" required="" placeholder="Your Mail*"
+                                                    name="EMAIL" value="" />
                                                 <div class="mc-news" aria-hidden="true">
-                                                    <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" />
+                                                    <input type="text" value="" tabindex="-1"
+                                                        name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" />
                                                 </div>
                                                 <div class="clear">
-                                                    <button id="mc-embedded-subscribe" class="button btn-primary" type="submit" name="subscribe" value=""><i
+                                                    <button id="mc-embedded-subscribe" class="button btn-primary"
+                                                        type="submit" name="subscribe" value=""><i
                                                             class="icon-cursor"></i> Send Mail</button>
                                                 </div>
                                             </div>
@@ -723,7 +759,9 @@
                                         <li class="old-price not-cut">$18.90</li>
                                     </ul>
                                 </div>
-                                <p class="quickview-para">Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p>
+                                <p class="quickview-para">Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm
+                                    tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis
+                                    nostrud exercitation ullamco</p>
                                 <div class="pro-details-size-color">
                                     <div class="pro-details-color-wrap">
                                         <span>Color</span>
@@ -801,6 +839,7 @@
     <script src="~/js/plugins/jquery-ui.min.js"></script>
     <script src="~/js/plugins/jquery.nice-select.min.js"></script>
     <script src="~/js/plugins/countdown.js"></script>
+
     <script src="~/js/plugins/scrollup.js"></script>
     <script src="~/js/plugins/jquery.waypoints.js"></script>
     <script src="~/js/plugins/jquery.lineProgressbar.js"></script>
