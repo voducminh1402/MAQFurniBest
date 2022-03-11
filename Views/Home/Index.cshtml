@@ -65,7 +65,7 @@
                             @foreach (var item in Model.ListCategory)
                             {
                                 <div class=" swiper-slide">
-                                    <a href="shop-left-sidebar.html" class="category-inner ">
+                                    <a href="/Home/FilterCategory?categoryId=@Html.DisplayFor(modelItem => item.CategoryId)" class="category-inner ">
                                         <div class="category-single-item">
                                             <img src="@Html.DisplayFor(modelItem => item.CategoryImage)" alt="">
                                             <span class="title">@Html.DisplayFor(modelItem => item.CategoryName)</span>
@@ -303,6 +303,7 @@
                                             </span>
                                         </div>
                                     </div>
+                                    <input id="detail-add" type="hidden">
                                     <!-- Single Prodect -->
                                 </div>
                                 }

@@ -41,6 +41,7 @@ namespace MAQFurni.Controllers
 
             ViewBag.ProductList = searchList;
             ViewBag.Search = search;
+            ViewBag.Cond = "Relevance";
 
             return View("SearchProduct");
         }
@@ -62,10 +63,70 @@ namespace MAQFurni.Controllers
             return View("ProductDetail");
         }
 
+        public IActionResult FilterCategory(int categoryId)
+        {
+            List<Product> list = _context.Products.Where(p => p.CategoryId == categoryId).ToList();
+
+            ViewBag.ProductList = list;
+            ViewBag.Cond = "Relevance";
+
+            return View("FilterCategory");
+        }
+
+        [HttpGet]
+        public IActionResult Shopping(string condition)
+        {
+            List<Product> listProduct = new List<Product>();
+
+            if (condition == null) {
+                condition = "Relevance";
+            }
+
+            if (condition.Equals("1"))
+            {
+                listProduct = _context.Products.OrderBy(p => p.ProductName).ToList();
+            }
+            else if (condition.Equals("2"))
+            {
+                listProduct = _context.Products.OrderByDescending(p => p.ProductName).ToList();
+            }
+            else if (condition.Equals("3"))
+            {
+                listProduct = _context.Products.OrderByDescending(p => p.ProductPrice).ToList();
+            }
+            else if (condition.Equals("4"))
+            {
+                listProduct = _context.Products.OrderBy(p => p.ProductPrice).ToList();
+            }
+            else
+            {
+                listProduct = _context.Products.ToList();
+            }
+
+            // List<Category> listCate = _context.Categories.ToList();
+            var categoryView =_context.Categories.Select(c => new CategoryView {
+                Id = c.CategoryId,
+                Name = c.CategoryName,
+                Numbers = c.Products.Count()
+            }).ToList();
+
+            ViewBag.ProductList = listProduct;
+            ViewBag.CategoryView = categoryView;
+            ViewBag.Cond = "Relevance";
+
+            return View("Shopping");
+        }
+
+
         [HttpGet]
         public IActionResult Sort(string condition, string search)
         {
             List<Product> searchList = new List<Product>();
+
+             if (condition == null) {
+                condition = "Relevance";
+            }
+
             if (condition.Equals("1"))
             {
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).OrderBy(p => p.ProductName).ToList();
@@ -87,7 +148,14 @@ namespace MAQFurni.Controllers
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).ToList();
             }
 
+            ProductPriceMinMax productPrice = new ProductPriceMinMax 
+            {
+                Min = searchList.OrderBy(p => p.ProductPrice).FirstOrDefault().ProductPrice,
+                Max = searchList.OrderByDescending(p => p.ProductPrice).FirstOrDefault().ProductPrice
+            };
+
             ViewBag.ProductList = searchList;
+            ViewBag.MinMax = productPrice;
             ViewBag.Search = search;
             ViewBag.Cond = condition;
 
