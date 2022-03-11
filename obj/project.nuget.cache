@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "P/mV3FSMhZS+fJQwt7bQlyZgUZWk5cV9LMkKlslXaYISym5aUDS9y6jbQzX7ONGK16r9b9gp2kh53W36KB0XUA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
+=======
   "dgSpecHash": "9fKPfAV70MfogdvXjeKH/7b8QuuaLAAIKjTrEjhkTTgfam4xUFBRz5O3fTK8gbVE9cAeJDXdK+NkkpR6IhsadQ==",
   "success": true,
   "projectFilePath": "D:\\MAQFurniBest\\MAQFurni.csproj",
+>>>>>>> 2d42d070df749a656816f9ba52056a68910d948b
   "expectedPackageFiles": [
     "C:\\Users\\PhongVu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\PhongVu\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -169,5 +175,12 @@
     "C:\\Users\\PhongVu\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\PhongVu\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
