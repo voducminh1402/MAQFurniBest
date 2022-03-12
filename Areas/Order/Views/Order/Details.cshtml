@@ -95,21 +95,25 @@
                                 <div class="row gutter-bottom-sm">
                                     <div class="col">
                                         <h3 class="card__title">Order Status</h3>
-                                        <div class="card-order__payment">
+                                        <form id="form-status" asp-action="ChangeStatus">
+                                            <div class="card-order__payment">
                                             
-                                            <div class="form-group">
-                                                <div class="input-group input-group--append">
-                                                    <select class="input js-input-select input--fluid form-control" asp-items="ViewBag.OrderStatus"></select>
-                                                    <span class="input-group__arrow">
-                              <svg class="icon-icon-keyboard-down">
-                                <use xlink:href="#icon-keyboard-down"></use>
-                              </svg></span>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group--append">
+                                                    
+                                                        @* <select id="status" name="status" class="input js-input-select input--fluid form-control" asp-items="ViewBag.OrderStatus"></select>
+                                                    
+                                                        <span class="input-group__arrow">
+                                                            <svg class="icon-icon-keyboard-down">
+                                                        <use xlink:href="#icon-keyboard-down"></use>
+                                                        </svg></span> *@
+                                                        <select id="status" name="status" class="form-control" style="width: 12rem;" asp-items="ViewBag.OrderStatus"></select>
+                                                    </div>
                                                 </div>
-                                            </div>
-
+                                            <input type="hidden" name="id" value="@Model.OrderId">
                                             
-     
-                                        </div>
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="col">
                                         <h3 class="card__title">Shipping method</h3>
@@ -240,7 +244,13 @@
                     </div>
                 </div>
             </div>
+<script>
+   
+document.getElementById("status").addEventListener("change", () => {
+    document.getElementById("form-status").submit();
 
+})
+</script>
 @* <h1>Details</h1>
 
 <div>

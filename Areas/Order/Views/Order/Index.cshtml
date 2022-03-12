@@ -92,11 +92,12 @@
           </div>
           <div class="form-group form-group--inline col-12 col-sm-auto d-none d-sm-block">
             <div class="toolbox__status input-group input-group--white input-group--append">
-
-              <select id="status" class="input input--select " asp-items="ViewBag.OrderStatus">
-                <option value="0">All status</option>
-              </select>
-
+              <form id="form-filter" asp-action="Filter" method="post">
+                <select id="status" name="status" class="input input--select" style="width: 12rem;"
+                  asp-items="ViewBag.OrderStatus">
+                  <option value="0">All status</option>
+                </select>
+              </form>
               @* <span class="input-group__arrow">
                 <svg class="icon-icon-keyboard-down">
                 <use xlink:href="#icon-keyboard-down"></use>
@@ -138,28 +139,18 @@
         </colgroup>
         <thead class="table__header">
           <tr class="table__header-row">
-            <th>
-              <div class="table__checkbox table__checkbox--all">
-                <label class="checkbox">
-                  <input class="js-checkbox-all" type="checkbox" data-checkbox-all="product" /><span
-                    class="checkbox__marker"><span class="checkbox__marker-icon">
-                      <svg class="icon-icon-checked">
-                        <use xlink:href="#icon-checked"></use>
-                      </svg></span></span>
-                </label>
-              </div>
-            </th>
-            <th class="d-none d-lg-table-cell">
+
+            <th class="table__th-sort" style="width: 20rem;">
               <span>Order ID</span>
             </th>
-            <th class="table__th-sort">
+            <th class="table__th-sort" style="width: 16rem;">
               <span class="align-middle">Customer Name</span><span class="sort sort--down"></span>
             </th>
 
             <th class="table__th-sort">
-              <span class="align-middle">Total</span><span class="sort sort--down"></span>
+              <span class="align-middle" style="width: 10rem;">Total</span><span class="sort sort--down"></span>
             </th>
-            <th class="table__th-sort">
+            <th class="table__th-sort" style="width: 15rem;">
               <span class="align-middle">Date</span><span class="sort sort--down"></span>
             </th>
             <th class="table__th-sort d-none d-sm-table-cell">
@@ -172,24 +163,14 @@
           @foreach (var item in Model)
           {
             <tr class="table__row">
-              <td class="table__td">
-                <div class="table__checkbox table__checkbox--all">
-                  <label class="checkbox">
-                    <input type="checkbox" data-checkbox="product" /><span class="checkbox__marker"><span
-                      class="checkbox__marker-icon">
-                        <svg class="icon-icon-checked">
-                          <use xlink:href="#icon-checked"></use>
-                        </svg></span></span>
-                  </label>
-                </div>
-              </td>
-              <td class="d-none d-lg-table-cell table__td">
+
+              <td class="table__td" style="width: 20rem;">
                 <span class="text-grey">@Html.DisplayFor(modelItem => item.OrderId)</span>
               </td>
-              <td class="table__td">@Html.DisplayFor(modelItem => item.User.UserName)</td>
+              <td class="table__td" style="width: 16rem;">@Html.DisplayFor(modelItem => item.User.UserName)</td>
 
-              <td class="table__td"><span>@Html.DisplayFor(modelItem => item.TotalPrice)</span></td>
-              <td class="table__td text-nowrap">
+              <td class="table__td" style="width: 10rem;"><span>@Html.DisplayFor(modelItem => item.TotalPrice)</span></td>
+              <td class="table__td text-nowrap" style="width: 15rem;">
                 <span class="text-grey">@Html.DisplayFor(modelItem => item.CreateDate)</span>
               </td>
               <td class="table__td text-nowrap">
@@ -279,69 +260,6 @@
       return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
   }
-  $('#status').change(function () {
-    var data = "";
-
-    let currentUrl = window.location;
-    if (currentUrl.href.toString().includes("search")) {
-      $.ajax({
-        type: "POST",
-
-        url: "./filter-by-status",
-
-
-        data: "status=" + $(this).val(),
-        async: false,
-        success: function (response) {
-          data = response;
-          let dataRow = "";
-          for (let i = 0; i < response.length; i++) {
-            dataRow += `<tr class="table__row">
-
-            <td class="table__td">
-            <div class="table__checkbox table__checkbox--all">
-            <label class="checkbox">
-            <input type="checkbox" data-checkbox="product" /><span class="checkbox__marker"><span
-            class="checkbox__marker-icon">
-            <svg class="icon-icon-checked">
-            <use xlink:href="#icon-checked"></use>
-            </svg></span></span>
-            </label>
-            </div>
-            </td>
-            <td class="d-none d-lg-table-cell table__td">
-            <span class="text-grey">${response[i].orderId}</span>
-            </td>
-            <td class="table__td">${response[i].userId}</td>
-
-            <td class="table__td"><span>${response[i].totalPrice}</span></td>
-            <td class="table__td text-nowrap">
-            <span class="text-grey">${response[i].createDate.slice(0, 10)}</span>
-            </td>
-            <td class="table__td text-nowrap">
-            <span class="text-grey">${response[i].shippingInfo}</span>
-            </td>
-            <td class="table__td table__actions">
-
-
-            <a class="dropdown-items__link" asp-action="Details" asp-route-id="${response[i].orderId}"><span
-            class="dropdown-items__link-icon">
-            <svg class="icon-icon-view">
-            <use xlink:href="#icon-view"></use>
-            </svg></span>Details</a>
-
-            </td>
-            </tr>`;
-          }
-
-
-          $("#order-table").html(dataRow);
-        },
-        error: function () {
-          alert('Error occured');
-        }
-      });
-
-    });
+  document.getElementById("status").addEventListener("change", () => document.getElementById("form-filter").submit());
 </script>
 }
