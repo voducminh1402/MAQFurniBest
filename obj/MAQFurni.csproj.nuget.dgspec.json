@@ -1,24 +1,7 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "D:\\MAQFurniBest\\MAQFurni.csproj": {}
-=======
-<<<<<<< HEAD
-    "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
-        "projectName": "MAQFurni",
-        "projectPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
-        "packagesPath": "C:\\Users\\VODUCMINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
-=======
-    "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj": {}
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
   },
   "projects": {
     "D:\\MAQFurniBest\\MAQFurni.csproj": {
@@ -26,27 +9,15 @@
       "restore": {
         "projectUniqueName": "D:\\MAQFurniBest\\MAQFurni.csproj",
         "projectName": "MAQFurni",
-<<<<<<< HEAD
         "projectPath": "D:\\MAQFurniBest\\MAQFurni.csproj",
         "packagesPath": "C:\\Users\\PhongVu\\.nuget\\packages\\",
         "outputPath": "D:\\MAQFurniBest\\obj\\",
-=======
-        "projectPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\",
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\PhongVu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-<<<<<<< HEAD
-          "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -159,15 +130,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
         }
       }
     }

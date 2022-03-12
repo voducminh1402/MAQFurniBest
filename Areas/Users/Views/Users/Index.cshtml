@@ -217,7 +217,7 @@
                         </li>
 
                         <li class="dropdown-items__item">
-                          <form id="deleteCateForm" asp-action="Delete" asp-route-id="@item.Id">
+                          <form asp-action="Delete" asp-route-id="@item.Id">
                             <input type="hidden" asp-for="@item.Id" />
                             <button type="submit" value="Delete" class="dropdown-items__link category-delete"><span
                               class="dropdown-items__link-icon"><svg class="icon-icon-trash">

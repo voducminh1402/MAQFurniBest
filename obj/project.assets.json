@@ -8490,52 +8490,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\PhongVu\\.nuget\\packages\\": {},
-=======
-<<<<<<< HEAD
-    "C:\\Users\\VODUCMINH\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\MAQFurniBest\\MAQFurni.csproj",
       "projectName": "MAQFurni",
       "projectPath": "D:\\MAQFurniBest\\MAQFurni.csproj",
       "packagesPath": "C:\\Users\\PhongVu\\.nuget\\packages\\",
       "outputPath": "D:\\MAQFurniBest\\obj\\",
-=======
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
-      "projectName": "MAQFurni",
-      "projectPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
-      "packagesPath": "C:\\Users\\VODUCMINH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
-      "projectName": "MAQFurni",
-      "projectPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\",
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\PhongVu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-<<<<<<< HEAD
-        "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8648,16 +8619,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
->>>>>>> ca660aa952c9d74cc9b1b2a92607bec1e0ad87cc
->>>>>>> ee8e583788f5a5859b7d4c9c5919ada55bbc17e5
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\MAQFurniBest\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'dgSpecHash', line 4, position 0."
+    }
+  ]
 }

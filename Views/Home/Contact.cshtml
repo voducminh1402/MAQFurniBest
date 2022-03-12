@@ -25,16 +25,7 @@
     <!-- contact area start -->
     <div class="contact-area pb-100px pt-100px">
         <div class="container">
-            <div class="contact-map mb-10">
-                <div id="mapid" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mapouter">
-                        <div class="gmap_canvas">
-                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <a href="https://sites.google.com/view/maps-api-v2/mapv2"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="custom-row-2 row">
                 <div class="col-lg-4 col-md-5 mb-lm-60px col-sm-12 col-xs-12 w-sm-100">
                     <div class="contact-info-wrap">
@@ -93,22 +84,18 @@
                 <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
                     <div class="contact-form">
                         <div class="contact-title mb-30">
-                            <h2 class="title" data-aos="fade-up" data-aos-delay="200">Get In Touch</h2>
+                            <h2 class="title" data-aos="fade-up" data-aos-delay="200">Find Your Order</h2>
                         </div>
-                        <form class="contact-form-style" id="contact-form" action="https://htmlmail.hasthemes.com/nazmul/mail.php" method="post">
+                        <form class="contact-form-style" id="contact-form" method="get" asp-action="ViewOrder">
                             <div class="row">
-                                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                                    <input name="name" placeholder="Name*" type="text" />
-                                </div>
-                                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                                    <input name="email" placeholder="Email*" type="email" />
+                                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                                    <input name="orderid" placeholder="Order ID*" type="text" />
                                 </div>
                                 <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
-                                    <input name="subject" placeholder="Subject*" type="text" />
+                                    <input name="phone" placeholder="Phone Number*" type="text" />
                                 </div>
                                 <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
-                                    <textarea name="message" placeholder="Your Message*"></textarea>
-                                    <button class="btn btn-primary btn-hover-dark mt-4" data-aos="fade-up" data-aos-delay="200" type="submit">SEND</button>
+                                    <button class="btn btn-primary btn-hover-dark mt-4" data-aos="fade-up" data-aos-delay="200" type="submit" id="find-order">FIND</button>
                                 </div>
                             </div>
                         </form>

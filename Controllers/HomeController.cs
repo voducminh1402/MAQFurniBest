@@ -8,6 +8,7 @@ using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MAQFurni.Controllers
 {
@@ -105,7 +106,7 @@ namespace MAQFurni.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)] 
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
@@ -122,6 +123,46 @@ namespace MAQFurni.Controllers
         //     public decimal price { get; set; }
         //     public int quantity { get; set; }
         // }
+        [HttpGet("contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpGet("view-order")] 
+        [ActionName("ViewOrder")]
+        public IActionResult ViewOrder(string orderid, string phone)
+        {   
+
+            ViewBag.Product = new SelectList(_context.Products, "ProductName");
+
+            var detail = _context.OrderDetails.Where(m => m.OrderId == orderid).Include(m => m.Product);
+            
+            if(detail == null){
+                return View("Contact");
+            }
+
+            
+            
+
+
+            return View(detail.ToList());
+        }
+
+
+        //  [ActionName("ViewOrder")]
+        // public async Task<IActionResult> ViewOrderAsync(string orderId){
+        //     if(orderId == null){
+        //         return NotFound();
+        //     }
+
+            
+            
+        //     return View("ViewOrder");
+
+        // }
+
+
         [HttpPost("cart/check-out")]
         [ActionName("AddOrder")]
         public async Task<IActionResult> CheckOutAsync(string cart, string firstName, string lastName, string city, string phone, string state, string address)
