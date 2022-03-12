@@ -26,7 +26,8 @@ namespace MAQFurni
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<FurnitureShopContext>(options => {
+            services.AddDbContext<FurnitureShopContext>(options =>
+            {
                 // Đọc chuỗi kết nối
                 string connectstring = Configuration.GetConnectionString("FurnitureShop");
                 // Sử dụng MS SQL Server
@@ -37,8 +38,8 @@ namespace MAQFurni
             .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<FurnitureShopContext>()
             .AddDefaultTokenProviders();
-
-            services.Configure<IdentityOptions> (options => {
+            services.Configure<IdentityOptions>(options =>
+            {
                 // Thiết lập về Password
                 options.Password.RequireDigit = false; // Không bắt phải có số
                 options.Password.RequireLowercase = false; // Không bắt phải có chữ thường
@@ -48,7 +49,7 @@ namespace MAQFurni
                 options.Password.RequiredUniqueChars = 1; // Số ký tự riêng biệt
 
                 // Cấu hình Lockout - khóa user
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes (5); // Khóa 5 phút
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5); // Khóa 5 phút
                 options.Lockout.MaxFailedAccessAttempts = 5; // Thất bại 5 lầ thì khóa
                 options.Lockout.AllowedForNewUsers = true;
 
@@ -63,20 +64,33 @@ namespace MAQFurni
 
             });
 
-            services.ConfigureApplicationCookie (options => {
+            services.ConfigureApplicationCookie(options =>
+            {
                 // options.Cookie.HttpOnly = true;  
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);  
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 options.LoginPath = $"/login/";                                 // Url đến trang đăng nhập
-                options.LogoutPath = $"/logout/";   
+                options.LogoutPath = $"/logout/";
                 options.AccessDeniedPath = $"/Identity/Account/AccessDenied";   // Trang khi User bị cấm truy cập
             });
             services.Configure<SecurityStampValidatorOptions>(options =>
             {
                 // Trên 5 giây truy cập lại sẽ nạp lại thông tin User (Role)
                 // SecurityStamp trong bảng User đổi -> nạp lại thông tinn Security
-                options.ValidationInterval = TimeSpan.FromSeconds(5); 
+                options.ValidationInterval = TimeSpan.FromSeconds(5);
             });
+            services.AddAuthentication()
+    .AddGoogle(googleOptions =>
+    {
+        // Đọc thông tin Authentication:Google từ appsettings.json
+        IConfigurationSection googleAuthNSection = Configuration.GetSection("Authentication:Google");
 
+        // Thiết lập ClientID và ClientSecret để truy cập API google
+        googleOptions.ClientId = googleAuthNSection["ClientId"];
+        googleOptions.ClientSecret = googleAuthNSection["ClientSecret"];
+        // Cấu hình Url callback lại từ Google (không thiết lập thì mặc định là /signin-google)
+        googleOptions.CallbackPath = "/login-with-google";
+
+    });
             services.AddControllersWithViews();
         }
 
@@ -98,7 +112,7 @@ namespace MAQFurni
 
             app.UseRouting();
 
-            app.UseAuthentication();   
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -106,7 +120,8 @@ namespace MAQFurni
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();    
+                endpoints.MapRazorPages();
+
             });
         }
     }
