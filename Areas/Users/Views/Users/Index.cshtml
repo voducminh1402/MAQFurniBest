@@ -199,11 +199,12 @@
                     <div class="dropdown-items__container">
                       <ul class="dropdown-items__list">
                         <li class="dropdown-items__item">
-
-                          <a class="dropdown-items__link" asp-action="Details" asp-route-id="@item.Id"><span
-                            class="dropdown-items__link-icon">
-                              <svg class="icon-icon-view">
-                                <use xlink:href="#icon-view"></use>
+                          <a data-modal="#editCategory" data-cate-id="@item.Id"
+                          data-cate-name="@item.Id" data-cate-image="@item.Id" asp-area="Users"
+                          asp-action="Edit" asp-route-id="@item.Id"
+                          class="dropdown-items__link category-edit"><span class="dropdown-items__link-icon">
+                              <svg class="icon-icon-archive">
+                                <use xlink:href="#icon-archive"></use>
                               </svg></span>Edit</a>
                         </li>
                         <li class="dropdown-items__item">
@@ -216,12 +217,13 @@
                         </li>
 
                         <li class="dropdown-items__item">
-
-                          <a class="dropdown-items__link" asp-action="Delete" asp-route-id="@item.Id"><span
-                            class="dropdown-items__link-icon">
-                              <svg class="icon-icon-trash">
-                                <use xlink:href="#icon-trash"></use>
-                              </svg></span>Delete</a>
+                          <form asp-action="Delete" asp-route-id="@item.Id">
+                            <input type="hidden" asp-for="@item.Id" />
+                            <button type="submit" value="Delete" class="dropdown-items__link category-delete"><span
+                              class="dropdown-items__link-icon"><svg class="icon-icon-trash">
+                                  <use xlink:href="#icon-trash"></use>
+                                </svg></span>Delete</button>
+                          </form>
                         </li>
                       </ul>
                     </div>

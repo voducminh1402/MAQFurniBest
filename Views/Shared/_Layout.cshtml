@@ -125,7 +125,8 @@
                                         class="icon-magnifier"></i></a>
                                 <div class="dropdown_search">
                                     <form class="action-form" action="/Home/Search">
-                                        <input class="form-control" name="search" placeholder="Enter your search key" type="text">
+                                        <input class="form-control" name="search" placeholder="Enter your search key"
+                                            type="text">
                                         <button class="submit" type="submit"><i class="icon-magnifier"></i></button>
                                     </form>
                                 </div>
@@ -135,7 +136,11 @@
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
                                         class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="my-account.html">My account</a></li>
+                                    
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        <li><a class="dropdown-item" href="identity/account/manage">My account</a></li>
+                                    }
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
                                     @if (SignInManager.IsSignedIn(User))
                                     {
@@ -188,7 +193,8 @@
                                         class="icon-magnifier"></i></a>
                                 <div class="dropdown_search">
                                     <form class="action-form" action="/Home/Search">
-                                        <input class="form-control" name="search" placeholder="Enter your search key" type="text">
+                                        <input class="form-control" name="search" placeholder="Enter your search key"
+                                            type="text">
                                         <button class="submit" type="submit"><i class="icon-magnifier"></i></button>
                                     </form>
                                 </div>
@@ -348,7 +354,8 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="contact">Contact us</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -495,7 +502,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://localhost:5001/contact">Contact Us</a></li>
                 </ul>
             </div>
             <!-- OffCanvas Menu End -->
