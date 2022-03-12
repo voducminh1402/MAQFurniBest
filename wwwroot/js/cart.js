@@ -7,6 +7,7 @@ if (cart === null) {
 const addBtn = document.querySelectorAll(".add-to-cart");
 const cartIcon = document.querySelectorAll(".cartIcon");
 const cartRemove = document.querySelectorAll(".remove-cart");
+const detailAdd = document.getElementById("detail-add");
 
 const checkCartItem = (id, cart) => {
   let flag = 0;
@@ -67,6 +68,108 @@ addBtn.forEach((item, index) => {
         item.style.backgroundColor = "transparent";
       }
     });
+  });
+});
+
+detailAdd.addEventListener("click", () => {
+  let cartFromLocal = JSON.parse(localStorage.getItem("cart"));
+  if (cartFromLocal === null) {
+    cartFromLocal = [];
+  }
+  let quanityText = document.getElementById("detail-quantity");
+
+  let productImage = detailAdd.childNodes[1].value;
+  let productId = detailAdd.childNodes[3].value;
+  let productName = detailAdd.childNodes[5].value;
+  let productPrice = detailAdd.childNodes[7].value;
+  let quantiy =
+    parseInt(quanityText.value) <= 0 ? 1 : parseInt(quanityText.value);
+
+  let newProduct = {
+    id: productId,
+    image: productImage,
+    name: productName,
+    price: productPrice,
+    quantity: quantiy,
+  };
+
+  if (cartFromLocal.length === 0) {
+    cartFromLocal.push(newProduct);
+  } else {
+    let indexOfItem = checkCartItem(newProduct.id, cartFromLocal);
+    if (indexOfItem !== 0) {
+      cartFromLocal[indexOfItem].quantity += quantiy;
+    } else {
+      cartFromLocal.push(newProduct);
+    }
+  }
+  localStorage.setItem("cart", JSON.stringify(cartFromLocal));
+
+  document.querySelectorAll(".header-action-num").forEach((item, index) => {
+    let cartSize = JSON.parse(localStorage.getItem("cart")).length;
+    if (cartSize != 0) {
+      if (cartSize < 10) {
+        item.innerHTML = "0" + cartSize;
+        item.style.backgroundColor = "#ff7004";
+      } else {
+        item.innerHTML = cartSize;
+        item.style.backgroundColor = "#ff7004";
+      }
+    } else {
+      item.innerHTML = "";
+      item.style.backgroundColor = "transparent";
+    }
+  });
+});
+
+detailAdd.addEventListener("click", () => {
+  let cartFromLocal = JSON.parse(localStorage.getItem("cart"));
+  if (cartFromLocal === null) {
+    cartFromLocal = [];
+  }
+  let quanityText = document.getElementById("detail-quantity");
+
+  let productImage = detailAdd.childNodes[1].value;
+  let productId = detailAdd.childNodes[3].value;
+  let productName = detailAdd.childNodes[5].value;
+  let productPrice = detailAdd.childNodes[7].value;
+  let quantiy =
+    parseInt(quanityText.value) <= 0 ? 1 : parseInt(quanityText.value);
+
+  let newProduct = {
+    id: productId,
+    image: productImage,
+    name: productName,
+    price: productPrice,
+    quantity: quantiy,
+  };
+
+  if (cartFromLocal.length === 0) {
+    cartFromLocal.push(newProduct);
+  } else {
+    let indexOfItem = checkCartItem(newProduct.id, cartFromLocal);
+    if (indexOfItem !== 0) {
+      cartFromLocal[indexOfItem].quantity += quantiy;
+    } else {
+      cartFromLocal.push(newProduct);
+    }
+  }
+  localStorage.setItem("cart", JSON.stringify(cartFromLocal));
+
+  document.querySelectorAll(".header-action-num").forEach((item, index) => {
+    let cartSize = JSON.parse(localStorage.getItem("cart")).length;
+    if (cartSize != 0) {
+      if (cartSize < 10) {
+        item.innerHTML = "0" + cartSize;
+        item.style.backgroundColor = "#ff7004";
+      } else {
+        item.innerHTML = cartSize;
+        item.style.backgroundColor = "#ff7004";
+      }
+    } else {
+      item.innerHTML = "";
+      item.style.backgroundColor = "transparent";
+    }
   });
 });
 
