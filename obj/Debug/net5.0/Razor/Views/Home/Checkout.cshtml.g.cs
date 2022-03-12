@@ -3,7 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma checksum "C:\Users\HP\Desktop\prn22\MAQFurniBest\Views\Home\Checkout.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "957f46aedd639483a78cc70cc95baafe7a3fc3fe"
+=======
+#pragma checksum "D:\MAQFurniBest\Views\Home\Checkout.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "c058de31400b2a6cc54087b135efe32698177ad1"
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 #pragma checksum "D:\MAQFurniBest\Views\Home\Checkout.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "c058de31400b2a6cc54087b135efe32698177ad1"
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -112,7 +116,11 @@ using MAQFurni.Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "957f46aedd639483a78cc70cc95baafe7a3fc3fe5801", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c058de31400b2a6cc54087b135efe32698177ad15223", async() => {
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c058de31400b2a6cc54087b135efe32698177ad15223", async() => {
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
