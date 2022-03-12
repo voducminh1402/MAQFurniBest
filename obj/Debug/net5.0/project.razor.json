@@ -13566,38 +13566,6 @@
         }
       },
       {
-        "HashCode": 1127581693,
-        "Kind": "MVC.ViewComponent",
-        "Name": "__Generated__MessagePageViewComponentTagHelper",
-        "AssemblyName": "MAQFurni",
-        "CaseSensitive": false,
-        "TagMatchingRules": [
-          {
-            "TagName": "vc:message-page",
-            "Attributes": [
-              {
-                "Name": "message"
-              }
-            ]
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "MVC.ViewComponent",
-            "Name": "message",
-            "TypeName": "MAQFurni.MessagePage.Message",
-            "Metadata": {
-              "Common.PropertyName": "message"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "ITagHelper",
-          "Common.TypeName": "__Generated__MessagePageViewComponentTagHelper",
-          "MVC.ViewComponent.Name": "MessagePage"
-        }
-      },
-      {
         "HashCode": 141407075,
         "Kind": "Components.Bind",
         "Name": "Bind",
