@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma checksum "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "2750c5f0074271f31d668aaac8a1811a45400248"
+=======
+#pragma checksum "D:\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "6b7fd91a37f6237cd2325a25e30e0013d87cdb56"
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 #pragma checksum "D:\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "6b7fd91a37f6237cd2325a25e30e0013d87cdb56"
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -151,9 +155,15 @@ using MAQFurni.Areas.Identity.Pages.Account;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2750c5f0074271f31d668aaac8a1811a4540024810507", async() => {
                 WriteLiteral("\r\n                                        ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2750c5f0074271f31d668aaac8a1811a4540024810806", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5610369", async() => {
+                WriteLiteral("\r\n                                        ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5610668", async() => {
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5610369", async() => {
                 WriteLiteral("\r\n                                        ");
@@ -193,7 +203,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2750c5f0074271f31d668aaac8a1811a4540024812509", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5612348", async() => {
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5612348", async() => {
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -229,7 +243,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2750c5f0074271f31d668aaac8a1811a4540024814344", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5614160", async() => {
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5614160", async() => {
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -265,7 +283,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2750c5f0074271f31d668aaac8a1811a4540024816340", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5616133", async() => {
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5616133", async() => {
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -306,7 +328,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2750c5f0074271f31d668aaac8a1811a4540024818350", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5618097", async() => {
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5618097", async() => {
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -335,7 +361,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 59 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
+=======
+#line 60 "D:\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 #line 60 "D:\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -352,6 +382,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #line default
 #line hidden
 #nullable disable
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -388,6 +419,12 @@ WriteAttributeValue("", 3717, provider.Name, 3717, 14, false);
                 WriteLiteral("\r\n                                                <div style=\"display: flex; justify-content: center;\">\r\n                                                    <p>\r\n");
 #nullable restore
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
+=======
+            WriteLiteral("                                        <section>\r\n                                            <hr />\r\n                                            ");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5621366", async() => {
+                WriteLiteral("\r\n                                                <div style=\"display: flex; justify-content: center;\">\r\n                                                    <p>\r\n");
+#nullable restore
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 #line 69 "D:\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
                                                          foreach (var provider in Model.ExternalLogins)
                                                         {
@@ -406,9 +443,12 @@ WriteAttributeValue("", 3717, provider.Name, 3717, 14, false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 70 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
 WriteAttributeValue(" ", 3810, provider.DisplayName, 3811, 21, false);
 =======
+=======
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
@@ -427,9 +467,12 @@ WriteAttributeValue("", 4054, provider.Name, 4054, 14, false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 70 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
                                                                                                        Write(provider.DisplayName);
 =======
+=======
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
@@ -446,9 +489,12 @@ WriteAttributeValue(" ", 4151, provider.DisplayName, 4152, 21, false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 71 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
                                                     }
 =======
+=======
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
@@ -479,9 +525,12 @@ WriteAttributeValue(" ", 4151, provider.DisplayName, 4152, 21, false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 63 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
                                                  WriteLiteral(Model.ReturnUrl);
 =======
+=======
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
@@ -511,9 +560,12 @@ WriteAttributeValue(" ", 4151, provider.DisplayName, 4152, 21, false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #line 75 "C:\Users\HP\Desktop\prn22\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
 
 =======
+=======
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
@@ -542,6 +594,9 @@ WriteAttributeValue(" ", 4151, provider.DisplayName, 4152, 21, false);
 #line 79 "D:\MAQFurniBest\Areas\Identity\Pages\Account\Login.cshtml"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
+=======
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
@@ -592,7 +647,11 @@ WriteAttributeValue(" ", 4151, provider.DisplayName, 4152, 21, false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2750c5f0074271f31d668aaac8a1811a4540024827851", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5627327", async() => {
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b7fd91a37f6237cd2325a25e30e0013d87cdb5627327", async() => {
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
