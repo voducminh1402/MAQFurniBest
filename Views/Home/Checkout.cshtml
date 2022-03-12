@@ -26,8 +26,9 @@
 <!-- checkout area start -->
 <div class="checkout-area pt-100px pb-100px">
     <div class="container">
-        <div class="row">
-            <form id="form" asp-action="AddOrder" method="post">
+        <form id="form" asp-action="AddOrder" method="post">
+            <div class="row">
+
                 <div class="col-lg-7">
                     <div class="billing-info-wrap">
                         <h3>Billing Details</h3>
@@ -55,6 +56,12 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="billing-info mb-4">
+                                    <label>Email Address</label>
+                                    <input name="email" type="email" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
                                     <label>Town / City</label>
                                     <input name="city" type="text" required />
                                 </div>
@@ -70,6 +77,14 @@
                                 <div class="billing-info mb-4">
                                     <label>Phone</label>
                                     <input name="phone" type="phone" required />
+                                </div>
+                            </div>
+                            <div class="additional-info-wrap">
+                                <h4>Additional information</h4>
+                                <div class="additional-info">
+                                    <label>Order notes</label>
+                                    <textarea placeholder="Notes about your order, e.g. special notes for delivery. "
+                                        name="message"></textarea>
                                 </div>
                             </div>
                             <input type="hidden" name="cart">
@@ -166,11 +181,13 @@
                     </div>
                 </div>
                 <input type="hidden" id="id-remove" value="@ViewBag.ProductId">
+                <input type="hidden" id="quantity" value="@ViewBag.ProductQuantity">
                 <input type="hidden" id="clear-cart" value="@ViewBag.Success">
-            </form>
+                <input type="hidden" id="detail-add">
+        </form>
 
-        </div>
     </div>
+</div>
 </div>
 <!-- checkout area end -->
 <script>
@@ -260,26 +277,58 @@
             let success = document.getElementById("clear-cart").value;
             if (success === "success") {
                 localStorage.removeItem("cart");
-                localStorage.setItem("cart", []);
+
+                document.location.href = "https://localhost:5001/check-out-success";
             }
             let cart = JSON.parse(localStorage.getItem("cart"));
             if (cart === null) {
                 cart = [];
             }
             let id = document.getElementById("id-remove").value;
+            let quantity = document.getElementById("quantity").value;
+            console.log(id);
+            console.log(quantity);
             var newCart = [];
             if (id != null) {
-                for (let o of cart) {
-                    console.log(o.id);
-                    if (o.id != document.getElementById("id-remove").value) {
-                        newCart.push(o);
+                if (quantity == "0") {
+                    for (let o of cart) {
+                        console.log(o.id);
+                        if (o.id != document.getElementById("id-remove").value) {
+                            newCart.push(o);
+                        }
                     }
+
+                    localStorage.setItem("cart", JSON.stringify(newCart));
+                    console.log(JSON.parse(localStorage.getItem("cart")));
+                } else {
+                    for (let o of cart) {
+                        let newProduct;
+                        if (o.id == document.getElementById("id-remove").value) {
+                            newProduct = {
+                                id: o.id,
+                                image: o.image,
+                                name: o.name,
+                                price: o.price,
+                                quantity: quantity
+                            };
+                        } else {
+                            newProduct = {
+                                id: o.id,
+                                image: o.image,
+                                name: o.name,
+                                price: o.price,
+                                quantity: o.quantity
+                            };
+                        }
+
+                        newCart.push(newProduct);
+                    }
+                    localStorage.setItem("cart", JSON.stringify(newCart));
+                    console.log(JSON.parse(localStorage.getItem("cart")));
                 }
 
-                localStorage.setItem("cart", JSON.stringify(newCart));
-                console.log(JSON.parse(localStorage.getItem("cart")));
             }
-
+            cart = JSON.parse(localStorage.getItem("cart"));
             let listInsert = document.getElementById("listProduct");
             listInsert.innerHTML = "";
             if (cart === null) {
