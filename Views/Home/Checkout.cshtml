@@ -260,7 +260,6 @@
             let success = document.getElementById("clear-cart").value;
             if (success === "success") {
                 localStorage.removeItem("cart");
-                localStorage.setItem("cart", []);
             }
             let cart = JSON.parse(localStorage.getItem("cart"));
             if (cart === null) {

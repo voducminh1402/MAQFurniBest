@@ -15694,11 +15694,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Product\\Delete.cshtml",
-      "TargetPath": "Views\\Product\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Users\\Views\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Users\\Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -15749,11 +15744,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Product\\Details.cshtml",
-      "TargetPath": "Views\\Product\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Order\\Views\\Order\\Index.cshtml",
       "TargetPath": "Areas\\Order\\Views\\Order\\Index.cshtml",
       "FileKind": "mvc"
@@ -15781,11 +15771,6 @@
     {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Product\\Edit.cshtml",
-      "TargetPath": "Views\\Product\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15851,11 +15836,6 @@
     {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Users\\Views\\Users\\Create.cshtml",
       "TargetPath": "Areas\\Users\\Views\\Users\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Product\\Index.cshtml",
-      "TargetPath": "Views\\Product\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15956,11 +15936,6 @@
     {
       "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\Views\\Product\\Create.cshtml",
-      "TargetPath": "Views\\Product\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
