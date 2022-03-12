@@ -38,10 +38,6 @@ namespace MAQFurni
             .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<FurnitureShopContext>()
             .AddDefaultTokenProviders();
-            services.AddOptions();                                         // Kích hoạt Options
-            var mailsettings = Configuration.GetSection("MailSettings");  // đọc config
-            services.Configure<MailSetting>(mailsettings);                // đăng ký để Inject
-            services.AddTransient<ISendMailService, SendMailService>();
             services.Configure<IdentityOptions>(options =>
             {
                 // Thiết lập về Password
@@ -126,20 +122,6 @@ namespace MAQFurni
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
 
-                endpoints.MapGet("/chec-out-success", async context =>
-                {
-                    // Lấy dịch vụ sendmailservice
-                    var sendmailservice = context.RequestServices.GetService<ISendMailService>();
-
-                    MailContent content = new MailContent
-                    {
-                        To = "honganhle00@gmail.com",
-                        Subject = "Thank you!",
-                        Body = $"Thank you for your order"
-                    };
-
-                    await sendmailservice.SendMail(content);
-                });
             });
         }
     }
