@@ -1,0 +1,384 @@
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row breadcrumb_box  align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-left">
+                        <h2 class="breadcrumb-title">Shop</h2>
+                    </div>
+                    <div class="col-lg-6  col-md-6 col-sm-12">
+                        <!-- breadcrumb-list start -->
+                        <ul class="breadcrumb-list text-center text-md-right">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Checkout</li>
+                        </ul>
+                        <!-- breadcrumb-list end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- breadcrumb-area end -->
+
+<!-- checkout area start -->
+<div class="checkout-area pt-100px pb-100px">
+    <div class="container">
+        <form id="form" asp-action="AddOrder" method="post">
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="billing-info-wrap">
+                        <h3>Billing Details</h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>First Name</label>
+                                    <input type="text" name="firstName" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>Last Name</label>
+                                    <input type="text" name="lastName" required />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Address</label>
+
+                                    <input name="address" placeholder="Apartment, suite, unit etc." type="text"
+                                        required />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Email Address</label>
+                                    <input name="email" type="email" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Town / City</label>
+                                    <input name="city" type="text" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>State / County</label>
+                                    <input name="state" type="text" required />
+                                </div>
+                            </div>
+                            <input type="hidden" name="cart" id="cart">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>Phone</label>
+                                    <input name="phone" type="phone" required />
+                                </div>
+                            </div>
+                            <div class="additional-info-wrap">
+                                <h4>Additional information</h4>
+                                <div class="additional-info">
+                                    <label>Order notes</label>
+                                    <textarea placeholder="Notes about your order, e.g. special notes for delivery. "
+                                        name="message"></textarea>
+                                </div>
+                            </div>
+                            <input type="hidden" name="cart">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-md-30px mt-lm-30px ">
+                    <div class="your-order-area">
+                        <h3>Your order</h3>
+                        <div class="your-order-wrap gray-bg-4">
+                            <div class="your-order-product-info">
+                                <div class="your-order-top">
+                                    <ul>
+                                        <li>Product</li>
+                                        <li>Total</li>
+                                    </ul>
+                                </div>
+                                <div class="your-order-middle">
+                                    <ul id="listProduct">
+                                    </ul>
+                                </div>
+                                <div class="your-order-bottom">
+                                    <ul>
+                                        <li class="your-order-shipping">Shipping</li>
+                                        <li>Free shipping</li>
+                                    </ul>
+                                </div>
+                                <div class="your-order-total">
+                                    <ul>
+                                        <li class="order-total">Total</li>
+                                        <li id="total"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="payment-method">
+                                <div class="payment-accordion element-mrg">
+                                    <div id="faq" class="panel-group">
+                                        <div class="panel panel-default single-my-account m-0">
+                                            <div class="panel-heading my-account-title">
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse"
+                                                        href="#my-account-1" class="collapsed"
+                                                        aria-expanded="true">Direct bank transfer</a>
+                                                </h4>
+                                            </div>
+                                            <div id="my-account-1" class="panel-collapse collapse show"
+                                                data-bs-parent="#faq">
+
+                                                <div class="panel-body">
+                                                    <p>Please send a check to Store Name, Store Street, Store Town,
+                                                        Store
+                                                        State / County, Store Postcode.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default single-my-account m-0">
+                                            <div class="panel-heading my-account-title">
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse"
+                                                        href="#my-account-2" aria-expanded="false"
+                                                        class="collapsed">Check payments</a></h4>
+                                            </div>
+                                            <div id="my-account-2" class="panel-collapse collapse"
+                                                data-bs-parent="#faq">
+
+                                                <div class="panel-body">
+                                                    <p>Please send a check to Store Name, Store Street, Store Town,
+                                                        Store
+                                                        State / County, Store Postcode.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default single-my-account m-0">
+                                            <div class="panel-heading my-account-title">
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse"
+                                                        href="#my-account-3">Cash on delivery</a></h4>
+                                            </div>
+                                            <div id="my-account-3" class="panel-collapse collapse"
+                                                data-bs-parent="#faq">
+
+                                                <div class="panel-body">
+                                                    <p>Please send a check to Store Name, Store Street, Store Town,
+                                                        Store
+                                                        State / County, Store Postcode.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Place-order mt-25">
+                            <button class="btn-hover button-css-to-a" id="check-out">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="id-remove" value="@ViewBag.ProductId">
+                <input type="hidden" id="quantity" value="@ViewBag.ProductQuantity">
+                <input type="hidden" id="clear-cart" value="@ViewBag.Success">
+                <input type="hidden" id="detail-add">
+        </form>
+
+    </div>
+</div>
+</div>
+<!-- checkout area end -->
+<script src="~/js/toast.js"></script>
+<script>
+    const checkOut = document.getElementById("check-out");
+    checkOut.addEventListener("click", function () {
+        document.getElementById("cart").value = localStorage.getItem("cart");
+    });
+
+
+    function toats() {
+        vt.error("Your order product have been sold out!", {
+            title: "Check out fail",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
+
+
+
+    @* @ViewBag.ProductId =  *@
+
+        @* $("form").submit(function (event) {
+            var formData = {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            superheroAlias: $("#superheroAlias").val(),
+            };
+
+            $.ajax({
+            type: "POST",
+            url: "process.php",
+            data: formData,
+            dataType: "json",
+            encode: true,
+            }).done(function (data) {
+            console.log(data);
+            });
+
+            event.preventDefault();
+            }); *@
+
+        /*checkOut.addEventListener("click", function () {
+            const phone = document.getElementById("phone");
+            const firstName = document.getElementById("first-name");
+            const lastName = document.getElementById("last-name");
+            const address = document.getElementById("address");
+            const city = document.getElementById("city");
+            const state = document.getElementById("state");
+            $.ajax({
+                type: "POST",
+                url: "cart/check-out",
+                @* data: "cart=" + localStorage.getItem("cart"), *@
+                data: {
+                cart: localStorage.getItem("cart"), fullName: firstName + " " + lastName,
+                phone: phone, address: address, city: city,
+                state: state
+            },
+                async: false,
+                success: function (response) {
+                    data = response;
+                    if (data === "not login")
+                        window.location.replace("https://localhost:5001/login");
+                    else if (data === "cart null")
+                        window.location.reload("https://localhost:5001/check-out");
+                    else {
+                        console.log(data);
+                        localStorage.removeItem("cart");
+                        localStorage.setItem("cart");
+                    }
+                },
+                error: function () {
+                    alert("Error occured");
+                },
+            });
+        });*/
+        @* Response.on('finish', function () {
+            // request processing finished
+            var headers = new Headers();
+            let responseStatus = headers.get("respone-status");
+            console.log(responseStatus);
+            if (responseStatus === "success") {
+            localStorage.removeItem("cart");
+            localStorage.getItem("cart");
+            }
+            }); *@
+
+        window.addEventListener('load', (event) => {
+
+            @* var header = Response.headers;
+                    console.log(new Response());
+                    let responseStatus = headers.get("respone-status");
+                    console.log(responseStatus); *@
+                @* if (responseStatus === "success") {
+                    localStorage.removeItem("cart");
+                    localStorage.getItem("cart");
+                    } *@
+                console.log("load ne");
+            let success = document.getElementById("clear-cart").value;
+            if (success === "success") {
+                localStorage.removeItem("cart");
+
+                document.location.href = "https://localhost:5001/check-out-success";
+            }
+            let cart = JSON.parse(localStorage.getItem("cart"));
+            if (cart === null) {
+                cart = [];
+            }
+
+            let id = document.getElementById("id-remove").value;
+            let quantity = document.getElementById("quantity").value;
+
+            var newCart = [];
+            if (id != null) {
+                localStorage.setItem("cart", JSON.stringify(newCart));
+                if (quantity == "0") {
+                    toats();
+                    for (let o of cart) {
+                        console.log(o.id);
+                        if (o.id != document.getElementById("id-remove").value) {
+                            newCart.push(o);
+                        }
+                    }
+
+
+                } else {
+                    for (let o of cart) {
+                        let newProduct;
+                        if (o.id == document.getElementById("id-remove").value) {
+                            newProduct = {
+                                id: o.id,
+                                image: o.image,
+                                name: o.name,
+                                price: o.price,
+                                quantity: quantity
+                            };
+                        } else {
+                            newProduct = {
+                                id: o.id,
+                                image: o.image,
+                                name: o.name,
+                                price: o.price,
+                                quantity: o.quantity
+                            };
+                        }
+
+                        newCart.push(newProduct);
+                    }
+                    localStorage.setItem("cart", JSON.stringify(newCart));
+                    console.log(JSON.parse(localStorage.getItem("cart")));
+                }
+
+            }
+            cart = JSON.parse(localStorage.getItem("cart"));
+            let listInsert = document.getElementById("listProduct");
+            listInsert.innerHTML = "";
+            if (cart === null) {
+                cart = [];
+            }
+
+            let total = 0;
+            let item = "";
+            for (let cartItem of cart) {
+                item += `<li><span class="order-middle-left">${cartItem.name} X ${cartItem.quantity}</span> <span
+                                            class="order-price">${cartItem.price * cartItem.quantity} VND </span></li>`;
+                total += parseFloat(cartItem.price * cartItem.quantity);
+            }
+            listInsert.innerHTML = item;
+            document.getElementById("total").innerHTML = total;
+        });
+</script>
+<style>
+    .button-css-to-a {
+        background-color: #ff7004;
+        color: #fff;
+        display: block;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1;
+        padding: 18px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 0px;
+        z-index: 9;
+        width: 100%;
+    }
+
+    .button-css-to-a:hover {
+        background-color: black;
+    }
+</style>
