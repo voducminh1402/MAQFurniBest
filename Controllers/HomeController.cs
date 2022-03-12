@@ -27,6 +27,7 @@ namespace MAQFurni.Controllers
             _signInManager = signInManager;
         }
 
+        [ActionName("Index")]
         public async Task<IActionResult> IndexAsync()
         {
             IndexViewModel ivm = new IndexViewModel();
@@ -70,7 +71,6 @@ namespace MAQFurni.Controllers
 
             ViewBag.ProductList = list;
             ViewBag.Cond = "Relevance";
-
             return View("FilterCategory");
         }
 
