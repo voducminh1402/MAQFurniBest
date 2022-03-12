@@ -8,11 +8,8 @@ using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
 using Microsoft.AspNetCore.Mvc.Rendering;
-=======
 using System.IO;
->>>>>>> 174df9c88fe538e45c48611a6a92502efb08862f
 
 namespace MAQFurni.Controllers
 {
@@ -203,31 +200,6 @@ namespace MAQFurni.Controllers
         //     public decimal price { get; set; }
         //     public int quantity { get; set; }
         // }
-        [HttpGet("contact")]
-        public IActionResult Contact()
-        {
-            return View();
-        }
-
-        [HttpGet("view-order")] 
-        [ActionName("ViewOrder")]
-        public IActionResult ViewOrder(string orderid, string phone)
-        {   
-
-            ViewBag.Product = new SelectList(_context.Products, "ProductName");
-
-            var detail = _context.OrderDetails.Where(m => m.OrderId == orderid).Include(m => m.Product);
-            
-            if(detail == null){
-                return View("Contact");
-            }
-
-            
-            
-
-
-            return View(detail.ToList());
-        }
 
 
         //  [ActionName("ViewOrder")]

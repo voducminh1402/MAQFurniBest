@@ -1,3 +1,4 @@
+@model User
 
 @{
     ViewData["Title"] = "Profile";
@@ -72,13 +73,13 @@
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="billing-info">
                                                         <label>User name</label>
-                                                        <input name="name" class="form-control" />
+                                                        <input name="name" asp-for="@Model.UserName" class="form-control" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="billing-info">
                                                         <label>Phone number</label>
-                                                        <input name="phone" class="form-control" />
+                                                        <input name="phone" asp-for="@Model.PhoneNumber" class="form-control" required type="tel"/>
                                                        
                                                     </div>
                                                 </div>

@@ -15671,11 +15671,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\MAQFurniBest\\Views\\Home\\Contact.cshtml",
-      "TargetPath": "Views\\Home\\Contact.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "d:\\MAQFurniBest\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -16093,11 +16088,6 @@
     {
       "FilePath": "d:\\MAQFurniBest\\Areas\\Users\\Views\\Users\\Index.cshtml",
       "TargetPath": "Areas\\Users\\Views\\Users\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\MAQFurniBest\\Views\\Home\\ViewOrder.cshtml",
-      "TargetPath": "Views\\Home\\ViewOrder.cshtml",
       "FileKind": "mvc"
     },
     {

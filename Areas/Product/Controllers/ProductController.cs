@@ -55,7 +55,7 @@ namespace MAQFurni.Areas.Product.Controllers
         public IActionResult Create()
         {
             ViewData["AvailableId"] = new SelectList(_context.ProductAvailables, "AvailableId", "AvailableName");
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryImage");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName");
             return View();
         }
 
@@ -73,7 +73,7 @@ namespace MAQFurni.Areas.Product.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AvailableId"] = new SelectList(_context.ProductAvailables, "AvailableId", "AvailableName", product.AvailableId);
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryImage", product.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             return View(product);
         }
 
@@ -92,7 +92,7 @@ namespace MAQFurni.Areas.Product.Controllers
                 return NotFound();
             }
             ViewData["AvailableId"] = new SelectList(_context.ProductAvailables, "AvailableId", "AvailableName", product.AvailableId);
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryImage", product.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             return View(product);
         }
 
@@ -129,7 +129,7 @@ namespace MAQFurni.Areas.Product.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AvailableId"] = new SelectList(_context.ProductAvailables, "AvailableId", "AvailableName", product.AvailableId);
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryImage", product.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             return View(product);
         }
 

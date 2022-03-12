@@ -36,12 +36,15 @@ namespace MAQFurni.Controllers
             if (!_signInManager.IsSignedIn(User))
                 return Redirect("https://localhost:5001/login");
             var user = _context.Users.SingleOrDefault(o => o.Id == userId);
-            user.UserName = name;
-            user.PhoneNumber = phone;
+            if (name.Trim().Length == 0 || phone.Trim().Length == 0)
+                return View(user);
+            
+            user.UserName = name.Trim();
+            user.PhoneNumber = phone.Trim();
             _context.Users.Update(user);
             _context.SaveChanges(); 
             // Add action logic here
-            return View();
+            return View(user);
         }
 
         public ActionResult Index()
