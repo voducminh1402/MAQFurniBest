@@ -277,11 +277,7 @@
             let success = document.getElementById("clear-cart").value;
             if (success === "success") {
                 localStorage.removeItem("cart");
-<<<<<<< HEAD
-=======
-
                 document.location.href = "https://localhost:5001/check-out-success";
->>>>>>> bc79799d27d5820b023f70aa4dcbab8fa2993652
             }
             let cart = JSON.parse(localStorage.getItem("cart"));
             if (cart === null) {
@@ -341,7 +337,7 @@
             let total = 0;
             let item = "";
             for (let cartItem of cart) {
-                item += `<li><span class="order-middle-left">${cartItem.name} X ${cartItem.quantity}</span> <span
+                item += `<li><span class="order-middle-left">${cartItem.name} x ${cartItem.quantity}</span> <span
                                             class="order-price">${cartItem.price * cartItem.quantity} VND </span></li>`;
                 total += parseFloat(cartItem.price * cartItem.quantity);
             }

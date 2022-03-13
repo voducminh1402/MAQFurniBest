@@ -153,14 +153,7 @@ namespace MAQFurni.Controllers
                 searchList = _context.Products.Where(p => p.ProductName.Contains(search)).ToList();
             }
 
-            ProductPriceMinMax productPrice = new ProductPriceMinMax
-            {
-                Min = searchList.OrderBy(p => p.ProductPrice).FirstOrDefault().ProductPrice,
-                Max = searchList.OrderByDescending(p => p.ProductPrice).FirstOrDefault().ProductPrice
-            };
-
             ViewBag.ProductList = searchList;
-            ViewBag.MinMax = productPrice;
             ViewBag.Search = search;
             ViewBag.Cond = condition;
 
