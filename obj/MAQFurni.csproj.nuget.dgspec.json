@@ -2,6 +2,7 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {}
   },
   "projects": {
@@ -15,24 +16,37 @@
         "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
 =======
     "D:\\MAQFurniBest\\MAQFurni.csproj": {}
+=======
+    "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj": {}
+>>>>>>> 17e034ccedaf0527f7c5a2ad3d61a56fc35cfcbf
   },
   "projects": {
-    "D:\\MAQFurniBest\\MAQFurni.csproj": {
+    "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MAQFurniBest\\MAQFurni.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
         "projectName": "MAQFurni",
+<<<<<<< HEAD
         "projectPath": "D:\\MAQFurniBest\\MAQFurni.csproj",
         "packagesPath": "C:\\Users\\PhongVu\\.nuget\\packages\\",
         "outputPath": "D:\\MAQFurniBest\\obj\\",
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
+=======
+        "projectPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\obj\\",
+>>>>>>> 17e034ccedaf0527f7c5a2ad3d61a56fc35cfcbf
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
 <<<<<<< HEAD
           "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
 =======
           "C:\\Users\\PhongVu\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
+=======
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 17e034ccedaf0527f7c5a2ad3d61a56fc35cfcbf
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,10 +172,14 @@
             }
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
 =======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
 >>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+>>>>>>> 17e034ccedaf0527f7c5a2ad3d61a56fc35cfcbf
         }
       }
     }

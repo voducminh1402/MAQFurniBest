@@ -64,8 +64,13 @@ namespace MAQFurni.Areas.Product.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost("admin/product/create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductImage,ProductPrice,Quantity,Description,AvailableId,CategoryId,CreateDate")] ProductModel product)
+        public async Task<IActionResult> Create([Bind("ProductName,ProductImage,ProductPrice,Quantity,Description,AvailableId,CategoryId")] ProductModel product)
         {
+            Guid uuid = Guid.NewGuid();
+            var id = uuid.ToString();
+            DateTime date = DateTime.Now;
+            product.CreateDate = date;
+            product.ProductId = id;
             if (ModelState.IsValid)
             {
                 _context.Add(product);
@@ -87,6 +92,7 @@ namespace MAQFurni.Areas.Product.Controllers
             }
 
             var product = await _context.Products.FindAsync(id);
+
             if (product == null)
             {
                 return NotFound();
@@ -99,10 +105,14 @@ namespace MAQFurni.Areas.Product.Controllers
         // POST: Product/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost("admin/product/edit/{id}")]
+        [HttpPost("admin/product/edit/{id}"), ActionName("Edit")]
+
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ProductId,ProductName,ProductImage,ProductPrice,Quantity,Description,AvailableId,CategoryId,CreateDate")] ProductModel product)
+        public async Task<IActionResult> Edit(string id, [Bind("ProductName,ProductImage,ProductPrice,Quantity,Description,AvailableId,CategoryId")] ProductModel product)
         {
+            Guid uuid = Guid.NewGuid();
+            DateTime date = DateTime.Now;
+            product.CreateDate = date;
             if (id != product.ProductId)
             {
                 return NotFound();

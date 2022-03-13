@@ -24,9 +24,6 @@
     <h1 class="page-header__title">Products</h1>
   </div>
 
-  <p>
-    <a asp-action="Create">Create New</a>
-  </p>
   <div class="page-tools">
     <div class="page-tools__breadcrumbs">
       <div class="breadcrumbs">
@@ -129,6 +126,7 @@
           </div>
         </div>
       </div>
+
       <div class="toolbox__right col-12 col-lg-auto">
         <div class="toolbox__right-row row row--xs flex-nowrap">
           <div class="col col-lg-auto">
@@ -142,6 +140,15 @@
                 <input class="input" type="text" placeholder="Search Products" />
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div class="toolbox__right col-12 col-lg-auto">
+        <div class="toolbox__right-row row row--xs flex-nowrap">
+          <div class="col-auto">
+            <a asp-action="Create" class="button-add button-add--blue btn-add-cate"><span class="button-add__icon">
+                Add New Product
+            </a>
           </div>
         </div>
       </div>

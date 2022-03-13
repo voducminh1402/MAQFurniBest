@@ -215,11 +215,11 @@ namespace MAQFurni.Controllers
             var userId = _userManager.GetUserId(User);
             if (!_signInManager.IsSignedIn(User))
                 return Redirect("https://localhost:5001/login");
-            Console.WriteLine($"{cart} - {phone} - {firstName + lastName} - {address} - {city} - {state}");
-            if (cart != null)
+            if (cart.Length < 2)
+                return View("Checkout");
+            if (cart.Length > 2)
             {
                 dynamic json = JsonConvert.DeserializeObject(cart);
-                Console.WriteLine(json);
                 string id;
                 decimal price;
                 int quantity;
@@ -234,7 +234,7 @@ namespace MAQFurni.Controllers
                     string q = o["quantity"];
                     price = decimal.Parse(p);
                     quantity = int.Parse(q);
-                    Console.WriteLine($"{id} - {price} - {quantity}");
+
                     totalPrice += price * quantity;
                     Product pro = await _context.Products.SingleOrDefaultAsync(o => o.ProductId.Equals(id));
                     if (pro.Quantity == 0)
@@ -297,38 +297,9 @@ namespace MAQFurni.Controllers
                 };
                 _context.ShippingInfos.Add(shipping);
                 _context.SaveChanges();
-            }
-
-
-            // foreach (var pro in products)
-            //     foreach (var p in cartProduct)
-            //     {
-
-            //         int availableId = p.AvailableId;
-            //         int quantityNew = pro.Quantity - p.Quantity;
-            //         if (quantityNew == 0)
-            //         {
-            //             availableId = 2;
-            //         }
-            //         Product product = new Product
-            //         {
-            //             ProductId = p.ProductId,
-            //             ProductImage = p.ProductImage,
-            //             ProductName = p.ProductName,
-            //             ProductPrice = p.ProductPrice,
-            //             Quantity = quantityNew,
-            //             Description = p.Description,
-            //             CreateDate = p.CreateDate,
-            //             AvailableId = availableId,
-            //             CategoryId = p.CategoryId
-            //         };
-            //         p.AvailableId = availableId;
-            //         p.Quantity = quantityNew;
-
-
-            ViewBag.Success = "success";
-            string subject = "Thank you for your order!";
-            string content = @"<!DOCTYPE html>
+                ViewBag.Success = "success";
+                string subject = "Thank you for your order!";
+                string content = @"<!DOCTYPE html>
 <html>
   <head>
     <meta charset=""utf-8"" />
@@ -593,7 +564,37 @@ namespace MAQFurni.Controllers
   </body>
 </html>
 ";
-            await MailUtils.MailUtils.SendMailGoogleSmtp("shopvegetabledemo@gmail.com", email, subject, content);
+                await MailUtils.MailUtils.SendMailGoogleSmtp("shopvegetabledemo@gmail.com", email, subject, content);
+            }
+
+
+            // foreach (var pro in products)
+            //     foreach (var p in cartProduct)
+            //     {
+
+            //         int availableId = p.AvailableId;
+            //         int quantityNew = pro.Quantity - p.Quantity;
+            //         if (quantityNew == 0)
+            //         {
+            //             availableId = 2;
+            //         }
+            //         Product product = new Product
+            //         {
+            //             ProductId = p.ProductId,
+            //             ProductImage = p.ProductImage,
+            //             ProductName = p.ProductName,
+            //             ProductPrice = p.ProductPrice,
+            //             Quantity = quantityNew,
+            //             Description = p.Description,
+            //             CreateDate = p.CreateDate,
+            //             AvailableId = availableId,
+            //             CategoryId = p.CategoryId
+            //         };
+            //         p.AvailableId = availableId;
+            //         p.Quantity = quantityNew;
+
+
+
             return View("Checkout");
 
         }

@@ -52,19 +52,18 @@
                                                 <a class="flote-none" href="javascript:void(0)">Remember me</a>
                                                 <a asp-page="./ForgotPassword">Forgot Password?</a>
                                             </div>
-                                            <button type="submit"><span>Login</span></button>
-                                        </div>
+                                            <div style="    display: flex;
+    justify-content: space-between;">
+                                                <button type="submit"><span>Login</span></button>
                                     </form>
-                                </div>
-                                <div class="col-md-12">
-                                    @if ((Model.ExternalLogins?.Count ?? 0) != 0)
-                                    {
-                                        <section>
-                                            <hr />
+                                    <div>
+                                        @if ((Model.ExternalLogins?.Count ?? 0) != 0)
+                                        {
+
                                             <form id="external-account" asp-page="./ExternalLogin"
                                             asp-route-returnUrl="@Model.ReturnUrl" method="post"
                                             class="form-horizontal">
-                                                <div style="display: flex; justify-content: center;">
+                                                <div>
                                                     <p>
                                                         @foreach (var provider in Model.ExternalLogins)
                                                         {
@@ -75,19 +74,26 @@
                                                     </p>
                                                 </div>
                                             </form>
-                                        </section>
-                                    }
+
+                                        }
+                                    </div>
                                 </div>
+
                             </div>
+
                         </div>
 
-
-
+                        <hr>
                     </div>
                 </div>
+
+
+
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 <!-- login area end -->
 

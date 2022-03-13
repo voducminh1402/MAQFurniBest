@@ -190,11 +190,26 @@
 </div>
 </div>
 <!-- checkout area end -->
+<script src="~/js/toast.js"></script>
 <script>
     const checkOut = document.getElementById("check-out");
     checkOut.addEventListener("click", function () {
         document.getElementById("cart").value = localStorage.getItem("cart");
     });
+
+
+    function toats() {
+        vt.error("Your order product have been sold out!", {
+            title: "Check out fail",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
+
+
 
     @* @ViewBag.ProductId =  *@
 
@@ -283,13 +298,15 @@
             if (cart === null) {
                 cart = [];
             }
+
             let id = document.getElementById("id-remove").value;
             let quantity = document.getElementById("quantity").value;
-            console.log(id);
-            console.log(quantity);
+
             var newCart = [];
             if (id != null) {
+                localStorage.setItem("cart", JSON.stringify(newCart));
                 if (quantity == "0") {
+                    toats();
                     for (let o of cart) {
                         console.log(o.id);
                         if (o.id != document.getElementById("id-remove").value) {
@@ -297,8 +314,7 @@
                         }
                     }
 
-                    localStorage.setItem("cart", JSON.stringify(newCart));
-                    console.log(JSON.parse(localStorage.getItem("cart")));
+
                 } else {
                     for (let o of cart) {
                         let newProduct;

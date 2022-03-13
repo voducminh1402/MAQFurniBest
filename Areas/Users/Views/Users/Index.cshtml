@@ -9,9 +9,7 @@
   <div class="page-header">
     <h1 class="page-header__title">Users</h1>
   </div>
-  <p>
-    <a asp-action="Create">Create New</a>
-  </p>
+ 
   <div class="page-tools">
     <div class="page-tools__breadcrumbs">
       <div class="breadcrumbs">
@@ -279,3 +277,25 @@
 </div>
 </tbody>
 </table>
+<script src="~/js/toast.js"></script>
+<script>
+ 
+   // Assuming "?post=1234&action=edit"
+window.addEventListener("load", () => {
+var urlParams = new URLSearchParams(window.location.search);
+
+console.log(urlParams.get('status')); // "edit"
+    if (urlParams.get('status') == "fail"){
+vt.error("User is making order!", {
+            title: "Delete fail",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
+  });
+  
+  
+</script>

@@ -159,7 +159,7 @@ namespace MAQFurni.Areas_Order_Controllers
         // POST: Order/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost("admin/order/create")]
+        [HttpPost("admin/order/create"), ActionName("Create")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("OrderId,UserId,TotalPrice,CreateDate")] Order order)
         {
@@ -194,7 +194,7 @@ namespace MAQFurni.Areas_Order_Controllers
         // POST: Order/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost("admin/order/edit/{id}")]
+        [HttpPost("admin/order/edit/{id}"), ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("OrderId,UserId,TotalPrice,CreateDate")] Order order)
         {

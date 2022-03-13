@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "FilePath": "c:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
+=======
+  "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\MAQFurni.csproj",
+>>>>>>> 17e034ccedaf0527f7c5a2ad3d61a56fc35cfcbf
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
