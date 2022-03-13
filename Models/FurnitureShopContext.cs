@@ -150,11 +150,13 @@ namespace MAQFurni.Models
             {
                 entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Name });
             });
-            
-            foreach (var entityType in modelBuilder.Model.GetEntityTypes ()) {
-                var tableName = entityType.GetTableName ();
-                if (tableName.StartsWith ("AspNet")) {
-                    entityType.SetTableName (tableName.Substring (6));
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                var tableName = entityType.GetTableName();
+                if (tableName.StartsWith("AspNet"))
+                {
+                    entityType.SetTableName(tableName.Substring(6));
                 }
             }
 
