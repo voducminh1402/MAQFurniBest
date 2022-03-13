@@ -15971,6 +15971,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\ChangeInfo\\ChangeInfo.cshtml",
+      "TargetPath": "Views\\ChangeInfo\\ChangeInfo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Category\\Views\\Category\\Index.cshtml",
       "TargetPath": "Areas\\Category\\Views\\Category\\Index.cshtml",
       "FileKind": "mvc"

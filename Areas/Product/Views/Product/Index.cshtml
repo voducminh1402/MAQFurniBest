@@ -14,7 +14,7 @@
     display: inline-block;
   }
 
-  .fixSize{
+  .fixSize {
     padding-right: 30px;
   }
 </style>
@@ -24,9 +24,6 @@
     <h1 class="page-header__title">Products</h1>
   </div>
 
-  <p>
-    <a asp-action="Create">Create New</a>
-  </p>
   <div class="page-tools">
     <div class="page-tools__breadcrumbs">
       <div class="breadcrumbs">
@@ -129,6 +126,7 @@
           </div>
         </div>
       </div>
+
       <div class="toolbox__right col-12 col-lg-auto">
         <div class="toolbox__right-row row row--xs flex-nowrap">
           <div class="col col-lg-auto">
@@ -142,6 +140,15 @@
                 <input class="input" type="text" placeholder="Search Products" />
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div class="toolbox__right col-12 col-lg-auto">
+        <div class="toolbox__right-row row row--xs flex-nowrap">
+          <div class="col-auto">
+            <a asp-action="Create" class="button-add button-add--blue btn-add-cate"><span class="button-add__icon">
+                Add New Product
+            </a>
           </div>
         </div>
       </div>
@@ -215,11 +222,12 @@
                     <div class="dropdown-items__container">
                       <ul class="dropdown-items__list">
                         <li class="dropdown-items__item">
-
-                          <a class="dropdown-items__link" asp-action="Details" asp-route-id="@item.ProductId"><span
+                          <a data-modal="#editCategory" data-cate-id="@item.ProductId" data-cate-name="@item.ProductId"
+                          data-cate-image="@item.ProductId" asp-area="Product" asp-action="Edit"
+                          asp-route-id="@item.ProductId" class="dropdown-items__link category-edit"><span
                             class="dropdown-items__link-icon">
-                              <svg class="icon-icon-view">
-                                <use xlink:href="#icon-view"></use>
+                              <svg class="icon-icon-archive">
+                                <use xlink:href="#icon-archive"></use>
                               </svg></span>Edit</a>
                         </li>
                         <li class="dropdown-items__item">
@@ -230,14 +238,14 @@
                                 <use xlink:href="#icon-view"></use>
                               </svg></span>Details</a>
                         </li>
-
                         <li class="dropdown-items__item">
-
-                          <a class="dropdown-items__link" asp-action="Delete" asp-route-id="@item.ProductId"><span
-                            class="dropdown-items__link-icon">
-                              <svg class="icon-icon-trash">
-                                <use xlink:href="#icon-trash"></use>
-                              </svg></span>Delete</a>
+                          <form id="deleteCateForm" asp-action="Delete" asp-route-id="@item.ProductId">
+                            <input type="hidden" asp-for="@item.ProductId" />
+                            <button type="submit" value="Delete" class="dropdown-items__link category-delete"><span
+                              class="dropdown-items__link-icon"><svg class="icon-icon-trash">
+                                  <use xlink:href="#icon-trash"></use>
+                                </svg></span>Delete</button>
+                          </form>
                         </li>
                       </ul>
                     </div>
