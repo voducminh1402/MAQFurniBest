@@ -24,9 +24,6 @@
     <h1 class="page-header__title">Products</h1>
   </div>
 
-  <p>
-    <a asp-action="Create">Create New</a>
-  </p>
   <div class="page-tools">
     <div class="page-tools__breadcrumbs">
       <div class="breadcrumbs">
@@ -129,6 +126,7 @@
           </div>
         </div>
       </div>
+
       <div class="toolbox__right col-12 col-lg-auto">
         <div class="toolbox__right-row row row--xs flex-nowrap">
           <div class="col col-lg-auto">
@@ -142,6 +140,15 @@
                 <input class="input" type="text" placeholder="Search Products" />
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div class="toolbox__right col-12 col-lg-auto">
+        <div class="toolbox__right-row row row--xs flex-nowrap">
+          <div class="col-auto">
+            <a asp-action="Create" class="button-add button-add--blue btn-add-cate"><span class="button-add__icon">
+                Add New Product
+            </a>
           </div>
         </div>
       </div>
@@ -215,10 +222,17 @@
                     <div class="dropdown-items__container">
                       <ul class="dropdown-items__list">
                         <li class="dropdown-items__item">
+<<<<<<< HEAD
+                          <a data-modal="#editCategory" data-cate-id="@item.ProductId" data-cate-name="@item.ProductId"
+                          data-cate-image="@item.ProductId" asp-area="Product" asp-action="Edit"
+                          asp-route-id="@item.ProductId" class="dropdown-items__link category-edit"><span
+                            class="dropdown-items__link-icon">
+=======
                           <a data-modal="#editCategory" data-cate-id="@item.ProductId"
                           data-cate-name="@item.ProductId" data-cate-image="@item.ProductId" asp-area="Product"
                           asp-action="Edit" asp-route-id="@item.ProductId"
                           class="dropdown-items__link category-edit"><span class="dropdown-items__link-icon">
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
                               <svg class="icon-icon-archive">
                                 <use xlink:href="#icon-archive"></use>
                               </svg></span>Edit</a>

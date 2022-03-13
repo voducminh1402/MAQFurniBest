@@ -7,71 +7,80 @@
 
 @* <h1>Edit</h1>
 
-<h4>Product</h4>
-<hr />
-<div class="row">
+    <h4>Product</h4>
+    <hr />
+    <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ProductId" />
-            <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductImage" class="control-label"></label>
-                <input asp-for="ProductImage" class="form-control" />
-                <span asp-validation-for="ProductImage" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductPrice" class="control-label"></label>
-                <input asp-for="ProductPrice" class="form-control" />
-                <span asp-validation-for="ProductPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AvailableId" class="control-label"></label>
-                <select asp-for="AvailableId" class="form-control" asp-items="ViewBag.AvailableId"></select>
-                <span asp-validation-for="AvailableId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ProductId" />
+    <div class="form-group">
+    <label asp-for="ProductName" class="control-label"></label>
+    <input asp-for="ProductName" class="form-control" />
+    <span asp-validation-for="ProductName" class="text-danger"></span>
     </div>
-</div>
+    <div class="form-group">
+    <label asp-for="ProductImage" class="control-label"></label>
+    <input asp-for="ProductImage" class="form-control" />
+    <span asp-validation-for="ProductImage" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+    <label asp-for="ProductPrice" class="control-label"></label>
+    <input asp-for="ProductPrice" class="form-control" />
+    <span asp-validation-for="ProductPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+    <label asp-for="Quantity" class="control-label"></label>
+    <input asp-for="Quantity" class="form-control" />
+    <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+    <label asp-for="Description" class="control-label"></label>
+    <input asp-for="Description" class="form-control" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+    <label asp-for="AvailableId" class="control-label"></label>
+    <select asp-for="AvailableId" class="form-control" asp-items="ViewBag.AvailableId"></select>
+    <span asp-validation-for="AvailableId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+    <label asp-for="CategoryId" class="control-label"></label>
+    <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+    <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+    <label asp-for="CreateDate" class="control-label"></label>
+    <input asp-for="CreateDate" class="form-control" />
+    <span asp-validation-for="CreateDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+    <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+    </form>
+    </div>
+    </div>
 
-<div>
+    <div>
     <a asp-action="Index">Back to List</a>
+<<<<<<< HEAD
+    </div> *@
+=======
 </div> *@
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
 
 <div class="container">
     <div class="page-header">
         <h1 class="page-header__title">Edit Product</h1>
     </div>
     <form asp-action="Edit">
+<<<<<<< HEAD
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="ProductId" />
+=======
        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductId" />
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
         <div class="page-tools">
             <div class="page-tools__breadcrumbs">
                 <div class="breadcrumbs">
@@ -116,7 +125,12 @@
                                 <div class="col-12 form-group form-group--lg">
                                     <label class="form-label" asp-for="ProductId"></label>
                                     <div class="input-group">
+<<<<<<< HEAD
+                                        <input class="input" type="text" placeholder="" required asp-for="ProductId"
+                                            readonly>
+=======
                                         <input class="input" type="text" placeholder="" required asp-for="ProductId">
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
                                         <span asp-validation-for="ProductId" class="text-danger"></span>
                                     </div>
                                 </div>
@@ -151,7 +165,11 @@
                                         <div class="input-group__prepend"><span class="input-group__symbol">$</span>
                                         </div>
                                         <input class="input" type="number" min="0" max="999999999" placeholder=""
+<<<<<<< HEAD
+                                            required asp-for="ProductPrice">
+=======
                                             value="" required asp-for="ProductPrice">
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
                                         <span asp-validation-for="ProductPrice" class="text-danger"></span>
                                     </div>
                                 </div>
@@ -165,7 +183,12 @@
                                 <div class="col-12 form-group form-group--lg">
                                     <label class="form-label" asp-for="Description"></label>
                                     <div class="input-editor">
+<<<<<<< HEAD
+                                        <textarea rows="5" class="input" type="text" placeholder="" required
+                                            asp-for="Description"></textarea>
+=======
                                         <input class="input" type="text" placeholder="" required asp-for="Description">
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
                                         <span asp-validation-for="Description" class="text-danger"></span>
                                     </div>
                                 </div>
@@ -193,11 +216,19 @@
                                             </svg></span>
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                @* <div class="form-group">
+                                    <label asp-for="CreateDate" class="control-label"></label>
+                                    <input asp-for="CreateDate" class="form-control" />
+                                    <span asp-validation-for="CreateDate" class="text-danger"></span>
+                                    </div> *@
+=======
                                 <div class="form-group">
                                     <label asp-for="CreateDate" class="control-label"></label>
                                     <input asp-for="CreateDate" class="form-control" />
                                     <span asp-validation-for="CreateDate" class="text-danger"></span>
                                 </div>
+>>>>>>> 5bbfa6e397e5db3fed9f319fd9828098fcc483c7
                             </div>
                             <div class="add-product__submit">
                                 <div class="modal__footer-button">
