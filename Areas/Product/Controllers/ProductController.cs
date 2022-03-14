@@ -1,12 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MAQFurni.Models;
-using Microsoft.AspNetCore.Authorization;
 using ProductModel = MAQFurni.Models.Product;
 
 namespace MAQFurni.Areas.Product.Controllers
@@ -26,9 +24,17 @@ namespace MAQFurni.Areas.Product.Controllers
         public async Task<IActionResult> Index()
         {
             var furnitureShopContext = _context.Products.Include(p => p.Available).Include(p => p.Category);
+            ViewBag.Available = new SelectList(_context.ProductAvailables, "AvailableId", "AvailableName");
             return View(await furnitureShopContext.ToListAsync());
         }
-
+        [HttpPost("admin/product/filter-by-status")]
+        [ActionName("Filter")]
+        public async Task<IActionResult> Filter(int status)
+        {
+            var furnitureShopContext = _context.Products.Where(o => o.AvailableId == status).Include(p => p.Available).Include(p => p.Category);
+            ViewBag.Available = new SelectList(_context.ProductAvailables, "AvailableId", "AvailableName");
+            return View("Index", await furnitureShopContext.ToListAsync());
+        }
         // GET: Product/Details/5
         [HttpGet("admin/product/detail/{id}")]
         public async Task<IActionResult> Details(string id)
@@ -102,26 +108,44 @@ namespace MAQFurni.Areas.Product.Controllers
             return View(product);
         }
 
+        [HttpGet("admin/product/search"), ActionName("Search")]
+        public async Task<IActionResult> Search(string search)
+        {
+            search = search.Trim();
+            ViewBag.Search = search;
+            if (search.Length > 0)
+            {
+                var furnitureShopContext = _context.Products.Where(o => o.ProductName.Contains(search)).Include(p => p.Available).Include(p => p.Category);
+                return View("Index", await furnitureShopContext.ToListAsync());
+            }
+            else
+            {
+                var furnitureShopContext = _context.Products.Include(p => p.Available).Include(p => p.Category);
+                return View("Index", await furnitureShopContext.ToListAsync());
+            }
+
+        }
+
         // POST: Product/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost("admin/product/edit/{id}"), ActionName("Edit")]
-
+        [HttpPost("admin/product/edit/{id}")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ProductName,ProductImage,ProductPrice,Quantity,Description,AvailableId,CategoryId")] ProductModel product)
+        public async Task<IActionResult> Edit(string ProductId, string ProductName, string ProductImage, decimal ProductPrice, int Quantity, string Description, int AvailableId, int CategoryId)
         {
-            Guid uuid = Guid.NewGuid();
-            DateTime date = DateTime.Now;
-            product.CreateDate = date;
-            if (id != product.ProductId)
-            {
-                return NotFound();
-            }
+            ProductModel product = _context.Products.SingleOrDefault(o => o.ProductId == ProductId);
 
             if (ModelState.IsValid)
             {
                 try
                 {
+                    product.ProductName = ProductName;
+                    product.ProductImage = ProductImage;
+                    product.ProductPrice = ProductPrice;
+                    product.Quantity = Quantity;
+                    product.AvailableId = AvailableId;
+                    product.CategoryId = product.CategoryId;
+                    product.Description = Description;
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
