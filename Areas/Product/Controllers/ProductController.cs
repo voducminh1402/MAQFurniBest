@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MAQFurni.Models;
 using ProductModel = MAQFurni.Models.Product;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MAQFurni.Areas.Product.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Product")]
     public class ProductController : Controller
     {
