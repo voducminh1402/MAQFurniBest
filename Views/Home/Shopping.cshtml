@@ -2,7 +2,8 @@
         var productList = ViewBag.ProductList as IEnumerable<Product>;
         var categoryList = ViewBag.CategoryView as IEnumerable<CategoryView>;
         var cond = ViewBag.Cond;
-        var minmax = ViewBag.MinMax;
+        var countPage = ViewBag.CountPage;
+        var page = ViewBag.Page;
   }
   
   <div class="breadcrumb-area">
@@ -101,7 +102,7 @@
                                 <!-- Single Prodect -->
                                 <div class="product mb-5">
                                     <div class="thumb">
-                                        <a href="shop-left-sidebar.html" class="image">
+                                        <a href="/Home/DetailProduct?productId=@product.ProductId" class="image">
                                             <img src="@product.ProductImage" alt="Product" />
                                             <img class="hover-image" src="@product.ProductImage" alt="Product" />
                                         </a>
@@ -138,10 +139,17 @@
                         <div class="pro-pagination-style text-center mb-md-30px mb-lm-30px mt-6" data-aos="fade-up">
                             <ul>
                                 <li>
-                                    <a class="prev" href="#"><i class="ion-ios-arrow-left"></i></a>
+                                    <a class="prev" asp-controller="Home" asp-action="Shopping" asp-route-condition=@cond asp-route-page=@(page-1)><i class="ion-ios-arrow-left"></i></a>
                                 </li>
-                                <li><a class="active" href="#">1</a></li>
-                                <li><a href="#">2</a></li>
+                                @for (int i = 1; i <= countPage; i++)
+                                {
+                                    @if(i == page) {
+                                        <li><a class="active" asp-controller="Home" asp-action="Shopping" asp-route-condition="@cond" asp-route-page=@i>@i</a></li>
+                                    }
+                                    else {
+                                        <li><a asp-controller="Home" asp-action="Shopping" asp-route-condition=@cond asp-route-page=@i>@i</a></li>
+                                    }
+                                }
                                 <li>
                                     <a class="next" href="#"><i class="ion-ios-arrow-right"></i></a>
                                 </li>
@@ -163,7 +171,7 @@
                                 <ul>
                                     @foreach (var category in categoryList)
                                     {
-                                        <li><a href="/Home/FilterCategory?categoryId=@category.Id" class="">@category.Name <span>(@category.Numbers)</span> </a></li>
+                                        <li><a asp-controller="Home" asp-action="FilterCategory" asp-route-categoryId="@category.Id" asp-route-page="1" class="">@category.Name <span>(@category.Numbers)</span> </a></li>
                                     }
                                 </ul>
                             </div>

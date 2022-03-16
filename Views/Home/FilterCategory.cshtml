@@ -1,6 +1,9 @@
    @{
         var productList = ViewBag.ProductList as IEnumerable<Product>;
         var cond = ViewBag.Cond;
+        var categoryId = ViewBag.CategoryId;
+        var countPage = ViewBag.CountPage;
+        var page = ViewBag.Page;
    }
    <div class="breadcrumb-area">
         <div class="container">
@@ -42,7 +45,8 @@
                                 <p>Sort By:</p>
                             </div>
                             <div class="shop-select">
-                                <form action="/Home/Sort" method="GET">
+                                <form asp-controller="Home" asp-action="FilterCategory" method="GET">
+                                    <input name="categoryId" type="hidden" value="@categoryId">
                                     <select name="condition" id="sort" class="shop-sort">
                                         @if(cond.Equals("Relevance") || cond == null){
                                             <option selected data-display="Relevance">Relevance</option>
@@ -134,10 +138,17 @@
                         <div class="pro-pagination-style text-center mb-md-30px mb-lm-30px mt-6" data-aos="fade-up">
                             <ul>
                                 <li>
-                                    <a class="prev" href="#"><i class="ion-ios-arrow-left"></i></a>
+                                    <a class="prev" asp-controller="Home" asp-action="FilterCategory" asp-route-categoryId="@categoryId" asp-route-condition=@cond asp-route-page=@(page-1)><i class="ion-ios-arrow-left"></i></a>
                                 </li>
-                                <li><a class="active" href="#">1</a></li>
-                                <li><a href="#">2</a></li>
+                                @for (int i = 1; i <= countPage; i++)
+                                {
+                                    @if(i == page) {
+                                        <li><a class="active" asp-controller="Home" asp-action="FilterCategory" asp-route-condition="@cond" asp-route-categoryId="@categoryId" asp-route-page=@i>@i</a></li>
+                                    }
+                                    else {
+                                        <li><a asp-controller="Home" asp-action="FilterCategory" asp-route-categoryId="@categoryId" asp-route-condition=@cond asp-route-page=@i>@i</a></li>
+                                    }
+                                }
                                 <li>
                                     <a class="next" href="#"><i class="ion-ios-arrow-right"></i></a>
                                 </li>
