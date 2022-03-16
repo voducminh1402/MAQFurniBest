@@ -188,8 +188,6 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Identity\Pag
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Create.cshtml.g.cs
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Delete.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Details.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\Order\Index.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Areas\Order\Views\_ViewImports.cshtml.g.cs

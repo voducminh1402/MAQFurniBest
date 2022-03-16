@@ -90,38 +90,32 @@
               </div>
             </div>
           </div>
-          <div class="form-group form-group--inline col col-sm-auto">
-            <div class="input-group input-group--white input-group--prepend input-group--append">
-              <div class="input-group__prepend">
-                <svg class="icon-icon-calendar">
-                  <use xlink:href="#icon-calendar"></use>
-                </svg>
-              </div>
-              <input class="input input--select" type="text" value="01.12.18 / 07.12.18" readonly /><span
-                class="input-group__arrow">
-                <svg class="icon-icon-keyboard-down">
-                  <use xlink:href="#icon-keyboard-down"></use>
-                </svg></span>
-            </div>
-          </div>
+
           <div class="form-group form-group--inline col-12 col-sm-auto d-none d-sm-block">
             <div class="toolbox__status input-group input-group--white input-group--append">
-              <input class="input input--select" type="text" value="All status" data-toggle="dropdown" readonly /><span
+              <form id="form-filter" asp-action="Filter" method="post">
+                <select id="status" name="status" class="input input--select" style="width: 12rem;"
+                  asp-items="ViewBag.Available">
+                  <option value="0">All status</option>
+                </select>
+              </form>
+              @* <input class="input input--select" type="text" value="All status" data-toggle="dropdown" readonly
+                /><span
                 class="input-group__arrow">
                 <svg class="icon-icon-keyboard-down">
-                  <use xlink:href="#icon-keyboard-down"></use>
+                <use xlink:href="#icon-keyboard-down"></use>
                 </svg></span>
-              <div class="dropdown-menu dropdown-menu--right dropdown-menu--fluid js-dropdown-select">
+                <div class="dropdown-menu dropdown-menu--right dropdown-menu--fluid js-dropdown-select">
                 <a class="dropdown-menu__item active" href="#" tabindex="0" data-value="All status"><span
-                    class="marker-item"></span> All status</a>
+                class="marker-item"></span> All status</a>
                 <a class="dropdown-menu__item" href="#" tabindex="0" data-value="Complete"><span
-                    class="marker-item color-green"></span>
-                  Complete</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="Pending"><span
-                    class="marker-item color-blue"></span>
-                  Pending</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="Processing"><span
-                    class="marker-item color-orange"></span>
-                  Processing</a>
-              </div>
+                class="marker-item color-green"></span>
+                Complete</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="Pending"><span
+                class="marker-item color-blue"></span>
+                Pending</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="Processing"><span
+                class="marker-item color-orange"></span>
+                Processing</a>
+                </div> *@
             </div>
           </div>
         </div>
@@ -130,43 +124,37 @@
       <div class="toolbox__right col-12 col-lg-auto">
         <div class="toolbox__right-row row row--xs flex-nowrap">
           <div class="col col-lg-auto">
-            <form class="toolbox__search" method="GET">
+            <form asp-action="Search" class="toolbox__search" method="GET">
               <div class="input-group input-group--white input-group--prepend">
                 <div class="input-group__prepend">
                   <svg class="icon-icon-search">
                     <use xlink:href="#icon-search"></use>
                   </svg>
                 </div>
-                <input class="input" type="text" placeholder="Search Products" />
+                <input class="input" name="search" type="text" placeholder="Search Products" value="@ViewBag.Search" />
               </div>
             </form>
           </div>
         </div>
       </div>
-      <div class="toolbox__right col-12 col-lg-auto">
-        <div class="toolbox__right-row row row--xs flex-nowrap">
-          <div class="col-auto">
-            <a asp-action="Create" class="button-add button-add--blue btn-add-cate"><span class="button-add__icon">
-                Add New Product
-            </a>
+      <form asp-action="Create" method="get">
+        <div class="toolbox__right col-12 col-lg-auto">
+          <div class="toolbox__right-row row row--xs flex-nowrap">
+            <div class="col-auto">
+              <button asp-action="Create" class="button-add button-add--blue btn-add-cate"><span
+                  class="button-add__icon">
+                  Add New Product
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
   <div class="table-wrapper">
     <div class="table-wrapper__content table-collapse scrollbar-thin scrollbar-visible" data-simplebar>
       <table class="table table--lines">
-        <colgroup>
-          <col width="90px" />
-          <col width="100px" />
-          <col width="16%" />
-          <col />
-          <col />
-          <col />
-          <col />
-          <col />
-        </colgroup>
+
         <thead class="table__header">
           <tr class="table__header-row">
             <th class="table__th-sort">
@@ -222,22 +210,17 @@
                     <div class="dropdown-items__container">
                       <ul class="dropdown-items__list">
                         <li class="dropdown-items__item">
+
                           <a data-modal="#editCategory" data-cate-id="@item.ProductId" data-cate-name="@item.ProductId"
                           data-cate-image="@item.ProductId" asp-area="Product" asp-action="Edit"
                           asp-route-id="@item.ProductId" class="dropdown-items__link category-edit"><span
                             class="dropdown-items__link-icon">
+
                               <svg class="icon-icon-archive">
                                 <use xlink:href="#icon-archive"></use>
                               </svg></span>Edit</a>
                         </li>
-                        <li class="dropdown-items__item">
 
-                          <a class="dropdown-items__link" asp-action="Details" asp-route-id="@item.ProductId"><span
-                            class="dropdown-items__link-icon">
-                              <svg class="icon-icon-view">
-                                <use xlink:href="#icon-view"></use>
-                              </svg></span>Details</a>
-                        </li>
                         <li class="dropdown-items__item">
                           <form id="deleteCateForm" asp-action="Delete" asp-route-id="@item.ProductId">
                             <input type="hidden" asp-for="@item.ProductId" />
@@ -302,3 +285,6 @@
 
 
 </tbody>
+<script>
+  document.getElementById("status").addEventListener("change", () => document.getElementById("form-filter").submit());
+</script>

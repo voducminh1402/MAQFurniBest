@@ -54,7 +54,8 @@
             <div class="ml-auto mr-auto col-lg-9">
                 <div class="checkout-wrapper">
                     <div id="faq" class="panel-group">
-                        <form asp-controller="ChangeInfo" asp-action="ChangeInfo" method="post">
+                        <form id="form-change-password" asp-action="ChangePassword" asp-controller="ChangeInfo"
+                            method="post">
                             <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="200">
                                 <div class="panel-heading my-account-title">
                                     <h3 class="panel-title"><span>1 .</span> <a data-bs-toggle="collapse"
@@ -66,21 +67,48 @@
                                     <div class="panel-body">
                                         <div class="myaccount-info-wrapper">
                                             <div class="account-info-wrapper">
-                                                <h4>My Account Information</h4>
-                                                <h5>Your Personal Details</h5>
+                                                @* <h4>My Account Information</h4>
+                                                    <h5>Your Personal Details</h5>
+                                                    </div>
+                                                    <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                    <div class="billing-info">
+                                                    <label>User name</label>
+                                                    <input name="name" asp-for="@Model.NormalizedUserName"
+                                                    class="form-control" required />
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                    <div class="billing-info">
+                                                    <label>Phone number</label>
+                                                    <input name="phone" asp-for="@Model.PhoneNumber"
+                                                    class="form-control" required type="tel" />
+
+                                                    </div>
+                                                    </div>
+                                                    </div> *@
+                                                <h4>Change Password</h4>
+                                                <h5>Your Password</h5>
                                             </div>
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6">
+                                                @* <div class="col-lg-12 col-md-12">
                                                     <div class="billing-info">
-                                                        <label>User name</label>
-                                                        <input name="name" asp-for="@Model.UserName" class="form-control" required/>
+                                                    <label>Current Password</label>
+                                                    <input name="currentPassword" type="password" />
+                                                    </div>
+                                                    </div> *@
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="billing-info">
+                                                        <label>Password</label>
+                                                        <p id="message"></p>
+                                                        <input id="newPassword" name="newPassword" type="password" />
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-12 col-md-12">
                                                     <div class="billing-info">
-                                                        <label>Phone number</label>
-                                                        <input name="phone" asp-for="@Model.PhoneNumber" class="form-control" required type="tel"/>
-                                                       
+                                                        <label>Password Confirm</label>
+                                                        <input id="confirmPassword" name="confirmPassword"
+                                                            type="password" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -89,7 +117,7 @@
                                                     <a href="#"><i class="icon-arrow-up-circle"></i> back</a>
                                                 </div>
                                                 <div class="billing-btn">
-                                                   <button type="submit" class="btn btn-primary">Save</button>
+                                                    <button type="submit" class="btn btn-primary">Save</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -97,100 +125,166 @@
                                 </div>
                             </div>
                         </form>
-                        <form asp-action="ChangePassword" method="post">
-                        <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="400">
+                        @* <form asp-action="ChangePassword" asp-controller="ChangeInfo" method="post">
+                            <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="400">
                             <div class="panel-heading my-account-title">
-                                <h3 class="panel-title"><span>2 .</span> <a data-bs-toggle="collapse" class="collapsed"
-                                        aria-expanded="false" href="#my-account-2">Change your password </a></h3>
+                            <h3 class="panel-title"><span>1 .</span> <a data-bs-toggle="collapse"
+                            class="collapsed" aria-expanded="true" href="#my-account-2">Change your
+                            password </a></h3>
                             </div>
                             <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
-                                <div class="panel-body">
-                                    <div class="myaccount-info-wrapper">
-                                        <div class="account-info-wrapper">
-                                            <h4>Change Password</h4>
-                                            <h5>Your Password</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12">
-                                                <div class="billing-info">
-                                                    <label>Current Password</label>
-                                                    <input type="password" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12">
-                                                <div class="billing-info">
-                                                    <label>Password</label>
-                                                    <input type="password" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12">
-                                                <div class="billing-info">
-                                                    <label>Password Confirm</label>
-                                                    <input type="password" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="billing-back-btn">
-                                            <div class="billing-back">
-                                                <a href="#"><i class="icon-arrow-up-circle"></i> back</a>
-                                            </div>
-                                            <div class="billing-btn">
-                                                <button type="submit" class="btn btn-primary">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="panel-body">
+                            <div class="myaccount-info-wrapper">
+                            <div class="account-info-wrapper">
+                            <h4>Change Password</h4>
+                            <h5>Your Password</h5>
                             </div>
-                        </div>
-                        </form>
-                        <form id="email-form" method="post">
-                        <div class="panel panel-default single-my-account " data-aos="fade-up" data-aos-delay="600">
+                            <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                            <div class="billing-info">
+                            <label>Current Password</label>
+                            <input name="currentPassword" type="password" />
+                            </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                            <div class="billing-info">
+                            <label>Password</label>
+                            <p id="message"></p>
+                            <input id="newPassword" name="newPassword" type="password" />
+                            </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                            <div class="billing-info">
+                            <label>Password Confirm</label>
+                            <input id="confirmPassword" name="confirmPassword"
+                            type="password" />
+                            </div>
+                            </div>
+                            </div>
+                            <div class="billing-back-btn">
+                            <div class="billing-back">
+                            <a href="#"><i class="icon-arrow-up-circle"></i> back</a>
+                            </div>
+                            <div class="billing-btn">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </form> *@
+                        @* <form id="email-form" method="post">
+                            <div class="panel panel-default single-my-account " data-aos="fade-up" data-aos-delay="600">
                             <div class="panel-heading my-account-title">
-                                <h3 class="panel-title"><span>3 .</span> <a data-bs-toggle="collapse" class="collapsed"
-                                        aria-expanded="false" href="#my-account-3">Change your email
-                                    </a></h3>
+                            <h3 class="panel-title"><span>2 .</span> <a data-bs-toggle="collapse"
+                            class="collapsed" aria-expanded="false" href="#my-account-3">Change your
+                            email
+                            </a></h3>
                             </div>
                             <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
-                                <div class="panel-body">
-                                    <div class="myaccount-info-wrapper">
-                                        <div class="account-info-wrapper">
-                                            <h4>Change Email</h4>
-                                            <h5>Your Email</h5>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="billing-info">
-                                                <label>Email Address</label>
-                                                <input type="email" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="billing-info">
-                                                <label>New Email Address</label>
-                                                <input type="email" />
-                                            </div>
-                                        </div>
-                                        <div class="billing-back-btn">
-                                            <div class="billing-back">
-                                                <a href="#"><i class="icon-arrow-up-circle"></i> back</a>
-                                            </div>
-                                            <div class="billing-btn">
-                                                <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="panel-body">
+                            <div class="myaccount-info-wrapper">
+                            <div class="account-info-wrapper">
+                            <h4>Change Email</h4>
+                            <h5>Your Email</h5>
                             </div>
-                        </div>
-                        </form>
+                            <div class="col-lg-12 col-md-12">
+                            <div class="billing-info">
+                            <label>Email Address</label>
+                            <input asp-for="@Model.Email" type="email" />
+                            </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                            <div class="billing-info">
+                            <label>New Email Address</label>
+                            <input type="email" />
+                            </div>
+                            </div>
+                            <div class="billing-back-btn">
+                            <div class="billing-back">
+                            <a href="#"><i class="icon-arrow-up-circle"></i> back</a>
+                            </div>
+                            <div class="billing-btn">
+                            <button id="change-email-button" type="submit"
+                            asp-page-handler="ChangeEmail"
+                            class="btn btn-primary">Save</button>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </form> *@
                     </div>
-                    
+                    <input type="hidden" id="error" name="error" value="@ViewBag.Fail">
+                    <input type="hidden" id="success" name="success" value="@ViewBag.Success">
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- account area end -->
+<script src="~/js/toast.js"></script>
+<script>
+    const password = document.getElementById("newPassword");
+    const confirm = document.getElementById("confirmPassword");
+    const messages = document.getElementById("message");
+    let message = "";
+    password.addEventListener("keyup", () => {
+        if (password.value.length < 6) {
+            message = "Password must be at least 6 charactors!";
+        }
+        else if (password.value != confirm.value) {
+            message = "New password and confirm password is different!";
+        } else message = "";
+        messages.innerHTML = message;
+    });
+    confirm.addEventListener("keyup", () => {
+        if (password.value != confirm.value) {
+            message = "New password and confirm password is different!";
+        } else message = "";
+        messages.innerHTML = message;
+    });
+    function toatsError() {
+        vt.error("Change password fail!", {
+            title: "Fail",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
+    function toatsSuccess() {
+        vt.success("Change password success!", {
+            title: "Success",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
+    window.addEventListener("load", () => {
+        console.log("load roi");
+        const success = document.getElementById("success");
+        const error = document.getElementById("error");
 
+        if (success.value != "") {
+            console.log("success");
+            toatsSuccess();
+        }
+
+
+        if (error.value != "") {
+            console.log("error");
+            toatsError();
+        }
+
+
+    });
+</script>
 @section Scripts {
 <partial name="_ValidationScriptsPartial" />
 }
