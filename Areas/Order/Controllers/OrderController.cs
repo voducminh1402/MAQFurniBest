@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MAQFurni.Models;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MAQFurni.Areas_Order_Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Order")]
     public class OrderController : Controller
     {
