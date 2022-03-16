@@ -15686,6 +15686,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Order\\Views\\Order\\Create.cshtml",
+      "TargetPath": "Areas\\Order\\Views\\Order\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Users\\Views\\Users\\Delete.cshtml",
       "TargetPath": "Areas\\Users\\Views\\Users\\Delete.cshtml",
       "FileKind": "mvc"
@@ -16003,6 +16008,11 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Shared\\Components\\MessagePage\\Default.cshtml",
       "TargetPath": "Views\\Shared\\Components\\MessagePage\\Default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Order\\Views\\Order\\Delete.cshtml",
+      "TargetPath": "Areas\\Order\\Views\\Order\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
