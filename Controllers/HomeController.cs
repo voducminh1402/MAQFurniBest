@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MAQFurni.Controllers
 {
@@ -66,20 +67,61 @@ namespace MAQFurni.Controllers
             return View("ProductDetail");
         }
 
-        public IActionResult FilterCategory(int categoryId)
+        public IActionResult FilterCategory(int categoryId, int? page, string condition)
         {
             List<Product> list = _context.Products.Where(p => p.CategoryId == categoryId).ToList();
 
-            ViewBag.ProductList = list;
-            ViewBag.Cond = "Relevance";
+            int cate = categoryId;
+
+            int pageCurrent = (int)(page == null ? 1 : page);
+
+            int pageSize = 9;
+
+            if (condition == null)
+            {
+                condition = "Relevance";
+            }
+
+            if (condition.Equals("1"))
+            {
+                list = _context.Products.Where(p => p.CategoryId == categoryId).OrderBy(p => p.ProductName).ToList();
+            }
+            else if (condition.Equals("2"))
+            {
+                list = _context.Products.Where(p => p.CategoryId == categoryId).OrderByDescending(p => p.ProductName).ToList();
+            }
+            else if (condition.Equals("3"))
+            {
+                list = _context.Products.Where(p => p.CategoryId == categoryId).OrderBy(p => p.ProductPrice).ToList();
+            }
+            else if (condition.Equals("4"))
+            {
+                list = _context.Products.Where(p => p.CategoryId == categoryId).OrderByDescending(p => p.ProductPrice).ToList();
+            }
+            else
+            {
+                list = _context.Products.Where(p => p.CategoryId == categoryId).ToList();
+            }
+
+            ViewBag.productList = list.Skip(pageSize * (pageCurrent - 1)).Take(pageSize);
+            decimal countPage = new decimal(list.Count()/pageSize);
+            ViewBag.CountPage = Math.Ceiling(countPage) + 1; //tim cho nay
+            ViewBag.Page = pageCurrent; //tim cho nay
+            ViewBag.CategoryId = categoryId;
+            ViewBag.Cond = condition;
+
             return View("FilterCategory");
         }
 
         [HttpGet]
         [ActionName("Shopping")]
-        public IActionResult Shopping(string condition)
+        public IActionResult Shopping(string condition, int? page)
         {
             List<Product> listProduct = new List<Product>();
+
+            int pageCurrent = (int)(page == null ? 1 : page);
+
+            int pageSize = 9;
 
             if (condition == null)
             {
@@ -96,11 +138,11 @@ namespace MAQFurni.Controllers
             }
             else if (condition.Equals("3"))
             {
-                listProduct = _context.Products.OrderByDescending(p => p.ProductPrice).ToList();
+                listProduct = _context.Products.OrderBy(p => p.ProductPrice).ToList();
             }
             else if (condition.Equals("4"))
             {
-                listProduct = _context.Products.OrderBy(p => p.ProductPrice).ToList();
+                listProduct = _context.Products.OrderByDescending(p => p.ProductPrice).ToList();
             }
             else
             {
@@ -115,13 +157,15 @@ namespace MAQFurni.Controllers
                 Numbers = c.Products.Count()
             }).ToList();
 
-            ViewBag.ProductList = listProduct;
+            ViewBag.ProductList = listProduct.Skip(pageSize * (pageCurrent - 1)).Take(pageSize);
             ViewBag.CategoryView = categoryView;
-            ViewBag.Cond = "Relevance";
+            decimal countPage = new decimal(listProduct.Count()/pageSize);
+            ViewBag.CountPage = Math.Ceiling(countPage) + 1; //tim cho nay
+            ViewBag.Page = pageCurrent; //tim cho nay
+            ViewBag.Cond = condition;
 
             return View("Shopping");
         }
-
 
         [HttpGet]
         public IActionResult Sort(string condition, string search)
@@ -173,6 +217,37 @@ namespace MAQFurni.Controllers
         [HttpGet("check-out-success")]
         public IActionResult CheckoutSuccess()
         {
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("/admin/dashboard")]
+        public IActionResult AdminDashboard() 
+        {
+            int listUser = _context.Users.ToList().Count();
+            int listUserBuy = _context.Orders.Select(o => o.UserId).Distinct().ToList().Count();
+
+            int listOrders = _context.Orders.ToList().Count();
+            int listOrderSuccess = _context.ShippingInfos.Where(s => s.StatusId == 1).ToList().Count();
+
+            int listProduct = _context.Products.ToList().Count();
+            int listProductBuy = _context.OrderDetails.Select(o => o.ProductId).Distinct().ToList().Count();
+
+            List<OrderDetail> listOdDetail = _context.OrderDetails.Take(15).ToList();
+            List<Order> listTransaction = _context.Orders.Take(20).ToList();
+
+            decimal totalMoney = _context.Orders.ToList().Sum(o => o.TotalPrice);
+
+            ViewBag.ListUser = listUser;
+            ViewBag.ListUserBuy = listUserBuy;
+            ViewBag.ListOrders = listOrders;
+            ViewBag.ListOrderSuccess = listOrderSuccess;
+            ViewBag.ListProduct = listProduct;
+            ViewBag.ListProductBuy = listProductBuy;
+            ViewBag.TotalMoney = totalMoney;
+            ViewBag.ListOdDetail = listOdDetail;
+            ViewBag.ListTransaction = listTransaction;
+
             return View();
         }
 

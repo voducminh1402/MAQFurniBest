@@ -9,9 +9,11 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MAQFurni.Controllers
 {
+    [Authorize(Roles = "User")]
     public class ChangeInfoController : Controller
     {
         private readonly UserManager<User> _userManager;
