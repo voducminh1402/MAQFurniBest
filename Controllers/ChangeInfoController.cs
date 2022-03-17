@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using Microsoft.Extensions.Logging;
@@ -16,6 +17,14 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using System.Collections;
+=======
+
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
+using Microsoft.Extensions.Logging;
+
+using Microsoft.AspNetCore.Authorization;
+>>>>>>> dev
 
 namespace MAQFurni.Controllers
 {
