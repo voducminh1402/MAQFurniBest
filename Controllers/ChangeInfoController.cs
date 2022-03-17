@@ -37,6 +37,7 @@ namespace MAQFurni.Controllers
         //
         // GET: /Products/
 
+        [Authorize(Roles = "User")]
         [HttpPost("user/change-info")]
         [ActionName("ChangeInfor")]
         public ActionResult ChangeInfor(string name, string phone)
@@ -57,6 +58,7 @@ namespace MAQFurni.Controllers
             return View("ChangeInfo", user);
         }
 
+        [Authorize(Roles = "User")]
         [HttpPost("user/change-password")]
         [ActionName("ChangePassword")]
         public async Task<ActionResult> ChangePasswordAsync(string newPassword, string confirmPassword)
@@ -97,6 +99,8 @@ namespace MAQFurni.Controllers
             ViewBag.Fail = "Change password fail!";
             return View("ChangeInfo");
         }
+
+        [Authorize(Roles = "User")]
         [HttpGet("user/change-user-info")]
         [ActionName("ChangeInfo")]
         public ActionResult ChangeInfo()

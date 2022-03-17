@@ -243,3 +243,4 @@ C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Home\AdminDashb
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\ref\MAQFurni.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.pdb
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Home\ViewOrder.cshtml.g.cs

@@ -29,6 +29,9 @@ namespace MAQFurni.Controllers
             _signInManager = signInManager;
         }
 
+
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
         [ActionName("Index")]
         public async Task<IActionResult> IndexAsync()
         {
@@ -38,6 +41,8 @@ namespace MAQFurni.Controllers
             return View(ivm);
         }
 
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
         public IActionResult Search(string search)
         {
             List<Product> searchList = new List<Product>();
@@ -50,6 +55,8 @@ namespace MAQFurni.Controllers
             return View("SearchProduct");
         }
 
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
         public IActionResult DetailProduct(string productId)
         {
             Product productDetail = _context.Products.Find(productId);
@@ -67,6 +74,8 @@ namespace MAQFurni.Controllers
             return View("ProductDetail");
         }
 
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
         public IActionResult FilterCategory(int categoryId, int? page, string condition)
         {
             List<Product> list = _context.Products.Where(p => p.CategoryId == categoryId).ToList();
@@ -113,6 +122,8 @@ namespace MAQFurni.Controllers
             return View("FilterCategory");
         }
 
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
         [HttpGet]
         [ActionName("Shopping")]
         public IActionResult Shopping(string condition, int? page)
@@ -167,6 +178,8 @@ namespace MAQFurni.Controllers
             return View("Shopping");
         }
 
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Sort(string condition, string search)
         {
@@ -205,15 +218,56 @@ namespace MAQFurni.Controllers
             return View("SearchProduct");
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
+        [HttpGet("/view-order")]
+         public IActionResult ViewOrder() {
+          ViewBag.Order = null;
+          ViewBag.ShippingInfo = null;
+          ViewBag.Status = "";
+
+          return View();
         }
+
+        
+        [HttpPost("/view-order")]
+        public IActionResult CheckOrder(string orderId, string phone) {
+          var order = new Order();
+          var shipping = new ShippingInfo();
+          string status = "";
+
+          var orderCheck = _context.Orders.Where(o => o.OrderId.Equals(orderId)).Where(o => o.ShippingInfo.Phone.Equals(phone)).FirstOrDefault();
+          if (orderCheck != null) {
+            order = orderCheck;
+            shipping = _context.ShippingInfos.Where(s => s.OrderId.Equals(orderCheck.OrderId)).FirstOrDefault();
+          }
+          else {
+            order = null;
+            shipping = null;
+            status = "Incorrect order ID or phone number! Please try again!";
+          }
+
+          ViewBag.Order = order;
+          ViewBag.ShippingInfo = shipping;
+          ViewBag.Status = status;
+          ViewBag.OrderId = orderId;
+          ViewBag.Phone = phone;
+          return View("ViewOrder");
+        }
+
+        // public IActionResult Privacy()
+        // {
+        //     return View();
+        // }
+
+        [Authorize(Roles = "User")]
         [HttpGet("check-out")]
         public IActionResult Checkout()
         {
             return View();
         }
+
+        [Authorize(Roles = "User")]
         [HttpGet("check-out-success")]
         public IActionResult CheckoutSuccess()
         {
@@ -251,6 +305,7 @@ namespace MAQFurni.Controllers
             return View();
         }
 
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)] 
         public IActionResult Error()
         {
@@ -283,6 +338,8 @@ namespace MAQFurni.Controllers
         // }
 
 
+        [Authorize(Roles = "User")]
+        [AllowAnonymous]
         [HttpPost("cart/check-out")]
         [ActionName("AddOrder")]
         public async Task<IActionResult> CheckOutAsync(string cart, string firstName, string lastName, string city, string phone, string state, string address, string message, string email)

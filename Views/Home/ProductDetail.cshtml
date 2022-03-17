@@ -60,7 +60,7 @@
                         </div>
                         <div class="pricing-meta">
                             <ul>
-                                <li class="old-price not-cut">@productDetail.ProductPrice VND</li>
+                                <li class="old-price not-cut">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", productDetail.ProductPrice)</li>
                             </ul>
                         </div>
                         <div class="pro-details-quality">
