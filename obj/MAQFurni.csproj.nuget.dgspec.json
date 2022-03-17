@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {}
+    "D:\\MAQFurniBest\\MAQFurni.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj": {
+    "D:\\MAQFurniBest\\MAQFurni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
+        "projectUniqueName": "D:\\MAQFurniBest\\MAQFurni.csproj",
         "projectName": "MAQFurni",
-        "projectPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\MAQFurni.csproj",
-        "packagesPath": "C:\\Users\\VODUCMINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VODUCMINH\\Desktop\\MAQFurni\\obj\\",
+        "projectPath": "D:\\MAQFurniBest\\MAQFurni.csproj",
+        "packagesPath": "C:\\Users\\PhongVu\\.nuget\\packages\\",
+        "outputPath": "D:\\MAQFurniBest\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\VODUCMINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PhongVu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -139,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
