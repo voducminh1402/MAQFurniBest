@@ -2,6 +2,7 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\ref\MAQFurni.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.csproj.AssemblyReference.cache
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.AssemblyInfoInputs.cache
@@ -261,3 +262,6 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\OrderHi
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\OrderDetail.cshtml.g.cs
 =======
 >>>>>>> dev
+=======
+C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Home\ViewOrder.cshtml.g.cs
+>>>>>>> 25e6a399ed2159794155503bbc1b0ba4a3481d39

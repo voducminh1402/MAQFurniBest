@@ -15681,6 +15681,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Home\\OrderHistory.cshtml",
+      "TargetPath": "Views\\Home\\OrderHistory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Users\\Views\\Users\\Delete.cshtml",
       "TargetPath": "Areas\\Users\\Views\\Users\\Delete.cshtml",
       "FileKind": "mvc"
@@ -15753,6 +15758,11 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Users\\Views\\Users\\Index.cshtml",
       "TargetPath": "Areas\\Users\\Views\\Users\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Home\\ViewOrder.cshtml",
+      "TargetPath": "Views\\Home\\ViewOrder.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15986,6 +15996,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Home\\OrderDetail.cshtml",
+      "TargetPath": "Views\\Home\\OrderDetail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -16043,6 +16058,11 @@
     {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\ChangeInfo\\ChangeInfoConfirm.cshtml",
+      "TargetPath": "Views\\ChangeInfo\\ChangeInfoConfirm.cshtml",
       "FileKind": "mvc"
     },
     {

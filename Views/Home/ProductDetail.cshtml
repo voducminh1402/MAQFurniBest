@@ -47,7 +47,7 @@
                 <div class="col-lg-7 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-details-content quickview-content">
                         <h2>@productDetail.ProductName</h2>
-                        <p class="reference">Quantity:<span> @productDetail.Quantity</span></p>
+                        @* <p class="reference">Quantity:<span> @productDetail.Quantity</span></p> *@
                         <div class="pro-details-rating-wrap">
                             <div class="rating-product">
                                 <i class="ion-android-star"></i>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="pricing-meta">
                             <ul>
-                                <li class="old-price not-cut">@productDetail.ProductPrice VND</li>
+                                <li class="old-price not-cut">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", productDetail.ProductPrice)</li>
                             </ul>
                         </div>
                         <div class="pro-details-quality">
