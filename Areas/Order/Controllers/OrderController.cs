@@ -50,8 +50,9 @@ namespace MAQFurni.Areas_Order_Controllers
         [ActionName("Filter")]
         public async Task<IActionResult> Filter(int status)
         {
-            var furnitureShopContext = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).Include(o => o.User).Include(o => o.ShippingInfo);
             ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
+            var furnitureShopContext = _context.Orders.Where(o => o.ShippingInfo.StatusId == status).Include(o => o.User).Include(o => o.ShippingInfo);
+
             return View("Index", await furnitureShopContext.ToListAsync());
         }
 
