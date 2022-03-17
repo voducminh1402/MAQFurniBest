@@ -17005,7 +17005,7 @@ body.offcanvas-open {
   margin-bottom: 20px;
 }
 .contact-info-wrap .single-contact-info .contact-info-inner {
-  width: 80px;
+  /* width: 80px; */
 }
 .contact-info-wrap .single-contact-info .contact-info-inner .sub-title {
   display: inline-block;
