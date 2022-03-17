@@ -240,3 +240,6 @@ C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\MAQFurni.Views.pdb
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\MAQFurni.csproj.CopyComplete
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\MAQFurni.genruntimeconfig.cache
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Home\AdminDashboard.cshtml.g.cs
+C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.dll
+C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\ref\MAQFurni.dll
+C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.pdb

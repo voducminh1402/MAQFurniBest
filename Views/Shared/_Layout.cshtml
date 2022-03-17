@@ -136,10 +136,11 @@
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
                                         class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    
+
                                     @if (SignInManager.IsSignedIn(User))
                                     {
-                                        <li><a class="dropdown-item" href="identity/account/manage">My account</a></li>
+                                        <li><a class="dropdown-item" asp-action="ChangeInfo" asp-controller="ChangeInfo">My
+                                                account</a></li>
                                     }
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
                                     @if (SignInManager.IsSignedIn(User))
@@ -204,7 +205,8 @@
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
                                         class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="my-account.html">My account</a></li>
+                                    <li><a class="dropdown-item" asp-action="ChangeInfo" asp-controller="ChangeInfo">My
+                                            account</a></li>
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
                                     @if (SignInManager.IsSignedIn(User))
                                     {
@@ -355,7 +357,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="contact">Contact us</a></li>
-                                
+
                             </ul>
                         </div>
                     </div>
