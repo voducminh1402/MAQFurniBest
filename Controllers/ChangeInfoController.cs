@@ -13,20 +13,10 @@ using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
-<<<<<<< HEAD
+
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using System.Collections;
-=======
-
-using Microsoft.AspNetCore.WebUtilities;
-using System.Text;
-using Microsoft.Extensions.Logging;
-
-using Microsoft.AspNetCore.Authorization;
->>>>>>> dev
-=======
->>>>>>> 25e6a399ed2159794155503bbc1b0ba4a3481d39
 
 namespace MAQFurni.Controllers
 {

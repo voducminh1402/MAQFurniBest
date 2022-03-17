@@ -2,7 +2,6 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\ref\MAQFurni.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.csproj.AssemblyReference.cache
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.AssemblyInfoInputs.cache
@@ -150,18 +149,6 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\runtimes\unix\lib\netcor
 C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\HP\Desktop\prn22\MAQFurniBest\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-<<<<<<< HEAD
-=======
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.csproj.AssemblyReference.cache
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.AssemblyInfoInputs.cache
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.AssemblyInfo.cs
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.csproj.CoreCompileInputs.cache
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.RazorAssemblyInfo.cache
-C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.RazorAssemblyInfo.cs
->>>>>>> dev
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\staticwebassets\MAQFurni.StaticWebAssets.Manifest.cache
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\staticwebassets\MAQFurni.StaticWebAssets.xml
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\scopedcss\bundle\MAQFurni.styles.css
@@ -256,12 +243,9 @@ C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.RazorTargetAsse
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.Views.pdb
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.csproj.CopyComplete
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\MAQFurni.genruntimeconfig.cache
-<<<<<<< HEAD
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\ChangeInfo\ChangeInfoConfirm.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\OrderHistory.cshtml.g.cs
 C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\OrderDetail.cshtml.g.cs
-=======
->>>>>>> dev
-=======
 C:\Users\VODUCMINH\Desktop\MAQFurni\obj\Debug\net5.0\Razor\Views\Home\ViewOrder.cshtml.g.cs
 >>>>>>> 25e6a399ed2159794155503bbc1b0ba4a3481d39
+C:\Users\HP\Desktop\prn22\MAQFurniBest\obj\Debug\net5.0\Razor\Views\Home\ViewOrder.cshtml.g.cs
