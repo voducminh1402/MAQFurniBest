@@ -9,13 +9,10 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
-<<<<<<< HEAD
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using Microsoft.Extensions.Logging;
-=======
 using Microsoft.AspNetCore.Authorization;
->>>>>>> 41b7e5de34d3e9e51a4a1c7cec261175ef4be453
 
 namespace MAQFurni.Controllers
 {
