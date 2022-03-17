@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MAQFurni.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MAQFurni.Areas_Users_Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Users")]
     public class UsersController : Controller
     {

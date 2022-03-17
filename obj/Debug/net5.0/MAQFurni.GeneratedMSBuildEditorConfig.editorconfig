@@ -7,4 +7,8 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MAQFurni
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\HP\Desktop\prn22\MAQFurniBest\
+=======
+build_property.ProjectDir = C:\Users\VODUCMINH\Desktop\MAQFurni\
+>>>>>>> 11f7c3328cf8aa333db3f27a980d4ea3f5b1017b
