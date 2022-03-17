@@ -183,12 +183,7 @@ namespace MAQFurni.Areas.Identity.Pages.Account
                     {
                         // Thực hiện login    
                         await _signInManager.SignInAsync(userWithexternalMail, isPersistent: false);
-                        return ViewComponent(MessagePage.COMPONENTNAME, new MessagePage.Message()
-                        {
-                            title = "LIÊN KẾT TÀI KHOẢN",
-                            urlredirect = returnUrl,
-                            htmlcontent = $"Liên kết tài khoản {userWithexternalMail.UserName} với {info.ProviderDisplayName} thành công"
-                        });
+                        return RedirectToPage("./Index");
                     }
                     else
                     {

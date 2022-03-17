@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MAQFurni.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MAQFurni.Areas_Users_Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Users")]
     public class UsersController : Controller
     {
@@ -87,42 +89,46 @@ namespace MAQFurni.Areas_Users_Controllers
                 return NotFound();
             }
             ViewData["UserStatusId"] = new SelectList(_context.Set<UserStatus>(), "StatusId", "StatusName", user.UserStatusId);
+            ViewBag.RoleId = new SelectList(_context.Roles, "Id", "Name", user.RoleId);
             return View(user);
         }
 
         // POST: Users/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost("admin/users/edit/{id}")]
+        [HttpPost("admin/users/edit/{id}"), ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("CreateDate,UserStatusId,RoleId,Id,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount")] User user)
+        public async Task<IActionResult> Edit(string Id, int UserStatusId, int RoleId)
         {
-            if (id != user.Id)
+            User user = _context.Users.SingleOrDefault(o => o.Id == Id);
+
+
+
+            try
             {
-                return NotFound();
+                user.UserStatusId = UserStatusId;
+                user.RoleId = RoleId;
+                _context.Update(user);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(user.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserExists(user.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
             ViewData["UserStatusId"] = new SelectList(_context.Set<UserStatus>(), "StatusId", "StatusName", user.UserStatusId);
+            ViewBag.RoleId = new SelectList(_context.Roles, "Id", "Name", user.RoleId);
+            // return RedirectToAction(nameof(Index));
+
+
+
             return View(user);
         }
 
@@ -152,9 +158,13 @@ namespace MAQFurni.Areas_Users_Controllers
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var user = await _context.Users.FindAsync(id);
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var order = _context.Orders.Where(o => o.UserId == id);
+            if (order == null)
+            {
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index), new { status = "fail" });
         }
 
         private bool UserExists(string id)

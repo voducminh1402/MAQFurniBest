@@ -9,9 +9,7 @@
   <div class="page-header">
     <h1 class="page-header__title">Users</h1>
   </div>
-  <p>
-    <a asp-action="Create">Create New</a>
-  </p>
+ 
   <div class="page-tools">
     <div class="page-tools__breadcrumbs">
       <div class="breadcrumbs">
@@ -136,30 +134,28 @@
     <div class="table-wrapper__content table-collapse scrollbar-thin scrollbar-visible" data-simplebar>
       <table class="table table--lines">
         <colgroup>
-          <col width="90px" />
-          <col width="100px" />
-          <col width="16%" />
+          <col width="150px" />
+          <col width="200px" />
+          <col width="18%" />
           <col />
           <col />
-          <col />
-          <col />
-          <col />
+          
         </colgroup>
         <thead class="table__header">
           <tr class="table__header-row">
             <th class="table__th-sort">
               <span class="align-middle">Username</span><span class="sort sort--down"></span>
             </th>
-            <th class="table__th-sort">
+            @* <th class="table__th-sort">
               <span class="align-middle">Role ID</span><span class="sort sort--down"></span>
-            </th>
+            </th> *@
 
             <th class="table__th-sort">
               <span class="align-middle">Email</span><span class="sort sort--down"></span>
             </th>
-            <th class="table__th-sort">
+            @* <th class="table__th-sort">
               <span class="align-middle">Phone Number</span><span class="sort sort--down"></span>
-            </th>
+            </th> *@
             <th class="table__th-sort d-none d-sm-table-cell">
               <span class="align-middle">Create Date</span><span class="sort sort--down"></span>
             </th>
@@ -176,12 +172,12 @@
               <td class="d-none d-lg-table-cell table__td">
                 <span class="text-grey">@Html.DisplayFor(modelItem => item.UserName)</span>
               </td>
-              <td class="table__td">@Html.DisplayFor(modelItem => item.RoleId)</td>
+              @* <td class="table__td">@Html.DisplayFor(modelItem => item.RoleId)</td> *@
 
               <td class="table__td"><span>@Html.DisplayFor(modelItem => item.Email)</span></td>
-              <td class="table__td text-nowrap">
+              @* <td class="table__td text-nowrap">
                 <span class="text-grey">@Html.DisplayFor(modelItem => item.PhoneNumber)</span>
-              </td>
+              </td> *@
               <td class="table__td text-nowrap">
                 <span class="text-grey">@Html.DisplayFor(modelItem => item.CreateDate)</span>
               </td>
@@ -207,14 +203,7 @@
                                 <use xlink:href="#icon-archive"></use>
                               </svg></span>Edit</a>
                         </li>
-                        <li class="dropdown-items__item">
-
-                          <a class="dropdown-items__link" asp-action="Details" asp-route-id="@item.Id"><span
-                            class="dropdown-items__link-icon">
-                              <svg class="icon-icon-view">
-                                <use xlink:href="#icon-view"></use>
-                              </svg></span>Details</a>
-                        </li>
+                        
 
                         <li class="dropdown-items__item">
                           <form asp-action="Delete" asp-route-id="@item.Id">
@@ -279,3 +268,25 @@
 </div>
 </tbody>
 </table>
+<script src="~/js/toast.js"></script>
+<script>
+ 
+   // Assuming "?post=1234&action=edit"
+window.addEventListener("load", () => {
+var urlParams = new URLSearchParams(window.location.search);
+
+console.log(urlParams.get('status')); // "edit"
+    if (urlParams.get('status') == "fail"){
+vt.error("User is making order!", {
+            title: "Delete fail",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
+  });
+  
+  
+</script>

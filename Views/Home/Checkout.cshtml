@@ -190,11 +190,26 @@
 </div>
 </div>
 <!-- checkout area end -->
+<script src="~/js/toast.js"></script>
 <script>
     const checkOut = document.getElementById("check-out");
     checkOut.addEventListener("click", function () {
         document.getElementById("cart").value = localStorage.getItem("cart");
     });
+
+
+    function toats() {
+        vt.error("Your order product have been sold out!", {
+            title: "Check out fail",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
+
+
 
     @* @ViewBag.ProductId =  *@
 
@@ -277,20 +292,21 @@
             let success = document.getElementById("clear-cart").value;
             if (success === "success") {
                 localStorage.removeItem("cart");
-
                 document.location.href = "https://localhost:5001/check-out-success";
             }
             let cart = JSON.parse(localStorage.getItem("cart"));
             if (cart === null) {
                 cart = [];
             }
+
             let id = document.getElementById("id-remove").value;
             let quantity = document.getElementById("quantity").value;
-            console.log(id);
-            console.log(quantity);
+
             var newCart = [];
             if (id != null) {
+                localStorage.setItem("cart", JSON.stringify(newCart));
                 if (quantity == "0") {
+                    toats();
                     for (let o of cart) {
                         console.log(o.id);
                         if (o.id != document.getElementById("id-remove").value) {
@@ -298,8 +314,7 @@
                         }
                     }
 
-                    localStorage.setItem("cart", JSON.stringify(newCart));
-                    console.log(JSON.parse(localStorage.getItem("cart")));
+
                 } else {
                     for (let o of cart) {
                         let newProduct;
@@ -338,7 +353,7 @@
             let total = 0;
             let item = "";
             for (let cartItem of cart) {
-                item += `<li><span class="order-middle-left">${cartItem.name} X ${cartItem.quantity}</span> <span
+                item += `<li><span class="order-middle-left">${cartItem.name} x ${cartItem.quantity}</span> <span
                                             class="order-price">${cartItem.price * cartItem.quantity} VND </span></li>`;
                 total += parseFloat(cartItem.price * cartItem.quantity);
             }
