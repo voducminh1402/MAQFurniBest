@@ -299,7 +299,7 @@
                                         <div class="content">
                                             <h5 class="title"><a href="shop-left-sidebar.html">@Html.DisplayFor(modelItem => item.ProductName)</a></h5>
                                             <span class="price">
-                                                <span class="new">@Html.DisplayFor(modelItem => item.ProductPrice) VND</span>
+                                                <span class="new">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", item.ProductPrice)</span>
                                             </span>
                                         </div>
                                     </div>

@@ -154,9 +154,23 @@ namespace MAQFurni.Areas_Category_Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
+            bool flag = false;
+
+            List<Product> productList = await _context.Products.Where(p => p.CategoryId == id).ToListAsync();
+
+            foreach (var product in productList)
+            {
+                _context.Products.Remove(product);
+                await _context.SaveChangesAsync();
+
+                flag = true;
+            }
+
+            if (flag) {
+                var category = await _context.Categories.FindAsync(id);
+                _context.Categories.Remove(category);
+                await _context.SaveChangesAsync();
+            }
             return RedirectToAction(nameof(Index));
         }
 

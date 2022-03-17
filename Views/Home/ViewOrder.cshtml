@@ -1,0 +1,135 @@
+@{
+    var order = ViewBag.Order as Order;
+    var shipping = ViewBag.ShippingInfo as ShippingInfo;
+    string status = ViewBag.Status as string;
+    string orderId = ViewBag.OrderId as string;
+    string phone = ViewBag.Phone as string;
+}
+
+<div class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row breadcrumb_box  align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-left">
+                            <h2 class="breadcrumb-title">View Order</h2>
+                        </div>
+                        <div class="col-lg-6  col-md-6 col-sm-12">
+                            <!-- breadcrumb-list start -->
+                            <ul class="breadcrumb-list text-center text-md-right">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">View Order</li>
+                            </ul>
+                            <!-- breadcrumb-list end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- breadcrumb-area end -->
+
+    <!-- contact area start -->
+    <div class="contact-area pb-100px pt-100px">
+        <div class="container">
+            <div class="custom-row-2 row">
+                 @if(order != null && shipping != null) {
+                <div class="col-lg-5 col-md-5 mb-lm-60px col-sm-12 col-xs-12 w-sm-100">
+                       <div class="contact-info-wrap">
+                        <h2 class="title" data-aos="fade-up" data-aos-delay="200">Order</h2>
+                        <div class="single-contact-info" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-info-inner">
+                                <span class="sub-title">Order ID: @order.OrderId</span>
+                            </div>
+                        </div>
+                        <div class="single-contact-info" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-info-inner">
+                                <span class="sub-title">Created Date: </span>
+                            </div>
+                            <div class="contact-info-dec">
+                                <p><a> @order.CreateDate</a></p>
+                            </div>
+                        </div>
+                        <div class="single-contact-info" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-info-inner">
+                                <span class="sub-title">Address: </span>
+                            </div>
+                            <div class="contact-info-dec">
+                                <p> @order.ShippingInfo.Address, @order.ShippingInfo.City, @order.ShippingInfo.State</p>
+                            </div>
+                        </div>
+                        <div class="single-contact-info" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-info-inner">
+                                <span class="sub-title">Status: 
+                                    @if(shipping.StatusId == 1) {
+                                       @Html.Raw("Complete");
+                                    }    
+                                    else if(shipping.StatusId == 2) {
+                                       @Html.Raw("Pending");
+                                    }  
+                                    else if(shipping.StatusId == 3) {
+                                       @Html.Raw("Processing");
+                                    } 
+                                </span>
+                            </div>
+                            <div class="contact-info-dec">
+                                <p> </p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <h3 class="title" data-aos="fade-up" data-aos-delay="200">Total Price: @String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", order.TotalPrice)</h3>
+                            <div class="social-info" data-aos="fade-up" data-aos-delay="200">
+                                @* <ul class="d-flex">
+                                    <li>
+                                        <a href="#"><i class="icon-social-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-social-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-social-youtube"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-social-google"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="m-0" href="#"><i class="icon-social-instagram"></i></a>
+                                    </li>
+                                </ul> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 }
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                       @if(status != null) {
+                            @if(status.Equals("")) {
+                            <span></span>
+                        }
+                        else {
+                            <span style="color: red; font-size: 14px;">@status</span>
+                        }
+                       }
+                    <div class="contact-form">
+                        <div class="contact-title mb-30">
+                            <h2 class="title" data-aos="fade-up" data-aos-delay="200">View Order</h2>
+                        </div>
+                        <form asp-controller="Home" asp-action="ViewOrder" class="contact-form-style" id="contact-form" method="post">
+                            <div class="row">
+                                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                                    <input value="@orderId" required name="orderId" placeholder="Order ID*" type="text" />
+                                </div>
+                                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                                    <input value="@phone" required name="phone" placeholder="Mobile Phone*" type="text" />
+                                </div>
+                                <button class="btn btn-primary btn-hover-dark mt-4 ml-3" data-aos="fade-up" data-aos-delay="200" type="submit">CHECK</button>
+                            </div>
+                        </form>
+                        <p class="form-messege"></p>
+                    </div>
+                </div>
+                <input type="hidden" id="detail-add">
+            </div>
+        </div>
+    </div>

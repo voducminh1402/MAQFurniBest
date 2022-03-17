@@ -124,7 +124,7 @@
                                         <div class="content">
                                             <h5 class="title"><a href="shop-left-sidebar.html">@product.ProductName</a></h5>
                                             <span class="price">
-                                                <span class="new">@product.ProductPrice VND</span>
+                                                <span class="new">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", product.ProductPrice)</span>
                                             </span>
                                         </div>
                                     </div>
