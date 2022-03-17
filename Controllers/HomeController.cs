@@ -221,15 +221,16 @@ namespace MAQFurni.Controllers
         [Authorize(Roles = "User")]
         [AllowAnonymous]
         [HttpGet("/view-order")]
-         public IActionResult ViewOrder() {
-          ViewBag.Order = null;
-          ViewBag.ShippingInfo = null;
-          ViewBag.Status = "";
+        public IActionResult ViewOrder()
+        {
+            ViewBag.Order = null;
+            ViewBag.ShippingInfo = null;
+            ViewBag.Status = "";
 
-          return View();
+            return View();
         }
 
-<<<<<<< HEAD
+        [Authorize(Roles = "User")]
         [HttpGet("order-history"), ActionName("OrderHistory")]
         public IActionResult OrderHistory()
         {
@@ -239,6 +240,7 @@ namespace MAQFurni.Controllers
             ViewBag.Order = orders;
             return View();
         }
+        [Authorize(Roles = "User")]
         [HttpGet("order-detail"), ActionName("OrderDetail")]
         public IActionResult OrderDetail(string id)
         {
@@ -247,31 +249,34 @@ namespace MAQFurni.Controllers
             ViewBag.OrderId = id;
             return View();
         }
-=======
-        
+
+
         [HttpPost("/view-order")]
-        public IActionResult CheckOrder(string orderId, string phone) {
-          var order = new Order();
-          var shipping = new ShippingInfo();
-          string status = "";
+        public IActionResult CheckOrder(string orderId, string phone)
+        {
+            var order = new Order();
+            var shipping = new ShippingInfo();
+            string status = "";
 
-          var orderCheck = _context.Orders.Where(o => o.OrderId.Equals(orderId)).Where(o => o.ShippingInfo.Phone.Equals(phone)).FirstOrDefault();
-          if (orderCheck != null) {
-            order = orderCheck;
-            shipping = _context.ShippingInfos.Where(s => s.OrderId.Equals(orderCheck.OrderId)).FirstOrDefault();
-          }
-          else {
-            order = null;
-            shipping = null;
-            status = "Incorrect order ID or phone number! Please try again!";
-          }
+            var orderCheck = _context.Orders.Where(o => o.OrderId.Equals(orderId)).Where(o => o.ShippingInfo.Phone.Equals(phone)).FirstOrDefault();
+            if (orderCheck != null)
+            {
+                order = orderCheck;
+                shipping = _context.ShippingInfos.Where(s => s.OrderId.Equals(orderCheck.OrderId)).FirstOrDefault();
+            }
+            else
+            {
+                order = null;
+                shipping = null;
+                status = "Incorrect order ID or phone number! Please try again!";
+            }
 
-          ViewBag.Order = order;
-          ViewBag.ShippingInfo = shipping;
-          ViewBag.Status = status;
-          ViewBag.OrderId = orderId;
-          ViewBag.Phone = phone;
-          return View("ViewOrder");
+            ViewBag.Order = order;
+            ViewBag.ShippingInfo = shipping;
+            ViewBag.Status = status;
+            ViewBag.OrderId = orderId;
+            ViewBag.Phone = phone;
+            return View("ViewOrder");
         }
 
         // public IActionResult Privacy()
@@ -280,7 +285,7 @@ namespace MAQFurni.Controllers
         // }
 
         [Authorize(Roles = "User")]
->>>>>>> 25e6a399ed2159794155503bbc1b0ba4a3481d39
+
         [HttpGet("check-out")]
         public IActionResult Checkout()
         {
@@ -325,12 +330,11 @@ namespace MAQFurni.Controllers
             return View();
         }
 
-<<<<<<< HEAD
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-=======
-        
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)] 
->>>>>>> 25e6a399ed2159794155503bbc1b0ba4a3481d39
+
+
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
