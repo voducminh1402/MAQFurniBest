@@ -1,0 +1,78 @@
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row breadcrumb_box  align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-left">
+                        <h2 class="breadcrumb-title">Shop</h2>
+                    </div>
+                    <div class="col-lg-6  col-md-6 col-sm-12">
+                        <!-- breadcrumb-list start -->
+                        <ul class="breadcrumb-list text-center text-md-right">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Orders History</li>
+                        </ul>
+                        <!-- breadcrumb-list end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- breadcrumb-area end -->
+
+<!-- Wishlist Area Start -->
+<div class="cart-main-area pt-100px pb-100px">
+    <div class="container">
+        <h3 class="cart-page-title">Your orders history</h3>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <form action="#">
+                    <div class="table-content table-responsive cart-table-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Order Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                
+                                    @{var list = ViewBag.Order;
+                                        foreach (var item in list)
+                                    {
+<tr>
+
+                                        <td style="width: 35%" class="product-thumbnail">
+                                            @* <a href="#"><img class="img-responsive ml-3"
+                                                src="assets/images/product-image/2.jpg" alt="" /></a> *@
+                                            @item.OrderId
+                                        </td>
+                                        <td class="product-name"><a href="#">@item.CreateDate</a></td>
+                                        <td class="product-price-cart"><span class="amount">@item.TotalPrice</span></td>
+
+                                        <td class="product-subtotal">@item.ShippingInfo.Status.StatusName</td>
+                                        <td class="product-wishlist-cart">
+                                            <a asp-action="OrderDetail" asp-route-id="@item.OrderId">Details</a>
+                                        </td>
+                                        </tr>
+                                    }}
+                                
+
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Wishlist Area End -->

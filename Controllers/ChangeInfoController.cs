@@ -9,12 +9,22 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
+<<<<<<< HEAD
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
+using System.Collections;
+=======
 
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using Microsoft.Extensions.Logging;
 
 using Microsoft.AspNetCore.Authorization;
+>>>>>>> dev
 
 namespace MAQFurni.Controllers
 {
@@ -73,7 +83,7 @@ namespace MAQFurni.Controllers
                 return View("ChangeInfo", user);
             }
 
-            if (newPassword.Trim().Length == 0 || confirmPassword.Trim().Length == 0)
+            if (newPassword.Trim().Length < 6 || confirmPassword.Trim().Length < 6)
             {
                 ViewBag.Fail = "Change password fail!";
                 return View("ChangeInfo", user);
@@ -85,6 +95,8 @@ namespace MAQFurni.Controllers
             // code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
 
             var result = await _userManager.ResetPasswordAsync(user, code, newPassword);
+
+
             if (result.Succeeded)
             {
                 _logger.LogInformation("User change password success.");
@@ -92,7 +104,8 @@ namespace MAQFurni.Controllers
                 ivm.ListCategory = await _context.Categories.ToListAsync();
                 ivm.ListProduct = await _context.Products.ToListAsync();
                 ViewBag.Success = "Change password success!";
-                return View("ChangeInfo");
+                await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+                return Redirect("/Home/Index");
             }
             _logger.LogError("User change password fail");
             // Add action logic here
@@ -110,6 +123,7 @@ namespace MAQFurni.Controllers
             // Add action logic here
             return View(user);
         }
+
 
     }
 }
