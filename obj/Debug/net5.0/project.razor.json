@@ -15761,6 +15761,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Home\\ViewOrder.cshtml",
+      "TargetPath": "Views\\Home\\ViewOrder.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\HP\\Desktop\\prn22\\MAQFurniBest\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

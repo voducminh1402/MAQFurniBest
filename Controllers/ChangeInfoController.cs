@@ -9,11 +9,11 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
-<<<<<<< HEAD
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using System.Collections;
@@ -25,6 +25,8 @@ using Microsoft.Extensions.Logging;
 
 using Microsoft.AspNetCore.Authorization;
 >>>>>>> dev
+=======
+>>>>>>> 25e6a399ed2159794155503bbc1b0ba4a3481d39
 
 namespace MAQFurni.Controllers
 {
@@ -49,6 +51,7 @@ namespace MAQFurni.Controllers
         //
         // GET: /Products/
 
+        [Authorize(Roles = "User")]
         [HttpPost("user/change-info")]
         [ActionName("ChangeInfor")]
         public ActionResult ChangeInfor(string name, string phone)
@@ -69,6 +72,7 @@ namespace MAQFurni.Controllers
             return View("ChangeInfo", user);
         }
 
+        [Authorize(Roles = "User")]
         [HttpPost("user/change-password")]
         [ActionName("ChangePassword")]
         public async Task<ActionResult> ChangePasswordAsync(string newPassword, string confirmPassword)
@@ -112,6 +116,8 @@ namespace MAQFurni.Controllers
             ViewBag.Fail = "Change password fail!";
             return View("ChangeInfo");
         }
+
+        [Authorize(Roles = "User")]
         [HttpGet("user/change-user-info")]
         [ActionName("ChangeInfo")]
         public ActionResult ChangeInfo()
