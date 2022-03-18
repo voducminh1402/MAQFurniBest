@@ -57,6 +57,7 @@ addBtn.forEach((item, index) => {
       let cartSize = JSON.parse(localStorage.getItem("cart")).length;
       if (cartSize != 0) {
         if (cartSize < 10) {
+          document.getElementById("checkout-btn").style.display = "block";
           item.innerHTML = "0" + cartSize;
           item.style.backgroundColor = "#ff7004";
         } else {
@@ -66,6 +67,7 @@ addBtn.forEach((item, index) => {
       } else {
         item.innerHTML = "";
         item.style.backgroundColor = "transparent";
+        document.getElementById("checkout-btn").style.display = "none";
       }
     });
   });
@@ -109,6 +111,7 @@ detailAdd.addEventListener("click", () => {
     let cartSize = JSON.parse(localStorage.getItem("cart")).length;
     if (cartSize != 0) {
       if (cartSize < 10) {
+        document.getElementById("checkout-btn").style.display = "block";
         item.innerHTML = "0" + cartSize;
         item.style.backgroundColor = "#ff7004";
       } else {
@@ -118,6 +121,7 @@ detailAdd.addEventListener("click", () => {
     } else {
       item.innerHTML = "";
       item.style.backgroundColor = "transparent";
+      document.getElementById("checkout-btn").style.display = "none";
     }
   });
 });
@@ -129,8 +133,6 @@ cartIcon.forEach((item, index) => {
     cartInsert.innerHTML = "";
 
     let subTotal = 0;
-    let cartEcoTax = 0;
-    let cartVAT = 0;
     let cartTotal = 0;
 
     for (let cartItem of cartFromLocal) {
@@ -149,14 +151,10 @@ cartIcon.forEach((item, index) => {
       );
 
       subTotal += cartItem.price * cartItem.quantity;
-      cartEcoTax = subTotal * 0.02;
-      cartVAT = subTotal * 0.08;
-      cartTotal = subTotal + cartEcoTax + cartVAT;
+      cartTotal =  subTotal;
     }
 
     document.getElementById("cartSubTotal").innerHTML = subTotal + " VND";
-    document.getElementById("cartEcoTax").innerHTML = cartEcoTax + " VND";
-    document.getElementById("cartVAT").innerHTML = cartVAT + " VND";
     document.getElementById("cartTotal").innerHTML = cartTotal + " VND";
   });
 });
@@ -173,8 +171,6 @@ document.addEventListener("click", function (e) {
   let itemRemoveId = "0";
   if (e.target && e.target.id == "cartRemove") {
     let subTotal = 0;
-    let cartEcoTax = 0;
-    let cartVAT = 0;
     let cartTotal = 0;
 
     itemRemoveId = e.target.querySelector("input").value;
@@ -182,7 +178,7 @@ document.addEventListener("click", function (e) {
     let cartFromLocal = JSON.parse(localStorage.getItem("cart"));
 
     let newCart = cartFromLocal.filter(
-      (item) => item.id != parseInt(itemRemoveId)
+      (item) => item.id != itemRemoveId
     );
     console.log(newCart);
     console.log(JSON.stringify(newCart));
@@ -194,6 +190,7 @@ document.addEventListener("click", function (e) {
     document.querySelectorAll(".header-action-num").forEach((item, index) => {
       let cartSize = JSON.parse(localStorage.getItem("cart")).length;
       if (cartSize != 0) {
+        document.getElementById("checkout-btn").style.display = "block";
         if (cartSize < 10) {
           item.innerHTML = "0" + cartSize;
         } else {
@@ -202,6 +199,7 @@ document.addEventListener("click", function (e) {
       } else {
         item.innerHTML = "";
         item.style.backgroundColor = "transparent";
+        document.getElementById("checkout-btn").style.display = "none";
       }
     });
 
@@ -209,14 +207,10 @@ document.addEventListener("click", function (e) {
 
     for (let cartItem of newCartLocal) {
       subTotal += cartItem.price * cartItem.quantity;
-      cartEcoTax = subTotal * 0.02;
-      cartVAT = subTotal * 0.08;
-      cartTotal = subTotal + cartEcoTax + cartVAT;
+      cartTotal =  subTotal;
     }
 
     document.getElementById("cartSubTotal").innerHTML = subTotal + " VND";
-    document.getElementById("cartEcoTax").innerHTML = cartEcoTax + " VND";
-    document.getElementById("cartVAT").innerHTML = cartVAT + " VND";
     document.getElementById("cartTotal").innerHTML = cartTotal + " VND";
   }
 });
@@ -228,6 +222,7 @@ window.onload = () => {
       cartSize = JSON.parse(localStorage.getItem("cart")).length;
     }
     if (cartSize != 0) {
+      document.getElementById("checkout-btn").style.display = "block";
       if (cartSize < 10) {
         item.innerHTML = "0" + cartSize;
       } else {
@@ -236,6 +231,7 @@ window.onload = () => {
     } else {
       item.innerHTML = "";
       item.style.backgroundColor = "transparent";
+      document.getElementById("checkout-btn").style.display = "none";
     }
   });
 };

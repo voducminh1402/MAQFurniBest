@@ -278,8 +278,17 @@
                                                 <img src="@Html.DisplayFor(modelItem => item.ProductImage)" alt="Product" />
                                             </a>
                                             <span class="badges">
-                                                
+                                            @if(item.AvailableId == 2) {
+                                                <span class="sale">Sold out</span>
+                                            }
+                                            else if(item.AvailableId == 3) {
+                                                <span class="sale">In coming</span>
+                                            }
+                                            else if(item.AvailableId == 4) {
+                                                <span class="sale">Off</span>
+                                            }
                                             </span>
+                                           
                                             <div class="actions">
                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
                                                         class="icon-heart"></i></a>
@@ -288,13 +297,16 @@
                                                 <a href="compare.html" class="action compare" title="Compare"><i
                                                         class="icon-refresh"></i></a>
                                             </div>
-                                            <button title="Add To Cart" class="add-to-cart">Add
+                                            @if(item.AvailableId == 1) {
+                                                 <button title="Add To Cart" class="add-to-cart">Add
                                                 To Cart
                                                 <input id="pCartImage" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductImage)" />
                                                 <input id="pCartId" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductId)" />
                                                 <input id="pCartName" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductName)" />
                                                 <input id="pCartPrice" type="hidden" value="@Html.DisplayFor(modelItem => item.ProductPrice)" />
                                                 </button>
+                                            }
+                                           
                                         </div>
                                         <div class="content">
                                             <h5 class="title"><a href="shop-left-sidebar.html">@Html.DisplayFor(modelItem => item.ProductName)</a></h5>
