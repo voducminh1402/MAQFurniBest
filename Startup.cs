@@ -91,6 +91,13 @@ namespace MAQFurni
                 googleOptions.CallbackPath = "/login-with-google";
 
             });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireRole", policy => 
+                    policy.RequireRole("User"));
+            });
+
             services.AddControllersWithViews();
         }
 

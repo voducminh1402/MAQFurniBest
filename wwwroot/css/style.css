@@ -13045,7 +13045,8 @@ input {
   text-align: center;
   color: #fff;
   border-radius: 50%;
-  background-color: #ff7004;
+  /* background-color: #ff7004; */
+  background-color: transparent;
 }
 .header-actions .header-action-btn .cart-amount {
   display: block;
