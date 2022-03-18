@@ -113,7 +113,7 @@ namespace MAQFurni.Controllers
             }
 
             ViewBag.productList = list.Skip(pageSize * (pageCurrent - 1)).Take(pageSize);
-            decimal countPage = new decimal(list.Count()/pageSize);
+            decimal countPage = new decimal(list.Count() / pageSize);
             ViewBag.CountPage = Math.Ceiling(countPage) + 1; //tim cho nay
             ViewBag.Page = pageCurrent; //tim cho nay
             ViewBag.CategoryId = categoryId;
@@ -170,7 +170,7 @@ namespace MAQFurni.Controllers
 
             ViewBag.ProductList = listProduct.Skip(pageSize * (pageCurrent - 1)).Take(pageSize);
             ViewBag.CategoryView = categoryView;
-            decimal countPage = new decimal(listProduct.Count()/pageSize);
+            decimal countPage = new decimal(listProduct.Count() / pageSize);
             ViewBag.CountPage = Math.Ceiling(countPage) + 1; //tim cho nay
             ViewBag.Page = pageCurrent; //tim cho nay
             ViewBag.Cond = condition;
@@ -221,38 +221,62 @@ namespace MAQFurni.Controllers
         [Authorize(Roles = "User")]
         [AllowAnonymous]
         [HttpGet("/view-order")]
-         public IActionResult ViewOrder() {
-          ViewBag.Order = null;
-          ViewBag.ShippingInfo = null;
-          ViewBag.Status = "";
+        public IActionResult ViewOrder()
+        {
+            ViewBag.Order = null;
+            ViewBag.ShippingInfo = null;
+            ViewBag.Status = "";
 
-          return View();
+            return View();
         }
 
-        
+        [Authorize(Roles = "User")]
+        [HttpGet("order-history"), ActionName("OrderHistory")]
+        public IActionResult OrderHistory()
+        {
+            var userId = _userManager.GetUserId(User);
+            ViewBag.OrderStatus = new SelectList(_context.ShippingStatuses, "StatusId", "StatusName");
+            var orders = _context.Orders.Where(o => o.UserId.Equals(userId)).Include(o => o.ShippingInfo.Status);
+            ViewBag.Order = orders;
+            return View();
+        }
+        [Authorize(Roles = "User")]
+        [HttpGet("order-detail"), ActionName("OrderDetail")]
+        public IActionResult OrderDetail(string id)
+        {
+            var orderDetails = _context.OrderDetails.Where(o => o.OrderId == id).Include(o => o.Product);
+            ViewBag.OrderDetails = orderDetails;
+            ViewBag.OrderId = id;
+            return View();
+        }
+
+
         [HttpPost("/view-order")]
-        public IActionResult CheckOrder(string orderId, string phone) {
-          var order = new Order();
-          var shipping = new ShippingInfo();
-          string status = "";
+        public IActionResult CheckOrder(string orderId, string phone)
+        {
+            var order = new Order();
+            var shipping = new ShippingInfo();
+            string status = "";
 
-          var orderCheck = _context.Orders.Where(o => o.OrderId.Equals(orderId)).Where(o => o.ShippingInfo.Phone.Equals(phone)).FirstOrDefault();
-          if (orderCheck != null) {
-            order = orderCheck;
-            shipping = _context.ShippingInfos.Where(s => s.OrderId.Equals(orderCheck.OrderId)).FirstOrDefault();
-          }
-          else {
-            order = null;
-            shipping = null;
-            status = "Incorrect order ID or phone number! Please try again!";
-          }
+            var orderCheck = _context.Orders.Where(o => o.OrderId.Equals(orderId)).Where(o => o.ShippingInfo.Phone.Equals(phone)).FirstOrDefault();
+            if (orderCheck != null)
+            {
+                order = orderCheck;
+                shipping = _context.ShippingInfos.Where(s => s.OrderId.Equals(orderCheck.OrderId)).FirstOrDefault();
+            }
+            else
+            {
+                order = null;
+                shipping = null;
+                status = "Incorrect order ID or phone number! Please try again!";
+            }
 
-          ViewBag.Order = order;
-          ViewBag.ShippingInfo = shipping;
-          ViewBag.Status = status;
-          ViewBag.OrderId = orderId;
-          ViewBag.Phone = phone;
-          return View("ViewOrder");
+            ViewBag.Order = order;
+            ViewBag.ShippingInfo = shipping;
+            ViewBag.Status = status;
+            ViewBag.OrderId = orderId;
+            ViewBag.Phone = phone;
+            return View("ViewOrder");
         }
 
         // public IActionResult Privacy()
@@ -261,6 +285,7 @@ namespace MAQFurni.Controllers
         // }
 
         [Authorize(Roles = "User")]
+
         [HttpGet("check-out")]
         public IActionResult Checkout()
         {
@@ -276,7 +301,7 @@ namespace MAQFurni.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpGet("/admin/dashboard")]
-        public IActionResult AdminDashboard() 
+        public IActionResult AdminDashboard()
         {
             int listUser = _context.Users.ToList().Count();
             int listUserBuy = _context.Orders.Select(o => o.UserId).Distinct().ToList().Count();
@@ -305,8 +330,11 @@ namespace MAQFurni.Controllers
             return View();
         }
 
-        
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)] 
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+
+
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
@@ -331,8 +359,8 @@ namespace MAQFurni.Controllers
         //         return NotFound();
         //     }
 
-            
-            
+
+
         //     return View("ViewOrder");
 
         // }
@@ -515,22 +543,7 @@ namespace MAQFurni.Controllers
     </style>
   </head>
   <body style=""background-color: #e9ecef"">
-    <div
-      class=""preheader""
-      style=""
-        display: none;
-        max-width: 0;
-        max-height: 0;
-        overflow: hidden;
-        font-size: 1px;
-        line-height: 1px;
-        color: #fff;
-        opacity: 0;
-      ""
-    >
-      A preheader is the short summary text that follows the subject line when
-      an email is viewed in the inbox.
-    </div>
+    
     <table border=""0"" cellpadding=""0"" cellspacing=""0"" width=""100%"">
       <tr>
         <td align=""center"" bgcolor=""#e9ecef"">
@@ -602,36 +615,13 @@ namespace MAQFurni.Controllers
                   line-height: 24px;
                 ""
               >
-                <p style=""margin: 0"">Dear,</p>
+                <p style=""margin: 0"">Dear,</p><br>
                 <p style=""margin: 0"">
-                  Tap the button below to confirm your email address. If you
-                  didn't create an account with , you can safely delete this
-                  email.
+                  We are lucky to have such great customers like you! We appreciate your order, and hope that you love it. We couldn’t do it without you. 
                 </p>
               </td>
             </tr>
-            <tr>
-              <td
-                align=""left""
-                bgcolor=""#ffffff""
-                style=""
-                  padding: 24px;
-                  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-                  font-size: 16px;
-                  line-height: 24px;
-                ""
-              >
-                <p style=""margin: 0"">
-                  If that doesn't work, copy and paste the following link in
-                  your browser:
-                </p>
-                <p style=""margin: 0"">
-                  <a href=""https://localhost:5001/"" target=""_blank""
-                    >Furniture Shop</a
-                  >
-                </p>
-              </td>
-            </tr>
+            
             <tr>
               <td
                 align=""left""
@@ -645,7 +635,7 @@ namespace MAQFurni.Controllers
                 ""
               >
                 <p style=""margin: 0"">
-                  Cheers,<br />
+                  Cheers,
                   <br />
                   Furniture Shop
                 </p>

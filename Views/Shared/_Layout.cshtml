@@ -141,8 +141,9 @@
                                     {
                                         <li><a class="dropdown-item" asp-action="ChangeInfo" asp-controller="ChangeInfo">My
                                                 account</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Home" asp-action="OrderHistory">Orders History</a></li>
                                     }
-                                    <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+                                    
                                     @if (SignInManager.IsSignedIn(User))
                                     {
                                         <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
@@ -205,11 +206,11 @@
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
                                         class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" asp-action="ChangeInfo" asp-controller="ChangeInfo">My
-                                            account</a></li>
-                                    <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+
                                     @if (SignInManager.IsSignedIn(User))
                                     {
+                                        <li><a class="dropdown-item" asp-action="ChangeInfo" asp-controller="ChangeInfo">My
+                                                account</a></li>
                                         <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
                                         asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                             <button class="dropdown-item" type="submit">Logout</button>

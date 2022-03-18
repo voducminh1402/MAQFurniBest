@@ -1311,5 +1311,17 @@
                 <!-- Single Item -->
             </div>
         </div>
+        <input type="hidden" id="success" value="@ViewBag.Success">
     </div>
     <!-- Instagram Area End -->
+    <script>
+        window.addEventListener('load', (event) => {
+            console.log(document.getElementById("success").value);
+if(document.getElementById("success").value != ""){
+    
+            window.location.reload();
+        }
+});
+        
+        
+    </script>
