@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MAQFurni.Controllers
 {
+
     public class HomeController : Controller
     {
         // private readonly ILogger<HomeController> _logger;
@@ -29,16 +30,16 @@ namespace MAQFurni.Controllers
             _signInManager = signInManager;
         }
 
-
+        
         [Authorize(Roles = "User")]
         [AllowAnonymous]
         [ActionName("Index")]
         public async Task<IActionResult> IndexAsync()
         {
-            IndexViewModel ivm = new IndexViewModel();
-            ivm.ListCategory = await _context.Categories.ToListAsync();
-            ivm.ListProduct = await _context.Products.ToListAsync();
-            return View(ivm);
+          IndexViewModel ivm = new IndexViewModel();
+          ivm.ListCategory = await _context.Categories.ToListAsync();
+          ivm.ListProduct = await _context.Products.ToListAsync();
+          return View(ivm);
         }
 
         [Authorize(Roles = "User")]

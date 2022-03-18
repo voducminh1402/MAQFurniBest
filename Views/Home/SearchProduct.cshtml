@@ -104,7 +104,15 @@
                                                 <img class="hover-image" src="@product.ProductImage" alt="Product" />
                                             </a>
                                             <span class="badges">
-                                                <span class="new">New</span>
+                                                 @if(product.AvailableId == 2) {
+                                                <span class="sale">Sold out</span>
+                                            }
+                                            else if(product.AvailableId == 3) {
+                                                <span class="sale">In coming</span>
+                                            }
+                                            else if(product.AvailableId == 4) {
+                                                <span class="sale">Off</span>
+                                            }
                                             </span>
                                             <div class="actions">
                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
@@ -113,6 +121,7 @@
                                                 <a href="compare.html" class="action compare" title="Compare"><i
                                                         class="icon-refresh"></i></a>
                                             </div>
+                                            @if(product.AvailableId == 1) {
                                             <button title="Add To Cart" class="add-to-cart">Add
                                                 To Cart
                                                 <input id="pCartImage" type="hidden" value="@product.ProductImage" />
@@ -120,6 +129,7 @@
                                                 <input id="pCartName" type="hidden" value="@product.ProductName" />
                                                 <input id="pCartPrice" type="hidden" value="@product.ProductPrice" />
                                             </button>
+                                            }
                                         </div>
                                         <div class="content">
                                             <h5 class="title"><a href="shop-left-sidebar.html">@product.ProductName</a></h5>
