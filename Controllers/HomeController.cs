@@ -286,7 +286,6 @@ namespace MAQFurni.Controllers
         // }
 
         [Authorize(Roles = "User")]
-
         [HttpGet("check-out")]
         public IActionResult Checkout()
         {
