@@ -58,11 +58,12 @@
                                                 src="@item.Product.ProductImage" alt="" /></a>
                                     </td>
                                     <td class="product-name"><a href="#">@item.Product.ProductName</a></td>
-                                    <td class="product-price-cart"><span class="amount">@item.DetailPrice</span></td>
+                                    
+                                    <td class="product-price-cart"><span class="amount">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", item.DetailPrice)</span></td>
                                     <td class="product-quantity">
                                         <span class="amount">@item.Quantity</span>
                                     </td>
-                                    <td class="product-subtotal">@price</td>
+                                    <td class="product-subtotal">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", price)</td>
                                     
                                 </tr>
                                 }}

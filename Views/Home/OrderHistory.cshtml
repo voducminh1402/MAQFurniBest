@@ -56,7 +56,8 @@
                                             @item.OrderId
                                         </td>
                                         <td class="product-name"><a href="#">@item.CreateDate</a></td>
-                                        <td class="product-price-cart"><span class="amount">@item.TotalPrice</span></td>
+                                        
+                                        <td class="product-price-cart"><span class="amount">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", item.TotalPrice)</span></td>
 
                                         <td class="product-subtotal">@item.ShippingInfo.Status.StatusName</td>
                                         <td class="product-wishlist-cart">

@@ -209,6 +209,16 @@
         });
     }
 
+    function toats2() {
+        vt.error("Your order do not have enough quantity!", {
+            title: "Check out fail",
+            position: "top-right",
+            duration: 5000,
+            closable: true,
+            focusable: true,
+            callback: undefined
+        });
+    }
 
 
     @* @ViewBag.ProductId =  *@
@@ -299,11 +309,16 @@
                 cart = [];
             }
 
+            if (JSON.parse(localStorage.getItem("cart")).length == 0) {
+                document.getElementById("check-out").style.display = "none";
+            }
+
             let id = document.getElementById("id-remove").value;
             let quantity = document.getElementById("quantity").value;
 
             var newCart = [];
             if (id != null) {
+
                 localStorage.setItem("cart", JSON.stringify(newCart));
                 if (quantity == "0") {
                     toats();
@@ -316,9 +331,11 @@
 
 
                 } else {
+
                     for (let o of cart) {
                         let newProduct;
                         if (o.id == document.getElementById("id-remove").value) {
+                            toats2();
                             newProduct = {
                                 id: o.id,
                                 image: o.image,
@@ -339,7 +356,7 @@
                         newCart.push(newProduct);
                     }
                     localStorage.setItem("cart", JSON.stringify(newCart));
-                    console.log(JSON.parse(localStorage.getItem("cart")));
+                    @* console.log(JSON.parse(localStorage.getItem("cart"))); *@
                 }
 
             }
