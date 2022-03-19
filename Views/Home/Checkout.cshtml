@@ -309,6 +309,10 @@
                 cart = [];
             }
 
+            if (JSON.parse(localStorage.getItem("cart")).length == 0) {
+                document.getElementById("check-out").style.display = "none";
+            }
+
             let id = document.getElementById("id-remove").value;
             let quantity = document.getElementById("quantity").value;
 
@@ -352,7 +356,7 @@
                         newCart.push(newProduct);
                     }
                     localStorage.setItem("cart", JSON.stringify(newCart));
-                    console.log(JSON.parse(localStorage.getItem("cart")));
+                    @* console.log(JSON.parse(localStorage.getItem("cart"))); *@
                 }
 
             }
