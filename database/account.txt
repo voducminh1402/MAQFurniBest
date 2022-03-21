@@ -1,0 +1,13 @@
+Run project with port 5001 of localhost
+
+
+
+Admin:
+
+admin@admin.com	
+admin1
+
+User:
+
+user2@user.com	
+123456
