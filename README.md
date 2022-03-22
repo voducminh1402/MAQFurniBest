@@ -1,7 +1,7 @@
 # Furniture Shopping 
 <h5>Team Project - Team Size: 4 - Team Role: Leader</h5>
 
-## [Live Demo]()	
+## [Live Demo](https://youtu.be/U68-1ZbIxrs)	
 	
 ## Introduction
 
@@ -60,7 +60,7 @@ Step 3: Edit appsettings.json file
  - Open appsettings.json file and change the username and password of Microsoft SQL Server
 
 Step 4: Add libraries
- - Add all libraries in folder lib to project
+ - Add all libraries that occurs in project file
 
 Step 5: Run project with terminal `dotnet watch run` and enjoy that moment ^^
 
@@ -75,4 +75,4 @@ Contact me to contribute or you have questions:
 <br>[Linkedin](https://www.linkedin.com/in/minhvd0406/)
 
 ## License
-Developed by Vo Duc Minh - Le Hong Anh - Tran Quang Quyen @ 2021
+Developed by Vo Duc Minh - Le Hong Anh - Tran Quang Quyen @ 2022
